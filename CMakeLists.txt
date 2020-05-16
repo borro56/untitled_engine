@@ -7,5 +7,5 @@ add_executable(untitled
         main.cpp
         Components/Vector3.h
         Components/Translation.h
-        ECS/Archetype.cpp
-        ECS/Archetype.h ECS/EntityManager.tpp ECS/EntityManager.h ECS/Entity.cpp ECS/Entity.h Components/Health.h)
+        ECS/Archetype.tpp
+        ECS/Archetype.h ECS/EntityManager.tpp ECS/EntityManager.h ECS/Entity.cpp ECS/Entity.h Components/Health.h ECS/Chunk.tpp ECS/Chunk.h ECS/Archetype.cpp)

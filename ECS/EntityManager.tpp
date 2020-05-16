@@ -8,45 +8,41 @@
 using namespace std;
 
 template <class T, class... Ts>
-void GetHashesRecursive(vector<size_t> &hashes, T const& first, Ts const&... rest)
+void GetHashes(vector<size_t> &hashes, int& size, T const& first, Ts const&... rest)
 {
+    size += sizeof(T);
     hashes.push_back(typeid(T).hash_code());
     if constexpr (sizeof...(rest) > 0)
     {
-        GetHashesRecursive(hashes, rest...);
+        GetHashes(hashes, size, rest...);
     }
 }
 
-template <class... Ts>
-vector<size_t> GetHashes(Ts const&... rest)
-{
-    int hashesCount = sizeof...(rest);
-    vector<size_t> hashes(hashesCount);
-    GetHashesRecursive(hashes, rest...);
-    return hashes;
-}
 
-
-Archetype& GetArchetype(vector<Archetype>& archetypes, vector<size_t>& typesHashes)
+Archetype* GetArchetype(vector<Archetype>& archetypes, vector<size_t>& typesHashes, int size)
 {
     for(auto& archetype : archetypes)
     {
         if(archetype.TypesHashes() == typesHashes)
         {
-            cout << 0;
-            return archetype;
+            return &archetype;
         }
     }
 
-    archetypes.push_back(Archetype(typesHashes));
-    return archetypes[archetypes.size() - 1];
+    archetypes.push_back(Archetype(typesHashes, size));
+    return &archetypes[archetypes.size() - 1]; //TODO: Ver porque no puedo retornar referencias
 }
 
 template<class... Types>
 Entity EntityManager::Create(Types const&... components)
 {
-    auto hashes = GetHashes(components...);
-    auto archetype = GetArchetype(archetypes, hashes);
+    int size = 0;
+    vector<size_t> hashes;
+    hashes.reserve(sizeof...(components));
+    GetHashes(hashes, size, components...);
+    sort(hashes.begin(), hashes.end());
 
+    auto archetype = GetArchetype(archetypes, hashes, size);
+    archetype->AddEntity(components...);
     return Entity();
 }

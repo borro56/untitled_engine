@@ -6,37 +6,55 @@
 
 #IncludeRegexTransform: 
 
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/Components/Health.h
 
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/Components/Translation.h
 Vector3.h
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Vector3.h
+/Users/nicolasborromeo/untitled_engine/Components/Vector3.h
 
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Vector3.h
+/Users/nicolasborromeo/untitled_engine/Components/Vector3.h
 
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 cstddef
 -
 vector
 -
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+Archetype.tpp
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
 
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+Chunk.tpp
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
+
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+
+/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
 Entity.h
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 vector
 -
 EntityManager.tpp
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.tpp
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp
 
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.tpp
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp
 EntityManager.h
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
 Entity.h
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 Archetype.h
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 vector
 -
 array
@@ -44,15 +62,13 @@ array
 typeinfo
 -
 
-/Users/nicolasborromeo/CLionProjects/untitled/main.cpp
+/Users/nicolasborromeo/untitled_engine/main.cpp
 iostream
 -
-vector
--
 Components/Translation.h
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/Components/Translation.h
 Components/Health.h
-/Users/nicolasborromeo/CLionProjects/untitled/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/Components/Health.h
 ECS/EntityManager.h
-/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
 

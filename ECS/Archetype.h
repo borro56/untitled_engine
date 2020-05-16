@@ -3,15 +3,29 @@
 
 #include <cstddef>
 #include <vector>
+#include "Chunk.h"
 
 using namespace std;
 
 class Archetype {
+    int sizeOfEntity;
     vector<size_t> typeHashes;
 
+    Chunk* GetChunk();
+
 public:
-    Archetype(vector<size_t> typeHashes) { this->typeHashes = typeHashes; }
-    vector<size_t> TypesHashes() { return typeHashes; }
+    vector<Chunk*> chunks;
+
+    Archetype(vector<size_t> typeHashes, int sizeOfEntity)
+    {
+        this->typeHashes = typeHashes;
+        this->sizeOfEntity = sizeOfEntity;
+    }
+    vector<size_t>& TypesHashes() { return typeHashes; }
+
+    template<class... Types> void AddEntity(Types const&... components);
 };
+
+#include "Archetype.tpp"
 
 #endif

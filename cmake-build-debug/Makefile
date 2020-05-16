@@ -48,10 +48,10 @@ RM = "/Users/nicolasborromeo/Library/Application Support/JetBrains/Toolbox/apps/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nicolasborromeo/CLionProjects/untitled
+CMAKE_SOURCE_DIR = /Users/nicolasborromeo/untitled_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/nicolasborromeo/untitled_engine/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/CMakeFiles /Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles /Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -4,6 +4,9 @@
 struct Health
 {
     float value;
+
+    Health() { }
+    Health(float value) : value(value) { }
 };
 
 #endif

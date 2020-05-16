@@ -6,6 +6,9 @@
 struct Translation
 {
     Vector3 value;
+
+    Translation() {}
+    Translation(Vector3 value) : value(value) {}
 };
 
 #endif

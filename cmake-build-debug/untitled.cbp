@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled">
-				<Option output="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug"/>
+				<Option output="/Users/nicolasborromeo/untitled_engine/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled/fast">
-				<Option output="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug"/>
+				<Option output="/Users/nicolasborromeo/untitled_engine/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,44 +73,53 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/CLionProjects/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/nicolasborromeo/untitled_engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/Components/Health.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Health.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/Components/Translation.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Translation.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/Components/Vector3.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Vector3.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/Archetype.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Archetype.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/Archetype.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/Entity.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/Entity.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/ECS/EntityManager.tpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Entity.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/main.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Entity.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/CLionProjects/untitled/CMakeLists.txt">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/main.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -2,13 +2,15 @@
 #define UNTITLED_ENTITYMANAGER_H
 
 #include "Entity.h"
+#include "Archetype.h"
 #include <vector>
 
 using namespace std;
 
 class EntityManager {
+
 public:
-    class vector<class Archetype> archetypes;
+    class vector<Archetype> archetypes;
 
 public:
     template<class... Types>

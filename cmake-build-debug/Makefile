@@ -177,6 +177,33 @@ ECS/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Entity.cpp.s
 .PHONY : ECS/Entity.cpp.s
 
+ECS/EntityManager.o: ECS/EntityManager.cpp.o
+
+.PHONY : ECS/EntityManager.o
+
+# target to build an object file
+ECS/EntityManager.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o
+.PHONY : ECS/EntityManager.cpp.o
+
+ECS/EntityManager.i: ECS/EntityManager.cpp.i
+
+.PHONY : ECS/EntityManager.i
+
+# target to preprocess a source file
+ECS/EntityManager.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.i
+.PHONY : ECS/EntityManager.cpp.i
+
+ECS/EntityManager.s: ECS/EntityManager.cpp.s
+
+.PHONY : ECS/EntityManager.s
+
+# target to generate assembly for a file
+ECS/EntityManager.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.s
+.PHONY : ECS/EntityManager.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -219,6 +246,9 @@ help:
 	@echo "... ECS/Entity.o"
 	@echo "... ECS/Entity.i"
 	@echo "... ECS/Entity.s"
+	@echo "... ECS/EntityManager.o"
+	@echo "... ECS/EntityManager.i"
+	@echo "... ECS/EntityManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

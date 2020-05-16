@@ -7,6 +7,6 @@ int main()
 {
     EntityManager em;
     auto en1 = em.Create(Translation(Vector3(25,1,1)), Health(1));
-    //auto en2 = em.Create(Health(), Translation());
-    cout << *(float*)(em.archetypes[0].chunks[0]->data);
+    auto en2 = em.Create(Health(4), Translation());
+    return 0;
 }

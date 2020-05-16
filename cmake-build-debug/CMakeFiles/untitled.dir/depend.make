@@ -10,9 +10,17 @@ CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/Chunk.tpp
 CMakeFiles/untitled.dir/ECS/Entity.cpp.o: ../ECS/Entity.cpp
 CMakeFiles/untitled.dir/ECS/Entity.cpp.o: ../ECS/Entity.h
 
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/Archetype.h
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/Archetype.tpp
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/Chunk.h
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/Chunk.tpp
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/Entity.h
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/EntityManager.cpp
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/EntityManager.h
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o: ../ECS/EntityManager.tpp
+
 CMakeFiles/untitled.dir/main.cpp.o: ../Components/Health.h
 CMakeFiles/untitled.dir/main.cpp.o: ../Components/Translation.h
-CMakeFiles/untitled.dir/main.cpp.o: ../Components/Vector3.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Archetype.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Archetype.tpp
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Chunk.h
@@ -20,5 +28,6 @@ CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Chunk.tpp
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Entity.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/EntityManager.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/EntityManager.tpp
+CMakeFiles/untitled.dir/main.cpp.o: ../Math/Vector3.h
 CMakeFiles/untitled.dir/main.cpp.o: ../main.cpp
 

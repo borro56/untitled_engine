@@ -14,3 +14,8 @@ Chunk* Archetype::GetChunk()
     chunks.push_back(chunk);
     return chunk;
 }
+
+bool Archetype::HasHashes(vector<size_t> &hashes)
+{
+    return typeHashes == hashes;
+}

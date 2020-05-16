@@ -10,10 +10,18 @@ CMakeFiles/untitled.dir/ECS/Archetype.cpp.o
 CMakeFiles/untitled.dir/ECS/Entity.cpp.o
  /Users/nicolasborromeo/untitled_engine/ECS/Entity.cpp
  /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o
+ /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
+ /Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
+ /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+ /Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
+ /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.cpp
+ /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
+ /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp
 CMakeFiles/untitled.dir/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/Components/Health.h
  /Users/nicolasborromeo/untitled_engine/Components/Translation.h
- /Users/nicolasborromeo/untitled_engine/Components/Vector3.h
  /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
  /Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
@@ -21,4 +29,5 @@ CMakeFiles/untitled.dir/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
  /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp
+ /Users/nicolasborromeo/untitled_engine/Math/Vector3.h
  /Users/nicolasborromeo/untitled_engine/main.cpp

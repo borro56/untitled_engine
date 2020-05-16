@@ -5,44 +5,76 @@
 #include <array>
 #include <typeinfo>
 
-using namespace std;
 
 template <class T, class... Ts>
-void GetHashes(vector<size_t> &hashes, int& size, T const& first, Ts const&... rest)
+int GetSize() //TODO: Move to helpers file
 {
-    size += sizeof(T);
-    hashes.push_back(typeid(T).hash_code());
-    if constexpr (sizeof...(rest) > 0)
+    if constexpr (sizeof...(Ts) > 0)
     {
-        GetHashes(hashes, size, rest...);
+        return sizeof(T) + GetSize<Ts...>();
+    }
+
+    return sizeof(T);
+}
+
+template <class T, class... Ts>
+void GetHashesRecursive(vector<size_t> &hashes) //TODO: Move to helpers file
+{
+    hashes.push_back(typeid(T).hash_code());
+    if constexpr (sizeof...(Ts) > 0)
+    {
+        GetHashesRecursive<Ts...>(hashes);
     }
 }
 
-
-Archetype* GetArchetype(vector<Archetype>& archetypes, vector<size_t>& typesHashes, int size)
+template <class... Ts>
+vector<size_t> GetHashes() //TODO: Move to helpers file
 {
-    for(auto& archetype : archetypes)
-    {
-        if(archetype.TypesHashes() == typesHashes)
-        {
-            return &archetype;
-        }
-    }
-
-    archetypes.push_back(Archetype(typesHashes, size));
-    return &archetypes[archetypes.size() - 1]; //TODO: Ver porque no puedo retornar referencias
+    vector<size_t> hashes;
+    hashes.reserve(sizeof...(Ts));
+    GetHashesRecursive<Ts...>(hashes);
+    sort(hashes.begin(), hashes.end());
+    return hashes;
 }
 
 template<class... Types>
 Entity EntityManager::Create(Types const&... components)
 {
-    int size = 0;
-    vector<size_t> hashes;
-    hashes.reserve(sizeof...(components));
-    GetHashes(hashes, size, components...);
-    sort(hashes.begin(), hashes.end());
-
-    auto archetype = GetArchetype(archetypes, hashes, size);
+    auto archetype = GetOrCreateArchetype<Types...>();
     archetype->AddEntity(components...);
-    return Entity();
+    return Entity(); //TODO: Return actual entity
+}
+
+template <class... Types>
+Archetype* EntityManager::GetOrCreateArchetype()
+{
+    auto hashes = GetHashes<Types...>();
+
+    for(auto& archetype : archetypes)
+    {
+        if(archetype.HasHashes(hashes))
+        {
+            return &archetype;
+        }
+    }
+
+    auto size = GetSize<Types...>();
+    archetypes.push_back(Archetype(hashes, size));
+    return &archetypes[archetypes.size() - 1]; //TODO: Ver porque no puedo retornar referencias
+}
+
+template<class... Types>
+Archetype *EntityManager::GetArchetype()
+{
+    auto hashes = GetHashes<Types...>();
+
+    for(auto& archetype : archetypes)
+    {
+        if(archetype.HasHashes(hashes))
+        {
+            return &archetype;
+        }
+    }
+
+    return nullptr;
 }

@@ -10,20 +10,20 @@ using namespace std;
 class Archetype {
     int sizeOfEntity;
     vector<size_t> typeHashes;
+    vector<Chunk*> chunks;
 
     Chunk* GetChunk();
 
 public:
-    vector<Chunk*> chunks;
+    bool HasHashes(vector<size_t>& hashes);
+
+    template<class... Types> void AddEntity(Types const&... components);
 
     Archetype(vector<size_t> typeHashes, int sizeOfEntity)
     {
         this->typeHashes = typeHashes;
         this->sizeOfEntity = sizeOfEntity;
     }
-    vector<size_t>& TypesHashes() { return typeHashes; }
-
-    template<class... Types> void AddEntity(Types const&... components);
 };
 
 #include "Archetype.tpp"

@@ -7,15 +7,16 @@ class Chunk
 {
     int sizeOfEntity;
     int amount;
+    unsigned char data[CHUNK_SIZE];
 
 public:
-    unsigned char data[CHUNK_SIZE];
-    Chunk(int sizeOfEntity) { this->sizeOfEntity = sizeOfEntity; }
+    template<class... Types>
+    void AddData(Types const&... data);
+
     int BytesCount() { return sizeOfEntity * amount; }
     int RemainingBytes() { return CHUNK_SIZE - BytesCount(); }
 
-    template<class... Types>
-    void AddData(Types const&... data);
+    Chunk(int sizeOfEntity) { this->sizeOfEntity = sizeOfEntity; }
 };
 
 #include "Chunk.tpp"

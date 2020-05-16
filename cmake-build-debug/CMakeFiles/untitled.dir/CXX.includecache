@@ -9,10 +9,8 @@
 /Users/nicolasborromeo/untitled_engine/Components/Health.h
 
 /Users/nicolasborromeo/untitled_engine/Components/Translation.h
-Vector3.h
-/Users/nicolasborromeo/untitled_engine/Components/Vector3.h
-
-/Users/nicolasborromeo/untitled_engine/Components/Vector3.h
+../Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 cstddef
@@ -38,6 +36,10 @@ Chunk.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.cpp
+EntityManager.h
+/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
+
 /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
 Entity.h
 /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
@@ -61,6 +63,8 @@ array
 -
 typeinfo
 -
+
+/Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/main.cpp
 iostream

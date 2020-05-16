@@ -8,13 +8,12 @@
 using namespace std;
 
 class EntityManager {
-
-public:
     class vector<Archetype> archetypes;
+    template <class... Types> Archetype* GetOrCreateArchetype();
 
 public:
-    template<class... Types>
-    class Entity Create(Types const&... components);
+    template<class... Types> class Entity Create(Types const&... components);
+    template<class... Types> Archetype* GetArchetype();
 };
 
 #include "EntityManager.tpp"

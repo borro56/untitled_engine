@@ -4,18 +4,13 @@ Chunk* Archetype::GetChunk()
 {
     for(auto chunk : chunks)
     {
-        if(chunk->RemainingBytes() > sizeOfEntity)
+        if(chunk->RemainingBytes() > entitySize)
         {
             return chunk;
         }
     }
 
-    auto chunk = new Chunk(sizeOfEntity);
+    auto chunk = new Chunk(this);
     chunks.push_back(chunk);
     return chunk;
-}
-
-bool Archetype::HasHashes(vector<size_t> &hashes)
-{
-    return typeHashes == hashes;
 }

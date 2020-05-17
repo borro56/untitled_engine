@@ -83,6 +83,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Health.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Speed.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/Components/Translation.h">
 			<Option target="untitled"/>
 		</Unit>
@@ -95,19 +98,25 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.cpp">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Entity.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Entity.h">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h">
@@ -117,6 +126,9 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/Math/Vector3.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/common.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/main.cpp">

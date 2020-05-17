@@ -150,6 +150,60 @@ ECS/Archetype.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Archetype.cpp.s
 .PHONY : ECS/Archetype.cpp.s
 
+ECS/Chunk.o: ECS/Chunk.cpp.o
+
+.PHONY : ECS/Chunk.o
+
+# target to build an object file
+ECS/Chunk.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.o
+.PHONY : ECS/Chunk.cpp.o
+
+ECS/Chunk.i: ECS/Chunk.cpp.i
+
+.PHONY : ECS/Chunk.i
+
+# target to preprocess a source file
+ECS/Chunk.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.i
+.PHONY : ECS/Chunk.cpp.i
+
+ECS/Chunk.s: ECS/Chunk.cpp.s
+
+.PHONY : ECS/Chunk.s
+
+# target to generate assembly for a file
+ECS/Chunk.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.s
+.PHONY : ECS/Chunk.cpp.s
+
+ECS/ComponentArray.o: ECS/ComponentArray.cpp.o
+
+.PHONY : ECS/ComponentArray.o
+
+# target to build an object file
+ECS/ComponentArray.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o
+.PHONY : ECS/ComponentArray.cpp.o
+
+ECS/ComponentArray.i: ECS/ComponentArray.cpp.i
+
+.PHONY : ECS/ComponentArray.i
+
+# target to preprocess a source file
+ECS/ComponentArray.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.i
+.PHONY : ECS/ComponentArray.cpp.i
+
+ECS/ComponentArray.s: ECS/ComponentArray.cpp.s
+
+.PHONY : ECS/ComponentArray.s
+
+# target to generate assembly for a file
+ECS/ComponentArray.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.s
+.PHONY : ECS/ComponentArray.cpp.s
+
 ECS/Entity.o: ECS/Entity.cpp.o
 
 .PHONY : ECS/Entity.o
@@ -176,33 +230,6 @@ ECS/Entity.s: ECS/Entity.cpp.s
 ECS/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Entity.cpp.s
 .PHONY : ECS/Entity.cpp.s
-
-ECS/EntityManager.o: ECS/EntityManager.cpp.o
-
-.PHONY : ECS/EntityManager.o
-
-# target to build an object file
-ECS/EntityManager.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.o
-.PHONY : ECS/EntityManager.cpp.o
-
-ECS/EntityManager.i: ECS/EntityManager.cpp.i
-
-.PHONY : ECS/EntityManager.i
-
-# target to preprocess a source file
-ECS/EntityManager.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.i
-.PHONY : ECS/EntityManager.cpp.i
-
-ECS/EntityManager.s: ECS/EntityManager.cpp.s
-
-.PHONY : ECS/EntityManager.s
-
-# target to generate assembly for a file
-ECS/EntityManager.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/EntityManager.cpp.s
-.PHONY : ECS/EntityManager.cpp.s
 
 main.o: main.cpp.o
 
@@ -243,12 +270,15 @@ help:
 	@echo "... ECS/Archetype.o"
 	@echo "... ECS/Archetype.i"
 	@echo "... ECS/Archetype.s"
+	@echo "... ECS/Chunk.o"
+	@echo "... ECS/Chunk.i"
+	@echo "... ECS/Chunk.s"
+	@echo "... ECS/ComponentArray.o"
+	@echo "... ECS/ComponentArray.i"
+	@echo "... ECS/ComponentArray.s"
 	@echo "... ECS/Entity.o"
 	@echo "... ECS/Entity.i"
 	@echo "... ECS/Entity.s"
-	@echo "... ECS/EntityManager.o"
-	@echo "... ECS/EntityManager.i"
-	@echo "... ECS/EntityManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

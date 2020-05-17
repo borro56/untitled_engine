@@ -8,11 +8,15 @@
 
 /Users/nicolasborromeo/untitled_engine/Components/Health.h
 
+/Users/nicolasborromeo/untitled_engine/Components/Speed.h
+
 /Users/nicolasborromeo/untitled_engine/Components/Translation.h
 ../Math/Vector3.h
 /Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
+ComponentArray.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
 cstddef
 -
 vector
@@ -27,6 +31,10 @@ Archetype.h
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
 Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
 
@@ -34,11 +42,17 @@ Chunk.tpp
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
 
-/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.cpp
+ComponentArray.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
 
-/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.cpp
-EntityManager.h
-/Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+
+/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
 Entity.h
@@ -66,13 +80,23 @@ typeinfo
 
 /Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
-/Users/nicolasborromeo/untitled_engine/main.cpp
+/Users/nicolasborromeo/untitled_engine/common.h
+cstddef
+-
+vector
+-
 iostream
 -
+
+/Users/nicolasborromeo/untitled_engine/main.cpp
 Components/Translation.h
 /Users/nicolasborromeo/untitled_engine/Components/Translation.h
 Components/Health.h
 /Users/nicolasborromeo/untitled_engine/Components/Health.h
 ECS/EntityManager.h
 /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
+common.h
+/Users/nicolasborromeo/untitled_engine/common.h
+Components/Speed.h
+/Users/nicolasborromeo/untitled_engine/Components/Speed.h
 

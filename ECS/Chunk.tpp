@@ -15,6 +15,7 @@ void AddDataRecursive(unsigned char* header, Type const& data, Types const&... r
 template<class... Types>
 void Chunk::AddData(Types const&... newData)
 {
-    unsigned char* lastPosition = data + amount++ * sizeOfEntity;
-    AddDataRecursive(lastPosition, newData...);
+    //TODO: Order data by hash type
+    //byte* lastPosition = data + amount++ * archetype->entitySize;
+    //AddDataRecursive(lastPosition, newData...);
 }

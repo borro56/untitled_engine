@@ -33,7 +33,6 @@ public:
     template<class... Types> bool HasTypes();
 };
 
-
 #include "Chunk.h"
 #include "ComponentType.h"
 #include "Archetype.tpp"

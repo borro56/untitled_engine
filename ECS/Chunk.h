@@ -26,10 +26,11 @@ public:
 
     Chunk(Archetype* archetype) { this->archetype = archetype; }
 
-    template<class Type> Type& GetComponent(int index); //TODO: Completar esto
+    template<class Type> Type* GetArray(class ComponentType& type);
 };
 
 #include "Archetype.h"
+#include "ComponentType.h"
 #include "Chunk.tpp"
 
 #endif

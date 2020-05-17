@@ -35,6 +35,8 @@ Archetype.h
 /Users/nicolasborromeo/untitled_engine/common.h
 Archetype.h
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
+ComponentType.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
 Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
 

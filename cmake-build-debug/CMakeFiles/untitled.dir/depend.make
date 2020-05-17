@@ -6,7 +6,8 @@ CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/Archetype.h
 CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/Archetype.tpp
 CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/Chunk.h
 CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/Chunk.tpp
-CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/ComponentArray.h
+CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/ComponentType.h
+CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/ECS/Archetype.cpp.o: ../common.h
 
 CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/Archetype.h
@@ -14,16 +15,9 @@ CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/Archetype.tpp
 CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/Chunk.cpp
 CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/Chunk.h
 CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/Chunk.tpp
-CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/ComponentArray.h
+CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/ComponentType.h
+CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/ECS/Chunk.cpp.o: ../common.h
-
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/Archetype.h
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/Archetype.tpp
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/Chunk.h
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/Chunk.tpp
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/ComponentArray.cpp
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../ECS/ComponentArray.h
-CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o: ../common.h
 
 CMakeFiles/untitled.dir/ECS/Entity.cpp.o: ../ECS/Entity.cpp
 CMakeFiles/untitled.dir/ECS/Entity.cpp.o: ../ECS/Entity.h
@@ -35,7 +29,8 @@ CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Archetype.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Archetype.tpp
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Chunk.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Chunk.tpp
-CMakeFiles/untitled.dir/main.cpp.o: ../ECS/ComponentArray.h
+CMakeFiles/untitled.dir/main.cpp.o: ../ECS/ComponentType.h
+CMakeFiles/untitled.dir/main.cpp.o: ../ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/Entity.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/EntityManager.h
 CMakeFiles/untitled.dir/main.cpp.o: ../ECS/EntityManager.tpp

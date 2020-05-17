@@ -1,21 +1,20 @@
+#include "../common.h"
 #include "Chunk.h"
 
-template<class Type, class... Types>
-void AddDataRecursive(unsigned char* header, Type const& data, Types const&... rest)
+template<class... Types> void Chunk::AddData(Types const&... rest)
 {
-    memcpy(header, &data, sizeof(data));
-
-    if constexpr (sizeof...(rest) > 0)
-    {
-        header += sizeof(Type);
-        AddDataRecursive(header, rest...);
-    }
+    AddDataRecursive(rest...);
+    amount++;
 }
 
-template<class... Types>
-void Chunk::AddData(Types const&... newData)
+template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& data, Types const&... rest)
 {
-    //TODO: Order data by hash type
-    //byte* lastPosition = data + amount++ * archetype->entitySize;
-    //AddDataRecursive(lastPosition, newData...);
+    auto type = archetype->GetType<Type>();
+    auto destination = this->data + type->chunkOffset + amount * type->componentSize;
+    memcpy(destination, &data, sizeof(Type));
+
+    if constexpr (sizeof...(Types) > 0)
+    {
+        AddDataRecursive(rest...);
+    }
 }

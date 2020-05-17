@@ -177,33 +177,6 @@ ECS/Chunk.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.s
 .PHONY : ECS/Chunk.cpp.s
 
-ECS/ComponentArray.o: ECS/ComponentArray.cpp.o
-
-.PHONY : ECS/ComponentArray.o
-
-# target to build an object file
-ECS/ComponentArray.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o
-.PHONY : ECS/ComponentArray.cpp.o
-
-ECS/ComponentArray.i: ECS/ComponentArray.cpp.i
-
-.PHONY : ECS/ComponentArray.i
-
-# target to preprocess a source file
-ECS/ComponentArray.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.i
-.PHONY : ECS/ComponentArray.cpp.i
-
-ECS/ComponentArray.s: ECS/ComponentArray.cpp.s
-
-.PHONY : ECS/ComponentArray.s
-
-# target to generate assembly for a file
-ECS/ComponentArray.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.s
-.PHONY : ECS/ComponentArray.cpp.s
-
 ECS/Entity.o: ECS/Entity.cpp.o
 
 .PHONY : ECS/Entity.o
@@ -273,9 +246,6 @@ help:
 	@echo "... ECS/Chunk.o"
 	@echo "... ECS/Chunk.i"
 	@echo "... ECS/Chunk.s"
-	@echo "... ECS/ComponentArray.o"
-	@echo "... ECS/ComponentArray.i"
-	@echo "... ECS/ComponentArray.s"
 	@echo "... ECS/Entity.o"
 	@echo "... ECS/Entity.i"
 	@echo "... ECS/Entity.s"

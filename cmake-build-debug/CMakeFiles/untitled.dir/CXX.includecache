@@ -15,14 +15,14 @@
 /Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
-ComponentArray.h
-/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
 cstddef
 -
 vector
 -
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+ComponentType.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
 Archetype.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
 
@@ -39,18 +39,24 @@ Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp
-Chunk.h
-/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
-
-/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.cpp
-ComponentArray.h
-/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
-
-/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h
 ../common.h
 /Users/nicolasborromeo/untitled_engine/common.h
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+ComponentType.tpp
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.tpp
+
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.tpp
+ComponentType.h
+/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 

@@ -107,10 +107,10 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Chunk.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentArray.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/ComponentType.tpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/ECS/Entity.cpp">

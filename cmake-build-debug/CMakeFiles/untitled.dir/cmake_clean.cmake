@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled.dir/ECS/Archetype.cpp.o"
   "CMakeFiles/untitled.dir/ECS/Chunk.cpp.o"
-  "CMakeFiles/untitled.dir/ECS/ComponentArray.cpp.o"
   "CMakeFiles/untitled.dir/ECS/Entity.cpp.o"
   "CMakeFiles/untitled.dir/main.cpp.o"
   "untitled"

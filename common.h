@@ -7,4 +7,6 @@
 
 using namespace std;
 
+template<class T> size_t typeHash() { return typeid(T).hash_code(); } //TODO: Use compile time hash
+
 #endif

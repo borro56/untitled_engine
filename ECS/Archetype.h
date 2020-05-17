@@ -1,7 +1,6 @@
 #ifndef UNTITLED_ARCHETYPE_H
 #define UNTITLED_ARCHETYPE_H
 
-#include "ComponentArray.h"
 #include <cstddef>
 #include <vector>
 
@@ -12,12 +11,11 @@ class Archetype
     friend class Chunk;
 
     int entitySize = 0;
-    vector<class BaseComponentArray*> componentArrays; //TODO: See if its worth making those pointers
+    vector<class ComponentType> componentTypes; //TODO: See if its worth making those pointers
     vector<class Chunk*> chunks;
 
     Chunk* GetChunk();
     template<class Type, class... Types> void AddType();
-    template<class... Types> void Init();
     template<class Type, class... Types> bool HasTypesRecursive();
 
     Archetype() { }
@@ -27,7 +25,7 @@ public:
 
     template<class... Types> void AddEntity(Types const&... components);
 
-    template<class Type> ComponentArray<Type>* GetComponentArray();
+    template<class Type> ComponentType* GetType();
 
 
     template <class... Types> static Archetype Create();
@@ -35,7 +33,9 @@ public:
     template<class... Types> bool HasTypes();
 };
 
+
 #include "Chunk.h"
+#include "ComponentType.h"
 #include "Archetype.tpp"
 
 #endif

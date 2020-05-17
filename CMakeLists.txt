@@ -17,4 +17,4 @@ add_executable(untitled
         ECS/Chunk.tpp
         ECS/Chunk.h
         ECS/Archetype.cpp
-        ECS/ComponentArray.cpp ECS/ComponentArray.h common.h ECS/Chunk.cpp Components/Speed.h)
+        ECS/ComponentType.tpp ECS/ComponentType.h common.h ECS/Chunk.cpp Components/Speed.h)

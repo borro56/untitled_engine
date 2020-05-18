@@ -1,4 +1,4 @@
-#include "Archetype.h"
+#include "../../include/ECS/Archetype.h"
 
 Chunk* Archetype::GetChunk()
 {

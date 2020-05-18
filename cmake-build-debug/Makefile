@@ -123,113 +123,113 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-ECS/Archetype.o: ECS/Archetype.cpp.o
+src/ECS/Archetype.o: src/ECS/Archetype.cpp.o
 
-.PHONY : ECS/Archetype.o
-
-# target to build an object file
-ECS/Archetype.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Archetype.cpp.o
-.PHONY : ECS/Archetype.cpp.o
-
-ECS/Archetype.i: ECS/Archetype.cpp.i
-
-.PHONY : ECS/Archetype.i
-
-# target to preprocess a source file
-ECS/Archetype.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Archetype.cpp.i
-.PHONY : ECS/Archetype.cpp.i
-
-ECS/Archetype.s: ECS/Archetype.cpp.s
-
-.PHONY : ECS/Archetype.s
-
-# target to generate assembly for a file
-ECS/Archetype.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Archetype.cpp.s
-.PHONY : ECS/Archetype.cpp.s
-
-ECS/Chunk.o: ECS/Chunk.cpp.o
-
-.PHONY : ECS/Chunk.o
+.PHONY : src/ECS/Archetype.o
 
 # target to build an object file
-ECS/Chunk.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.o
-.PHONY : ECS/Chunk.cpp.o
+src/ECS/Archetype.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o
+.PHONY : src/ECS/Archetype.cpp.o
 
-ECS/Chunk.i: ECS/Chunk.cpp.i
+src/ECS/Archetype.i: src/ECS/Archetype.cpp.i
 
-.PHONY : ECS/Chunk.i
+.PHONY : src/ECS/Archetype.i
 
 # target to preprocess a source file
-ECS/Chunk.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.i
-.PHONY : ECS/Chunk.cpp.i
+src/ECS/Archetype.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.i
+.PHONY : src/ECS/Archetype.cpp.i
 
-ECS/Chunk.s: ECS/Chunk.cpp.s
+src/ECS/Archetype.s: src/ECS/Archetype.cpp.s
 
-.PHONY : ECS/Chunk.s
+.PHONY : src/ECS/Archetype.s
 
 # target to generate assembly for a file
-ECS/Chunk.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Chunk.cpp.s
-.PHONY : ECS/Chunk.cpp.s
+src/ECS/Archetype.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.s
+.PHONY : src/ECS/Archetype.cpp.s
 
-ECS/Entity.o: ECS/Entity.cpp.o
+src/ECS/Chunk.o: src/ECS/Chunk.cpp.o
 
-.PHONY : ECS/Entity.o
+.PHONY : src/ECS/Chunk.o
 
 # target to build an object file
-ECS/Entity.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Entity.cpp.o
-.PHONY : ECS/Entity.cpp.o
+src/ECS/Chunk.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o
+.PHONY : src/ECS/Chunk.cpp.o
 
-ECS/Entity.i: ECS/Entity.cpp.i
+src/ECS/Chunk.i: src/ECS/Chunk.cpp.i
 
-.PHONY : ECS/Entity.i
+.PHONY : src/ECS/Chunk.i
 
 # target to preprocess a source file
-ECS/Entity.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Entity.cpp.i
-.PHONY : ECS/Entity.cpp.i
+src/ECS/Chunk.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.i
+.PHONY : src/ECS/Chunk.cpp.i
 
-ECS/Entity.s: ECS/Entity.cpp.s
+src/ECS/Chunk.s: src/ECS/Chunk.cpp.s
 
-.PHONY : ECS/Entity.s
+.PHONY : src/ECS/Chunk.s
 
 # target to generate assembly for a file
-ECS/Entity.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ECS/Entity.cpp.s
-.PHONY : ECS/Entity.cpp.s
+src/ECS/Chunk.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.s
+.PHONY : src/ECS/Chunk.cpp.s
 
-main.o: main.cpp.o
+src/ECS/Entity.o: src/ECS/Entity.cpp.o
 
-.PHONY : main.o
+.PHONY : src/ECS/Entity.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/ECS/Entity.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Entity.cpp.o
+.PHONY : src/ECS/Entity.cpp.o
 
-main.i: main.cpp.i
+src/ECS/Entity.i: src/ECS/Entity.cpp.i
 
-.PHONY : main.i
+.PHONY : src/ECS/Entity.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/ECS/Entity.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Entity.cpp.i
+.PHONY : src/ECS/Entity.cpp.i
 
-main.s: main.cpp.s
+src/ECS/Entity.s: src/ECS/Entity.cpp.s
 
-.PHONY : main.s
+.PHONY : src/ECS/Entity.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/ECS/Entity.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/ECS/Entity.cpp.s
+.PHONY : src/ECS/Entity.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -240,18 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
-	@echo "... ECS/Archetype.o"
-	@echo "... ECS/Archetype.i"
-	@echo "... ECS/Archetype.s"
-	@echo "... ECS/Chunk.o"
-	@echo "... ECS/Chunk.i"
-	@echo "... ECS/Chunk.s"
-	@echo "... ECS/Entity.o"
-	@echo "... ECS/Entity.i"
-	@echo "... ECS/Entity.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/ECS/Archetype.o"
+	@echo "... src/ECS/Archetype.i"
+	@echo "... src/ECS/Archetype.s"
+	@echo "... src/ECS/Chunk.o"
+	@echo "... src/ECS/Chunk.i"
+	@echo "... src/ECS/Chunk.s"
+	@echo "... src/ECS/Entity.o"
+	@echo "... src/ECS/Entity.i"
+	@echo "... src/ECS/Entity.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

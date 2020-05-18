@@ -7,7 +7,6 @@ template<class Type> class ComponentType;
 
 class Archetype
 {
-    friend class Chunk;
 
 public:
     template <class... Types> static Archetype Create();
@@ -19,6 +18,7 @@ private:
 
 public:
     const vector<Chunk*>& Chunks() const { return chunks; } //TODO: Ver porque se puede mutar
+    int EntitySize() { return EntitySize(); }
 
 private:
     Chunk* GetChunk();

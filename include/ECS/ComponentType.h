@@ -4,9 +4,6 @@
 
 class BaseComponentType
 {
-    friend class Archetype;
-    friend class Chunk;
-
     size_t componentHash;
     size_t componentSize;
     size_t chunkOffset;
@@ -21,6 +18,7 @@ protected:
 public:
     size_t ComponentSize() { return componentSize; }
     size_t ComponentHash() { return componentHash; }
+    size_t ChunkOffset() { return chunkOffset; }
 
     void ChunkOffset(size_t chunkOffset) { this->chunkOffset = chunkOffset; } //TODO: Buscar otra forma de hacer propiedades
 };

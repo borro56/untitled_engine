@@ -15,12 +15,10 @@ class Chunk
     int amount;
     byte data[CHUNK_SIZE];
 
-
     template<class... Types> void AddData(Types const&... rest);
     template<class Type, class... Types> void AddDataRecursive(Type const& data, Types const&... rest);
 
 public:
-
     int BytesCount();
     int RemainingBytes() { return CHUNK_SIZE - BytesCount(); }
     int Count() { return amount; }

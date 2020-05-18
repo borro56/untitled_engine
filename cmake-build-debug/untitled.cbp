@@ -92,13 +92,7 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp">
-			<Option target="untitled"/>
-		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h">
@@ -110,7 +104,13 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.tpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h">

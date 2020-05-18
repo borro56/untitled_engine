@@ -32,7 +32,6 @@ template<class Type> ComponentType<Type>& Archetype::GetType()
 template <class... Types> Archetype Archetype::Create()
 {
     Archetype archetype;
-
     archetype.componentTypes.reserve(sizeof...(Types));
     archetype.AddType<Types...>();
 

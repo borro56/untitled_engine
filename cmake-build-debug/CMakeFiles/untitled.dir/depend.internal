@@ -3,18 +3,18 @@
 
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/include/common.h
  /Users/nicolasborromeo/untitled_engine/src/ECS/Archetype.cpp
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o
  /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/include/common.h
  /Users/nicolasborromeo/untitled_engine/src/ECS/Chunk.cpp
 CMakeFiles/untitled.dir/src/ECS/Entity.cpp.o
@@ -24,13 +24,13 @@ CMakeFiles/untitled.dir/src/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/include/Components/Health.h
  /Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
  /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
  /Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
- /Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.tpp
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
+ /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
  /Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
  /Users/nicolasborromeo/untitled_engine/include/common.h
  /Users/nicolasborromeo/untitled_engine/src/main.cpp

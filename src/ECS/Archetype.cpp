@@ -1,8 +1,8 @@
 #include "../../include/ECS/Archetype.h"
 
-Chunk* Archetype::GetChunk()
+shared_ptr<Chunk> Archetype::GetChunk()
 {
-    for(auto chunk : chunks)
+    for(auto chunk : chunks) //TODO: Ver si esto es performante
     {
         if(chunk->RemainingBytes() > entitySize)
         {
@@ -10,7 +10,7 @@ Chunk* Archetype::GetChunk()
         }
     }
 
-    auto chunk = new Chunk(this);
+    auto chunk = make_shared<Chunk>(*this);
     chunks.push_back(chunk);
     return chunk;
 }

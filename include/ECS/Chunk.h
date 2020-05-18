@@ -8,11 +8,12 @@ const int CHUNK_SIZE = 16384;
 class Archetype;
 template<class Type> class ComponentType;
 
+
 class Chunk
 {
     friend class Archetype;
 
-    class Archetype* archetype;
+    class Archetype& archetype;
     int amount;
     byte data[CHUNK_SIZE];
 
@@ -24,13 +25,13 @@ public:
     int RemainingBytes() { return CHUNK_SIZE - BytesCount(); }
     int Count() { return amount; }
 
-    Chunk(Archetype* archetype) { this->archetype = archetype; }
+    Chunk(Archetype& archetype) : archetype(archetype) { }
 
-    template<class Type> Type* GetArray(ComponentType<Type>& type);
+    template<class Type> Type& GetAt(ComponentType<Type>& type, int i);
 };
 
 #include "Archetype.h"
 #include "ComponentType.h"
-#include "Chunk.tpp"
+#include "tpp/Chunk.tpp"
 
 #endif

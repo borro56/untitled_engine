@@ -7,15 +7,15 @@ using namespace std;
 
 class EntityManager {
     class vector<class Archetype> archetypes;
-    template <class... Types> Archetype* GetOrCreateArchetype();
+    template <class... Types> Archetype& GetOrCreateArchetype();
 
 public:
     template<class... Types> class Entity Create(Types const&... components);
-    template<class... Types> Archetype* GetArchetype();
+    template<class... Types> Archetype& GetArchetype();
 };
 
 #include "Archetype.h"
 #include "Entity.h"
-#include "EntityManager.tpp"
+#include "tpp/EntityManager.tpp"
 
 #endif

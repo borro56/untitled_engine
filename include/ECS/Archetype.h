@@ -15,14 +15,15 @@ public:
 private:
     int entitySize = 0;
     vector<BaseComponentType> componentTypes; //TODO: See if its worth making those pointers
-    vector<Chunk*> chunks;
+    vector<shared_ptr<Chunk>> chunks;
 
 public:
-    const vector<Chunk*>& Chunks() const { return chunks; } //TODO: Ver porque se puede mutar
-    int EntitySize() { return EntitySize(); }
+    int ChunkCount() { return chunks.size(); }
+    Chunk& GetChunkAt(int i) { return *chunks[i]; }
+    int EntitySize() { return entitySize; }
 
 private:
-    Chunk* GetChunk();
+    shared_ptr<Chunk> GetChunk();
     template<class Type, class... Types> void AddType();
     template<class Type, class... Types> bool HasTypesRecursive();
     Archetype() { }
@@ -35,6 +36,6 @@ public:
 
 #include "ComponentType.h"
 #include "Chunk.h"
-#include "Archetype.tpp"
+#include "tpp/Archetype.tpp"
 
 #endif

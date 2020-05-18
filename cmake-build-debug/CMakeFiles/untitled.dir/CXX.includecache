@@ -90,14 +90,6 @@ vector
 iostream
 -
 
-/Users/nicolasborromeo/untitled_engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
-
-/Users/nicolasborromeo/untitled_engine/src/ECS/Chunk.cpp
-../../include/ECS/Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
-
 /Users/nicolasborromeo/untitled_engine/src/main.cpp
 ../include/Components/Translation.h
 /Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
@@ -105,6 +97,4 @@ iostream
 /Users/nicolasborromeo/untitled_engine/include/Components/Health.h
 ../include/ECS/EntityManager.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
-../include/common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
 

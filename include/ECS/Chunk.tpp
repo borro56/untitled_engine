@@ -10,7 +10,7 @@ template<class... Types> void Chunk::AddData(Types const&... rest)
 template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& data, Types const&... rest)
 {
     auto type = archetype->GetType<Type>();
-    auto destination = this->data + type->chunkOffset + amount * type->componentSize;
+    auto destination = this->data + type.chunkOffset + amount * type.componentSize;
     memcpy(destination, &data, sizeof(Type));
 
     if constexpr (sizeof...(Types) > 0)

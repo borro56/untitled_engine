@@ -6,7 +6,7 @@ template<class... Types> void Archetype::AddEntity(const Types &... components)
 template<class Type, class... Types> void Archetype::AddType()
 {
     ComponentType<Type> componentType;
-    entitySize += componentType.ComponentSize();
+    entitySize += componentType.Size();
     componentTypes.push_back(componentType);
 
     if constexpr (sizeof...(Types) > 0)
@@ -17,16 +17,16 @@ template<class Type, class... Types> void Archetype::AddType()
 
 template<class Type> ComponentType<Type>& Archetype::GetType()
 {
-    auto hash = typeHash<Type>();
+    auto typeId = type_id<Type>;
     for(auto& type : componentTypes)
     {
-        if(type.ComponentHash() == hash)
+        if(type.Id() == typeId)
         {
             return (ComponentType<Type>&)type;
         }
     }
 
-    throw exception(); //TODO: Improve exception message
+    throw runtime_error("Archetype dont have the specified type");
 }
 
 template <class... Types> Archetype Archetype::Create()
@@ -41,7 +41,7 @@ template <class... Types> Archetype Archetype::Create()
     for(auto& componentType : archetype.componentTypes)
     {
         componentType.ChunkOffset(componentOffset);
-        componentOffset += entityCapacity * componentType.ComponentSize();
+        componentOffset += entityCapacity * componentType.Size();
     }
 
     return archetype;
@@ -57,10 +57,10 @@ bool Archetype::HasTypes()
 template<class Type, class... Types>
 bool Archetype::HasTypesRecursive()
 {
-    auto hash = typeHash<Type>();
+    auto id = type_id<Type>;
     for(auto& type : componentTypes)
     {
-        if (type.ComponentHash() == hash)
+        if (type.Id() == id)
         {
             if constexpr (sizeof...(Types) > 0)
             {

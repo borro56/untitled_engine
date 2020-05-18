@@ -38,5 +38,6 @@ Archetype& EntityManager::GetArchetype()
         }
     }
 
-    throw exception();
+
+    throw runtime_error("No Archetype for specified types");
 }

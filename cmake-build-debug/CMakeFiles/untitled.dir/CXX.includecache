@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
+
+/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
+../Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
+
 /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
 ../common.h
 /Users/nicolasborromeo/untitled_engine/include/common.h
@@ -28,9 +34,37 @@ tpp/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
 
+/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+
+/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/include/common.h
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+Entity.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+tpp/EntityManager.tpp
+/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
+
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
+
+/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
+../EntityManager.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+../Entity.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+../Archetype.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+vector
+-
+array
+-
+typeinfo
+-
+
+/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/include/common.h
 cstddef
@@ -39,8 +73,22 @@ vector
 -
 iostream
 -
+stdio.h
+-
 
 /Users/nicolasborromeo/untitled_engine/src/ECS/Archetype.cpp
 ../../include/ECS/Archetype.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+
+/Users/nicolasborromeo/untitled_engine/src/ECS/Chunk.cpp
+../../include/ECS/Chunk.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
+
+/Users/nicolasborromeo/untitled_engine/src/main.cpp
+../include/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
+../include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
+../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
 

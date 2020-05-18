@@ -4,9 +4,11 @@
 #include <cstddef>
 #include <vector>
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
-template<class T> size_t typeHash() { return typeid(T).hash_code(); } //TODO: Use compile time hash
+inline int type_id_seq = 0;
+template< typename > inline const int type_id = type_id_seq++;
 
 #endif

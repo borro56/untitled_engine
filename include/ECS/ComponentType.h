@@ -3,28 +3,28 @@
 
 class BaseComponentType
 {
-    size_t componentHash;
-    size_t componentSize;
+    size_t id;
+    size_t size;
     size_t chunkOffset;
 
 protected:
-    BaseComponentType(size_t componentHash, size_t componentSize) :
-            componentHash(componentHash),
-            componentSize(componentSize) { }
+    BaseComponentType(size_t id, size_t componentSize) :
+            id(id),
+            size(componentSize) { }
 
 public:
-    size_t ComponentSize() { return componentSize; }
-    size_t ComponentHash() { return componentHash; }
+    size_t Size() { return size; }
+    size_t Id() { return id; }
     size_t ChunkOffset() { return chunkOffset; }
 
-    void ChunkOffset(size_t chunkOffset) { this->chunkOffset = chunkOffset; } //TODO: Buscar otra forma de hacer propiedades
+    void ChunkOffset(size_t chunkOffset) { this->chunkOffset = chunkOffset; }
 };
 
 template<class Type>
 class ComponentType : public BaseComponentType
 {
 public:
-    ComponentType() : BaseComponentType(typeHash<Type>(), sizeof(Type)) {}
+    ComponentType() : BaseComponentType(type_id<Type>, sizeof(Type)) {}
 };
 
 #endif

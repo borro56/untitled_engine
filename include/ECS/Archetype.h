@@ -14,7 +14,7 @@ public:
 
 private:
     int entitySize = 0;
-    vector<BaseComponentType> componentTypes; //TODO: See if its worth making those pointers
+    vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
 
 public:

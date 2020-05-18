@@ -1,6 +1,6 @@
 #include "../../include/ECS/Archetype.h"
 
-shared_ptr<Chunk> Archetype::GetChunk()
+shared_ptr<Chunk> Archetype::GetOrCreateChunk()
 {
     for(auto chunk : chunks)
     {

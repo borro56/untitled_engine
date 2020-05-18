@@ -18,20 +18,20 @@ private:
     vector<shared_ptr<Chunk>> chunks;
 
 public:
-    int ChunkCount() { return chunks.size(); }
-    Chunk& GetChunkAt(int i) { return *chunks[i]; }
-    int EntitySize() { return entitySize; }
+    int ChunkCount() const { return chunks.size(); }
+    int EntitySize() const { return entitySize; }
+    const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
 private:
-    shared_ptr<Chunk> GetChunk();
+    shared_ptr<Chunk> GetOrCreateChunk();
     template<class Type, class... Types> void AddType();
-    template<class Type, class... Types> bool HasTypesRecursive();
+    template<class Type, class... Types> bool HasTypesRecursive() const;
     Archetype() { }
 
 public:
     template<class... Types> void AddEntity(Types const&... components);
-    template<class... Types> bool HasTypes();
-    template<class Type> ComponentType<Type>& GetType();
+    template<class... Types> bool HasTypes() const;
+    template<class Type> const ComponentType<Type>& GetType() const;
 };
 
 #include "ComponentType.h"

@@ -16,7 +16,7 @@ template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& da
     }
 }
 
-template<class Type> Type &Chunk::GetAt(ComponentType<Type> &type, int index)
+template<class Type> Type* Chunk::GetArray(const ComponentType<Type>& type) const
 {
-    return ((Type*)(this->data + type.ChunkOffset()))[index];
+    return (Type*)(this->data + type.ChunkOffset());
 }

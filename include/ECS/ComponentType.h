@@ -13,11 +13,11 @@ protected:
             size(componentSize) { }
 
 public:
-    size_t Size() { return size; }
-    size_t Id() { return id; }
-    size_t ChunkOffset() { return chunkOffset; }
+    size_t Size() const { return size; }
+    size_t Id() const { return id; }
+    size_t ChunkOffset() const { return chunkOffset; }
 
-    void ChunkOffset(size_t chunkOffset) { this->chunkOffset = chunkOffset; }
+    void ChunkOffset(const size_t chunkOffset) { this->chunkOffset = chunkOffset; }
 };
 
 template<class Type>

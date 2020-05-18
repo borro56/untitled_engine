@@ -21,13 +21,13 @@ class Chunk
     template<class Type, class... Types> void AddDataRecursive(Type const& data, Types const&... rest);
 
 public:
-    int BytesCount();
-    int RemainingBytes() { return CHUNK_SIZE - BytesCount(); }
-    int Count() { return amount; }
+    int BytesCount() const;
+    int RemainingBytes() const { return CHUNK_SIZE - BytesCount(); }
+    int Count() const { return amount; }
 
     Chunk(Archetype& archetype) : archetype(archetype) { }
 
-    template<class Type> Type& GetAt(ComponentType<Type>& type, int i);
+    template<class Type> Type* GetArray(const ComponentType<Type>& type) const;
 };
 
 #include "Archetype.h"

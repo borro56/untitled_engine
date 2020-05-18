@@ -5,12 +5,11 @@
 #include <array>
 #include <typeinfo>
 
-template<class... Types>
-Entity EntityManager::Create(Types const&... components)
+template<class... Types> const Entity EntityManager::Create(Types const&... components)
 {
     auto& archetype = GetOrCreateArchetype<Types...>();
     archetype.AddEntity(components...);
-    return Entity(); //TODO: Return actual entity
+    return Entity(0); //TODO: Return actual entity
 }
 
 template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
@@ -27,8 +26,7 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
     return archetypes[archetypes.size() - 1];
 }
 
-template<class... Types>
-Archetype& EntityManager::GetArchetype()
+template<class... Types> const Archetype& EntityManager::GetArchetype() const
 {
     for(auto& archetype : archetypes)
     {

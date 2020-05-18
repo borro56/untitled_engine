@@ -1,3 +1,3 @@
 #include "../../include/ECS/Chunk.h"
 
-int Chunk::BytesCount() { return archetype.EntitySize() * amount; }
+int Chunk::BytesCount() const { return archetype.EntitySize() * amount; }

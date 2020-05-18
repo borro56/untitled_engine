@@ -1,6 +1,6 @@
 template<class... Types> void Archetype::AddEntity(const Types &... components)
 {
-    GetChunk()->AddData(components...);
+    GetOrCreateChunk()->AddData(components...);
 }
 
 template<class Type, class... Types> void Archetype::AddType()
@@ -15,10 +15,10 @@ template<class Type, class... Types> void Archetype::AddType()
     }
 }
 
-template<class Type> ComponentType<Type>& Archetype::GetType()
+template<class Type> const ComponentType<Type>& Archetype::GetType() const
 {
     auto typeId = type_id<Type>;
-    for(auto& type : componentTypes)
+    for(const auto& type : componentTypes)
     {
         if(type.Id() == typeId)
         {
@@ -48,14 +48,13 @@ template <class... Types> Archetype Archetype::Create()
 }
 
 template<class... Types>
-bool Archetype::HasTypes()
+bool Archetype::HasTypes() const
 {
     if (sizeof...(Types) != componentTypes.size()) return false;
     return HasTypesRecursive<Types...>();
 }
 
-template<class Type, class... Types>
-bool Archetype::HasTypesRecursive()
+template<class Type, class... Types> bool Archetype::HasTypesRecursive() const
 {
     auto id = type_id<Type>;
     for(auto& type : componentTypes)

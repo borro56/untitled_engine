@@ -17,10 +17,11 @@ int main()
     for (int j = 0; j < archetype.ChunkCount(); ++j)
     {
         auto& chunk = archetype.GetChunkAt(j);
+        auto array = chunk.GetArray(translationType);
 
         for (int i = 0; i < chunk.Count(); ++i)
         {
-            cout << chunk.GetAt(translationType, i).value.x;
+            cout << array[i].value.x;
         }
     }
 

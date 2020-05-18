@@ -104,9 +104,6 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.tpp">
-			<Option target="untitled"/>
-		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h">
 			<Option target="untitled"/>
 		</Unit>

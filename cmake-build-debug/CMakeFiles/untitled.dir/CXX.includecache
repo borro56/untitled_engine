@@ -23,8 +23,6 @@ Archetype.tpp
 /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.tpp
-Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
 ../common.h
@@ -37,22 +35,8 @@ Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.tpp
-../common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
-Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
-Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
-ComponentType.tpp
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.tpp
-
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.tpp
-ComponentType.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
-../common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
 

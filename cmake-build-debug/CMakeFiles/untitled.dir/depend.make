@@ -6,7 +6,6 @@ CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/ECS/Archetype.tpp
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/ECS/Chunk.h
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/ECS/Chunk.tpp
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/ECS/ComponentType.h
-CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../include/common.h
 CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o: ../src/ECS/Archetype.cpp
 
@@ -15,7 +14,6 @@ CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/ECS/Archetype.tpp
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/ECS/Chunk.h
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/ECS/Chunk.tpp
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/ECS/ComponentType.h
-CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../include/common.h
 CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o: ../src/ECS/Chunk.cpp
 
@@ -29,7 +27,6 @@ CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/Archetype.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/Chunk.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/Chunk.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/ComponentType.h
-CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/ComponentType.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/Entity.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/EntityManager.tpp

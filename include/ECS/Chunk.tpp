@@ -1,6 +1,3 @@
-#include "../common.h"
-#include "Chunk.h"
-
 template<class... Types> void Chunk::AddData(Types const&... rest)
 {
     AddDataRecursive(rest...);

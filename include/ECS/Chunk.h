@@ -5,6 +5,7 @@
 
 const int CHUNK_SIZE = 16384;
 
+class Archetype;
 template<class Type> class ComponentType;
 
 class Chunk

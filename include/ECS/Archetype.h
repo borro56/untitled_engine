@@ -3,18 +3,19 @@
 
 #include "../common.h"
 
+class Chunk;
+class BaseComponentType;
 template<class Type> class ComponentType;
 
 class Archetype
 {
-
 public:
     template <class... Types> static Archetype Create();
 
 private:
     int entitySize = 0;
-    vector<class BaseComponentType> componentTypes; //TODO: See if its worth making those pointers
-    vector<class Chunk*> chunks;
+    vector<BaseComponentType> componentTypes; //TODO: See if its worth making those pointers
+    vector<Chunk*> chunks;
 
 public:
     const vector<Chunk*>& Chunks() const { return chunks; } //TODO: Ver porque se puede mutar

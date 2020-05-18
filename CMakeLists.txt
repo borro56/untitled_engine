@@ -17,4 +17,4 @@ add_executable(untitled
         include/ECS/Chunk.tpp
         include/ECS/Chunk.h
         src/ECS/Archetype.cpp
-        include/ECS/ComponentType.tpp include/ECS/ComponentType.h include/common.h src/ECS/Chunk.cpp include/Components/Speed.h)
+        include/ECS/ComponentType.h include/common.h src/ECS/Chunk.cpp include/Components/Speed.h)

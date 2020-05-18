@@ -1,17 +1,16 @@
 #ifndef UNTITLED_ARCHETYPE_H
 #define UNTITLED_ARCHETYPE_H
 
-#include <cstddef>
-#include <vector>
+#include "../common.h"
 
-using namespace std;
+template<class Type> class ComponentType;
 
 class Archetype
 {
     friend class Chunk;
 
     int entitySize = 0;
-    vector<class ComponentType> componentTypes; //TODO: See if its worth making those pointers
+    vector<class BaseComponentType*> componentTypes; //TODO: See if its worth making those pointers
     vector<class Chunk*> chunks;
 
     Chunk* GetChunk();
@@ -25,16 +24,15 @@ public:
 
     template<class... Types> void AddEntity(Types const&... components);
 
-    template<class Type> ComponentType* GetType();
-
+    template<class Type> ComponentType<Type>* GetType();
 
     template <class... Types> static Archetype Create();
 
     template<class... Types> bool HasTypes();
 };
 
-#include "Chunk.h"
 #include "ComponentType.h"
+#include "Chunk.h"
 #include "Archetype.tpp"
 
 #endif

@@ -1,9 +1,8 @@
 #ifndef UNTITLED_COMPONENTTYPE_H
 #define UNTITLED_COMPONENTTYPE_H
 
-#include "../common.h"
 
-class ComponentType
+class BaseComponentType
 {
     friend class Archetype;
     friend class Chunk;
@@ -12,19 +11,25 @@ class ComponentType
     size_t componentSize;
     size_t chunkOffset;
 
-    template <class Type> static ComponentType Create();
+protected:
+    virtual void dummy() { } //TODO: Check why this is neccesary
 
-    ComponentType() { }
+    BaseComponentType(size_t componentHash, size_t componentSize) :
+            componentHash(componentHash),
+            componentSize(componentSize) { }
 
 public:
     size_t ComponentSize() { return componentSize; }
     size_t ComponentHash() { return componentHash; }
 
-    ComponentType(size_t componentHash, size_t componentSize) :
-        componentHash(componentHash),
-        componentSize(componentSize) { }
-
     void ChunkOffset(size_t chunkOffset) { this->chunkOffset = chunkOffset; } //TODO: Buscar otra forma de hacer propiedades
+};
+
+template<class Type>
+class ComponentType : public BaseComponentType
+{
+public:
+    ComponentType() : BaseComponentType(typeHash<Type>(), sizeof(Type)) {}
 };
 
 #include "Chunk.h"

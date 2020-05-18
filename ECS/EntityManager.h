@@ -1,14 +1,12 @@
 #ifndef UNTITLED_ENTITYMANAGER_H
 #define UNTITLED_ENTITYMANAGER_H
 
-#include "Entity.h"
-#include "Archetype.h"
-#include <vector>
+#include "../common.h"
 
 using namespace std;
 
 class EntityManager {
-    class vector<Archetype> archetypes;
+    class vector<class Archetype> archetypes;
     template <class... Types> Archetype* GetOrCreateArchetype();
 
 public:
@@ -16,6 +14,8 @@ public:
     template<class... Types> Archetype* GetArchetype();
 };
 
+#include "Archetype.h"
+#include "Entity.h"
 #include "EntityManager.tpp"
 
 #endif

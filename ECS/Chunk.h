@@ -5,9 +5,10 @@
 
 const int CHUNK_SIZE = 16384;
 
+template<class Type> class ComponentType;
+
 class Chunk
 {
-    friend class BaseComponentArray;
     friend class Archetype;
 
     class Archetype* archetype;
@@ -26,7 +27,7 @@ public:
 
     Chunk(Archetype* archetype) { this->archetype = archetype; }
 
-    template<class Type> Type* GetArray(class ComponentType& type);
+    template<class Type> Type* GetArray(ComponentType<Type>& type);
 };
 
 #include "Archetype.h"

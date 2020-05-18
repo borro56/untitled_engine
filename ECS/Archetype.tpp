@@ -7,8 +7,8 @@ template<class... Types> void Archetype::AddEntity(const Types &... components)
 
 template<class Type, class... Types> void Archetype::AddType()
 {
-    auto componentType = ComponentType::Create<Type>();
-    entitySize += componentType.ComponentSize();
+    auto componentType = new ComponentType<Type>();
+    entitySize += componentType->ComponentSize();
     componentTypes.push_back(componentType);
 
     if constexpr (sizeof...(Types) > 0)
@@ -17,14 +17,14 @@ template<class Type, class... Types> void Archetype::AddType()
     }
 }
 
-template<class Type> ComponentType* Archetype::GetType()
+template<class Type> ComponentType<Type>* Archetype::GetType()
 {
     auto hash = typeHash<Type>();
     for(auto& type : componentTypes)
     {
-        if(type.ComponentHash() == hash)
+        if(type->ComponentHash() == hash)
         {
-            return &type;
+            return dynamic_cast<ComponentType<Type>*>(type);
         }
     }
 
@@ -43,8 +43,8 @@ template <class... Types> Archetype Archetype::Create()
 
     for(auto& componentType : archetype.componentTypes)
     {
-        componentType.ChunkOffset(componentOffset);
-        componentOffset += entityCapacity * componentType.ComponentSize();
+        componentType->ChunkOffset(componentOffset);
+        componentOffset += entityCapacity * componentType->ComponentSize();
     }
 
     return archetype;
@@ -63,7 +63,7 @@ bool Archetype::HasTypesRecursive()
     auto hash = typeHash<Type>();
     for(auto& type : componentTypes)
     {
-        if (type.ComponentHash() == hash)
+        if (type->ComponentHash() == hash)
         {
             if constexpr (sizeof...(Types) > 0)
             {

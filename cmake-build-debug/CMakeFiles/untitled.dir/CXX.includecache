@@ -15,14 +15,12 @@
 /Users/nicolasborromeo/untitled_engine/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
-cstddef
--
-vector
--
-Chunk.h
-/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
 ComponentType.h
 /Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
 Archetype.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.tpp
 
@@ -47,8 +45,6 @@ Chunk.h
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/ComponentType.h
-../common.h
-/Users/nicolasborromeo/untitled_engine/common.h
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/ECS/Chunk.h
 ComponentType.tpp
@@ -63,12 +59,12 @@ ComponentType.h
 /Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 
 /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.h
-Entity.h
-/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/common.h
 Archetype.h
 /Users/nicolasborromeo/untitled_engine/ECS/Archetype.h
-vector
--
+Entity.h
+/Users/nicolasborromeo/untitled_engine/ECS/Entity.h
 EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/ECS/EntityManager.tpp
 

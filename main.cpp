@@ -7,15 +7,15 @@
 int main()
 {
     EntityManager em;
-    auto en1 = em.Create(Translation(Vector3(25,1,1)), Health(1));
+    em.Create(Translation(Vector3(25,1,1)), Health(1));
 
-    auto archetype = em.GetArchetype<Translation, Health>();
+    auto archetype = em.GetArchetype<Health, Translation>();
     auto chunks = archetype->Chunks();
     auto translationType = archetype->GetType<Translation>();
 
     for(auto chunk : chunks)
     {
-        auto translationArray = chunk->GetArray<Translation>(*translationType);
+        auto translationArray = chunk->GetArray(*translationType);
         for (int i = 0; i < chunk->Count(); ++i)
         {
             cout << translationArray[i].value.x;

@@ -24,7 +24,7 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
     }
 
     archetypes.push_back(Archetype::Create<Types...>());
-    return archetypes[archetypes.size() - 1]; //TODO: Ver porque no puedo retornar referencias
+    return archetypes[archetypes.size() - 1];
 }
 
 template<class... Types>

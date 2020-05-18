@@ -16,7 +16,6 @@ template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& da
     }
 }
 
-//TODO: Evaluate if its better to return the array as before
 template<class Type> Type &Chunk::GetAt(ComponentType<Type> &type, int index)
 {
     return ((Type*)(this->data + type.ChunkOffset()))[index];

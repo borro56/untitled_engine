@@ -2,7 +2,7 @@
 
 shared_ptr<Chunk> Archetype::GetChunk()
 {
-    for(auto chunk : chunks) //TODO: Ver si esto es performante
+    for(auto chunk : chunks)
     {
         if(chunk->RemainingBytes() > entitySize)
         {

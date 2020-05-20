@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/untitled.dir/app/TestSystem.cpp.o"
   "CMakeFiles/untitled.dir/src/ECS/Archetype.cpp.o"
   "CMakeFiles/untitled.dir/src/ECS/Chunk.cpp.o"
   "CMakeFiles/untitled.dir/src/ECS/Entity.cpp.o"

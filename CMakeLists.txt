@@ -20,4 +20,4 @@ add_executable(untitled
         include/ECS/ComponentType.h
         include/common.h
         src/ECS/Chunk.cpp
-        include/Components/Speed.h)
+        include/Components/Speed.h include/ECS/System.h app/TestSystem.cpp app/TestSystem.h)

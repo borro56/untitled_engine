@@ -123,6 +123,33 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
+app/TestSystem.o: app/TestSystem.cpp.o
+
+.PHONY : app/TestSystem.o
+
+# target to build an object file
+app/TestSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/TestSystem.cpp.o
+.PHONY : app/TestSystem.cpp.o
+
+app/TestSystem.i: app/TestSystem.cpp.i
+
+.PHONY : app/TestSystem.i
+
+# target to preprocess a source file
+app/TestSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/TestSystem.cpp.i
+.PHONY : app/TestSystem.cpp.i
+
+app/TestSystem.s: app/TestSystem.cpp.s
+
+.PHONY : app/TestSystem.s
+
+# target to generate assembly for a file
+app/TestSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/TestSystem.cpp.s
+.PHONY : app/TestSystem.cpp.s
+
 src/ECS/Archetype.o: src/ECS/Archetype.cpp.o
 
 .PHONY : src/ECS/Archetype.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
+	@echo "... app/TestSystem.o"
+	@echo "... app/TestSystem.i"
+	@echo "... app/TestSystem.s"
 	@echo "... src/ECS/Archetype.o"
 	@echo "... src/ECS/Archetype.i"
 	@echo "... src/ECS/Archetype.s"

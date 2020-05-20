@@ -20,7 +20,7 @@ private:
 public:
     int ChunkCount() const { return chunks.size(); }
     int EntitySize() const { return entitySize; }
-    const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
+    Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
 private:
     shared_ptr<Chunk> GetOrCreateChunk();

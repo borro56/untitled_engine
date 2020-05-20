@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
+../include/ECS/System.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/System.h
+../include/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
+../include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
+
 /Users/nicolasborromeo/untitled_engine/include/Components/Health.h
 
 /Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
@@ -46,6 +54,16 @@ Entity.h
 tpp/EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
 
+/Users/nicolasborromeo/untitled_engine/include/ECS/System.h
+cstdio
+-
+Chunk.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+ComponentType.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
@@ -76,14 +94,6 @@ iostream
 stdio.h
 -
 
-/Users/nicolasborromeo/untitled_engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
-
-/Users/nicolasborromeo/untitled_engine/src/ECS/Chunk.cpp
-../../include/ECS/Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
-
 /Users/nicolasborromeo/untitled_engine/src/main.cpp
 ../include/Components/Translation.h
 /Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
@@ -91,4 +101,6 @@ stdio.h
 /Users/nicolasborromeo/untitled_engine/include/Components/Health.h
 ../include/ECS/EntityManager.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+../app/TestSystem.h
+/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
 

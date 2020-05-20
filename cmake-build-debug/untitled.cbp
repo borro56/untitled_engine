@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/TestSystem.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/TestSystem.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Components/Health.h">
 			<Option target="untitled"/>
 		</Unit>
@@ -102,6 +108,9 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/System.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp">

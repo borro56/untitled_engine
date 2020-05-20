@@ -8,9 +8,13 @@ CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/Components/Translation.
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/Archetype.h
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/Chunk.h
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/ComponentType.h
+CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/Entity.h
+CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/System.h
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/tpp/Chunk.tpp
+CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/tpp/EntityManager.tpp
+CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/ECS/tpp/System.tpp
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/Math/Vector3.h
 CMakeFiles/untitled.dir/app/TestSystem.cpp.o: ../include/common.h
 
@@ -45,6 +49,7 @@ CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/System.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/tpp/Chunk.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/tpp/EntityManager.tpp
+CMakeFiles/untitled.dir/src/main.cpp.o: ../include/ECS/tpp/System.tpp
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/Math/Vector3.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../include/common.h
 CMakeFiles/untitled.dir/src/main.cpp.o: ../src/main.cpp

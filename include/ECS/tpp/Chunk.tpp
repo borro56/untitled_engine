@@ -1,10 +1,10 @@
-template<class... Types> void Chunk::AddData(Types const&... rest)
+template<class... Types> void Chunk::AddData(Archetype& archetype, Types const&... rest)
 {
-    AddDataRecursive(rest...);
+    AddDataRecursive(archetype, rest...);
     amount++;
 }
 
-template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& dataToAdd, Types const&... rest)
+template<class Type, class... Types> void Chunk::AddDataRecursive(Archetype& archetype, Type const& dataToAdd, Types const&... rest)
 {
     auto& type = archetype.GetType<Type>();
     auto destination = data + type.ChunkOffset() + amount * type.Size();
@@ -12,7 +12,7 @@ template<class Type, class... Types> void Chunk::AddDataRecursive(Type const& da
 
     if constexpr (sizeof...(Types) > 0)
     {
-        AddDataRecursive(rest...);
+        AddDataRecursive(archetype, rest...);
     }
 }
 

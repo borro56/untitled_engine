@@ -13,22 +13,14 @@ class Chunk
 {
     friend class Archetype;
 
-    class Archetype& archetype;
     int amount;
     byte data[CHUNK_SIZE];
 
-    template<class... Types> void AddData(Types const&... rest);
-    template<class Type, class... Types> void AddDataRecursive(Type const& data, Types const&... rest);
-
-    Chunk(const Chunk&);
-    Chunk& operator=(const Chunk&);
+    template<class... Types> void AddData(Archetype& archetype, Types const&... rest);
+    template<class Type, class... Types> void AddDataRecursive(Archetype& archetype, Type const& data, Types const&... rest);
 
 public:
-    int BytesCount() const;
-    int RemainingBytes() const { return CHUNK_SIZE - BytesCount(); }
     int Count() const { return amount; }
-
-    Chunk(Archetype& archetype) : archetype(archetype) { }
 
     template<class Type> Type* GetArray(const ComponentType<Type>& type);
 };

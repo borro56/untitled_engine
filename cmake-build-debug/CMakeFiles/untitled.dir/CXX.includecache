@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/nicolasborromeo/untitled_engine/app/TestSystem.cpp
+TestSystem.h
+/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
+
 /Users/nicolasborromeo/untitled_engine/app/TestSystem.h
 ../include/ECS/System.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/System.h
@@ -63,6 +67,10 @@ Archetype.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
 ComponentType.h
 /Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+EntityManager.h
+/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+tpp/System.tpp
+/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/System.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
 
@@ -81,6 +89,8 @@ array
 -
 typeinfo
 -
+
+/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/System.tpp
 
 /Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
 

@@ -17,13 +17,19 @@ private:
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
 
+    Archetype& operator=(const Archetype&);
+
 public:
     int ChunkCount() const { return chunks.size(); }
     int EntitySize() const { return entitySize; }
     Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
+    /*Archetype( Archetype&& other ):
+        componentTypes( std::move( other.componentTypes ) ),
+        chunks( std::move( other.chunks ) ) { }*/
+
 private:
-    shared_ptr<Chunk> GetOrCreateChunk();
+    Chunk& GetOrCreateChunk();
     template<class Type, class... Types> void AddType();
     template<class Type, class... Types> bool HasTypesRecursive() const;
     Archetype() { }

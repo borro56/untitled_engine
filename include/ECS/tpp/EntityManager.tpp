@@ -36,6 +36,5 @@ template<class... Types> const Archetype& EntityManager::GetArchetype() const
         }
     }
 
-
     throw runtime_error("No Archetype for specified types");
 }

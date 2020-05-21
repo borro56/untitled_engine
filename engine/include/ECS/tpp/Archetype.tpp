@@ -29,9 +29,9 @@ template<class Type> const ComponentType<Type>& Archetype::GetType() const
     throw runtime_error("Archetype dont have the specified type");
 }
 
-template <class... Types> Archetype Archetype::Create()
+template <class... Types> Archetype Archetype::Create(EntityManager& entityManager)
 {
-    Archetype archetype;
+    Archetype archetype(entityManager);
     archetype.componentTypes.reserve(sizeof...(Types));
     archetype.AddType<Types...>();
 

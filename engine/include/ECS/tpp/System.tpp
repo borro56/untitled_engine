@@ -12,7 +12,7 @@ T& GetComponentRef(T* array, int index)
 }
 
 template<class... Types>
-void System<Types...>::Execute(EntityManager& entityManager)
+void System<Types...>::Execute()
 {
     auto archetypes = entityManager.GetArchetypes<Types...>(); //TODO: see if we can remove the vector allocation
 

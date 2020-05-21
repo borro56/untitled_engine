@@ -17,3 +17,8 @@ Chunk& Archetype::GetOrCreateChunk()
     chunks.push_back(chunk);
     return *chunk;
 }
+
+
+Archetype::Archetype(EntityManager& entityManager) : entityManager(entityManager)
+{
+}

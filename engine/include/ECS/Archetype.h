@@ -9,33 +9,39 @@ template<class Type> class ComponentType;
 
 class Archetype
 {
+
 public:
-    template <class... Types> static Archetype Create();
+    template <class... Types> static Archetype Create(class EntityManager& manager);
 
 private:
     int entitySize = 0;
+    EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
+    vector<class ISystem*> systems;
 
 public:
     int ChunkCount() const { return chunks.size(); }
     int EntitySize() const { return entitySize; }
     Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
+    void AddSystem(ISystem* system) { systems.push_back(system); } //TODO: Make this private and friend
 
 private:
     Chunk& GetOrCreateChunk();
     template<class Type, class... Types> void AddType();
-    Archetype() { }
+    Archetype(EntityManager& entityManager);
 
 public:
     template<class... Types> void AddEntity(Types const&... components);
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;
     template<class Type> const ComponentType<Type>& GetType() const;
+
 };
 
 #include "ComponentType.h"
 #include "Chunk.h"
+#include "EntityManager.h"
 #include "tpp/Archetype.tpp"
 
 #endif

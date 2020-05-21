@@ -11,6 +11,6 @@ int main ()
     em.Create(Health(1), Translation(Vector3(77,1,1)) );
     em.Create(Translation(Vector3(97,1,1)) );
 
-    TestSystem ts;
-    ts.Execute(em);
+    TestSystem ts(em);
+    ts.Execute();
 }

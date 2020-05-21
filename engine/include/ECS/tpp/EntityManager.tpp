@@ -22,7 +22,7 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
         }
     }
 
-    archetypes.push_back(Archetype::Create<Types...>());
+    archetypes.push_back(Archetype::Create<Types...>(*this));
     return archetypes[archetypes.size() - 1];
 }
 

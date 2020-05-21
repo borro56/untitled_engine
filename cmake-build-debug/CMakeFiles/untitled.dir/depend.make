@@ -21,16 +21,22 @@ CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/common.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Archetype.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/ComponentType.h
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/common.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/src/ECS/Archetype.cpp
 
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/Archetype.h
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/ComponentType.h
+CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
+CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/common.h
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/src/ECS/Chunk.cpp
 

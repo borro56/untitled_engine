@@ -7,6 +7,9 @@
 
 class TestSystem : public System<Translation>
 {
+public:
+    TestSystem(EntityManager& entityManager) : System(entityManager) { }
+
 protected:
     void InternalExecute(Translation& a) override
     {

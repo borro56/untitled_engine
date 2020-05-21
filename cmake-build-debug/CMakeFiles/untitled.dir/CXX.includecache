@@ -37,6 +37,8 @@ ComponentType.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
+EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 tpp/Archetype.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
 
@@ -65,8 +67,6 @@ tpp/EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
-cstdio
--
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 Archetype.h

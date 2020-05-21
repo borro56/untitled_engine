@@ -131,10 +131,7 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Chunk.cpp">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Entity.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">

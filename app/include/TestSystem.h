@@ -7,7 +7,9 @@
 
 class TestSystem : public System<Translation>
 {
-public:
+    friend class EntityManager;
+
+protected:
     TestSystem(EntityManager& entityManager) : System(entityManager) { }
 
 protected:

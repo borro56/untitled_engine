@@ -11,7 +11,6 @@ add_executable(untitled
         engine/include/ECS/Archetype.h
         engine/include/ECS/tpp/EntityManager.tpp
         engine/include/ECS/EntityManager.h
-        engine/src/ECS/Entity.cpp
         engine/include/ECS/Entity.h
         engine/include/Components/Health.h
         engine/include/ECS/tpp/Chunk.tpp
@@ -19,5 +18,4 @@ add_executable(untitled
         engine/src/ECS/Archetype.cpp
         engine/include/ECS/ComponentType.h
         engine/include/common.h
-        engine/src/ECS/Chunk.cpp
-        engine/include/Components/Speed.h engine/include/ECS/System.h app/include/TestSystem.h)
+        engine/include/Components/Speed.h engine/include/ECS/System.h app/include/TestSystem.h engine/src/ECS/EntityManager.cpp)

@@ -3,36 +3,31 @@
 
 class ISystem
 {
+    friend class EntityManager;
+
 protected:
     EntityManager& entityManager;
 
-public:
-    virtual void Execute() = 0;
-
     ISystem(EntityManager& entityManager) : entityManager(entityManager) {  }
+
+public:
+    //virtual void Execute() = 0;
+    virtual void Execute(Archetype& archetype, Chunk& chunk) = 0;
+
 };
 
 template<class... Types>
 class System : public ISystem
 {
-    friend class EntityManager;
-
     void InternalExecuteArray(Chunk& chunk, Types*... types);
 
 protected:
     virtual void InternalExecute(Types&... types) = 0;
 
-public:
-    System(EntityManager& entityManager) : ISystem(entityManager)
-    {
-        auto archetypes = entityManager.GetArchetypes<Types...>();
-        for(auto archetype : archetypes)
-        {
-            archetype->AddSystem(this);
-        }
-    }
+    System(EntityManager& entityManager);
 
-    void Execute() override;
+public:
+    void Execute(Archetype& archetype,Chunk& chunk) override;
 };
 
 #include "Chunk.h"

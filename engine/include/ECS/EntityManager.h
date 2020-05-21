@@ -6,12 +6,16 @@
 using namespace std;
 
 class EntityManager {
-    class vector<class Archetype> archetypes;
+    vector<class ISystem*> systems;
+    vector<class Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
 
 public:
     template<class... Types> const class Entity Create(Types const&... components);
     template<class... Types> vector<Archetype*> GetArchetypes();
+    void ExecuteSystems();
+
+    template<class SystemType> SystemType* GetOrCreateSystem();
 };
 
 #include "Archetype.h"

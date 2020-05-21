@@ -177,59 +177,32 @@ engine/src/ECS/Archetype.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.s
 .PHONY : engine/src/ECS/Archetype.cpp.s
 
-engine/src/ECS/Chunk.o: engine/src/ECS/Chunk.cpp.o
+engine/src/ECS/EntityManager.o: engine/src/ECS/EntityManager.cpp.o
 
-.PHONY : engine/src/ECS/Chunk.o
-
-# target to build an object file
-engine/src/ECS/Chunk.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o
-.PHONY : engine/src/ECS/Chunk.cpp.o
-
-engine/src/ECS/Chunk.i: engine/src/ECS/Chunk.cpp.i
-
-.PHONY : engine/src/ECS/Chunk.i
-
-# target to preprocess a source file
-engine/src/ECS/Chunk.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.i
-.PHONY : engine/src/ECS/Chunk.cpp.i
-
-engine/src/ECS/Chunk.s: engine/src/ECS/Chunk.cpp.s
-
-.PHONY : engine/src/ECS/Chunk.s
-
-# target to generate assembly for a file
-engine/src/ECS/Chunk.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.s
-.PHONY : engine/src/ECS/Chunk.cpp.s
-
-engine/src/ECS/Entity.o: engine/src/ECS/Entity.cpp.o
-
-.PHONY : engine/src/ECS/Entity.o
+.PHONY : engine/src/ECS/EntityManager.o
 
 # target to build an object file
-engine/src/ECS/Entity.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Entity.cpp.o
-.PHONY : engine/src/ECS/Entity.cpp.o
+engine/src/ECS/EntityManager.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
+.PHONY : engine/src/ECS/EntityManager.cpp.o
 
-engine/src/ECS/Entity.i: engine/src/ECS/Entity.cpp.i
+engine/src/ECS/EntityManager.i: engine/src/ECS/EntityManager.cpp.i
 
-.PHONY : engine/src/ECS/Entity.i
+.PHONY : engine/src/ECS/EntityManager.i
 
 # target to preprocess a source file
-engine/src/ECS/Entity.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Entity.cpp.i
-.PHONY : engine/src/ECS/Entity.cpp.i
+engine/src/ECS/EntityManager.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.i
+.PHONY : engine/src/ECS/EntityManager.cpp.i
 
-engine/src/ECS/Entity.s: engine/src/ECS/Entity.cpp.s
+engine/src/ECS/EntityManager.s: engine/src/ECS/EntityManager.cpp.s
 
-.PHONY : engine/src/ECS/Entity.s
+.PHONY : engine/src/ECS/EntityManager.s
 
 # target to generate assembly for a file
-engine/src/ECS/Entity.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/Entity.cpp.s
-.PHONY : engine/src/ECS/Entity.cpp.s
+engine/src/ECS/EntityManager.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.s
+.PHONY : engine/src/ECS/EntityManager.cpp.s
 
 # Help Target
 help:
@@ -246,12 +219,9 @@ help:
 	@echo "... engine/src/ECS/Archetype.o"
 	@echo "... engine/src/ECS/Archetype.i"
 	@echo "... engine/src/ECS/Archetype.s"
-	@echo "... engine/src/ECS/Chunk.o"
-	@echo "... engine/src/ECS/Chunk.i"
-	@echo "... engine/src/ECS/Chunk.s"
-	@echo "... engine/src/ECS/Entity.o"
-	@echo "... engine/src/ECS/Entity.i"
-	@echo "... engine/src/ECS/Entity.s"
+	@echo "... engine/src/ECS/EntityManager.o"
+	@echo "... engine/src/ECS/EntityManager.i"
+	@echo "... engine/src/ECS/EntityManager.s"
 .PHONY : help
 
 

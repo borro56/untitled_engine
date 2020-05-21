@@ -18,7 +18,7 @@ private:
     EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
-    vector<class ISystem*> systems;
+    vector<class ISystem*> systems; //TODO: Replace this with shared_ptr
 
 public:
     int ChunkCount() const { return chunks.size(); }
@@ -36,12 +36,13 @@ public:
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;
     template<class Type> const ComponentType<Type>& GetType() const;
+    void ExecuteSystems();
 
 };
 
+//TODO: Remove non exposed headers
 #include "ComponentType.h"
 #include "Chunk.h"
-#include "EntityManager.h"
 #include "tpp/Archetype.tpp"
 
 #endif

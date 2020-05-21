@@ -6,8 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nicolasborromeo/untitled_engine/app/src/main.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/app/src/main.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o"
-  "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Chunk.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o"
-  "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Entity.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/Entity.cpp.o"
+  "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

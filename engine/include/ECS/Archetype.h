@@ -9,6 +9,7 @@ template<class Type> class ComponentType;
 
 class Archetype
 {
+    friend class SystemThread;
 
 public:
     template <class... Types> static Archetype Create(class EntityManager& manager);
@@ -31,12 +32,14 @@ private:
     template<class Type, class... Types> void AddType();
     Archetype(EntityManager& entityManager);
 
+    void ExecuteSystem(Chunk& chunk);
+
 public:
     template<class... Types> void AddEntity(Types const&... components);
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;
     template<class Type> const ComponentType<Type>& GetType() const;
-    void ExecuteSystems();
+    void ExecuteSystems(vector<class SystemThread*>& vector);
 
 };
 

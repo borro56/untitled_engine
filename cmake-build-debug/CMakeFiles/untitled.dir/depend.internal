@@ -12,6 +12,7 @@ CMakeFiles/untitled.dir/app/src/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
@@ -25,6 +26,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
@@ -37,8 +39,18 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/common.h
  /Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
+ /Users/nicolasborromeo/untitled_engine/engine/include/common.h
+ /Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp

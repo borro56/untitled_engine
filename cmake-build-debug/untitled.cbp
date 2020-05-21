@@ -113,6 +113,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp">
 			<Option target="untitled"/>
 		</Unit>
@@ -132,6 +135,9 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">

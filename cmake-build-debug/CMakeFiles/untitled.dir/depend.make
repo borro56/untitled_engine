@@ -11,6 +11,7 @@ CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/ComponentType.
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/Entity.h
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/System.h
+CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/SystemThread.h
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
 CMakeFiles/untitled.dir/app/src/main.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
@@ -24,6 +25,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Co
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Entity.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/System.h
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/SystemThread.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
@@ -36,9 +38,19 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/EC
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/Entity.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/EntityManager.h
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/SystemThread.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/common.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/src/ECS/EntityManager.cpp
+
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/Archetype.h
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/Chunk.h
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/ComponentType.h
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/SystemThread.h
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/tpp/Archetype.tpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/include/common.h
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: ../engine/src/ECS/SystemThread.cpp
 

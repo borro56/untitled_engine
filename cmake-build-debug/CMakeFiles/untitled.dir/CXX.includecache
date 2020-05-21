@@ -61,6 +61,8 @@ Archetype.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 Entity.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+SystemThread.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
 tpp/EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 
@@ -76,7 +78,15 @@ EntityManager.h
 tpp/System.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
 
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
+../Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
@@ -107,4 +117,22 @@ iostream
 -
 stdio.h
 -
+thread
+-
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
+../../include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+../../include/ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+../../include/ECS/SystemThread.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp
+../../include/ECS/SystemThread.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
 

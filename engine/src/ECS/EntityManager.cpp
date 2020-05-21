@@ -1,9 +1,12 @@
 #include "../../include/ECS/EntityManager.h"
 
-void EntityManager::ExecuteSystems()
+vector<SystemThread*> EntityManager::ExecuteSystems()
 {
+    vector<SystemThread*> threads;
     for(auto& archetype : archetypes)
     {
-        archetype.ExecuteSystems();
+        archetype.ExecuteSystems(threads);
     }
+
+    return threads;
 }

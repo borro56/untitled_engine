@@ -13,7 +13,10 @@ int main ()
 
     em.GetOrCreateSystem<TestSystem>();
 
-    //(TestSystem(em));
+    auto threads = em.ExecuteSystems();
 
-    em.ExecuteSystems();
+    for(auto thread : threads)
+    {
+        thread->Thread().join();
+    }
 }

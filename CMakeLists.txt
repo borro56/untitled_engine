@@ -18,4 +18,7 @@ add_executable(untitled
         engine/src/ECS/Archetype.cpp
         engine/include/ECS/ComponentType.h
         engine/include/common.h
-        engine/include/Components/Speed.h engine/include/ECS/System.h app/include/TestSystem.h engine/src/ECS/EntityManager.cpp)
+        engine/include/Components/Speed.h
+        engine/include/ECS/System.h
+        app/include/TestSystem.h
+        engine/src/ECS/EntityManager.cpp engine/include/ECS/SystemThread.h engine/src/ECS/SystemThread.cpp)

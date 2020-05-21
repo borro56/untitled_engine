@@ -14,12 +14,15 @@ T& GetComponentRef(T* array, int index)
 template<class... Types>
 void System<Types...>::Execute(EntityManager& entityManager)
 {
-    auto& archetype = entityManager.GetArchetype<Types...>();
+    auto archetypes = entityManager.GetArchetypes<Types...>(); //TODO: see if we can remove the vector allocation
 
-    for (int i = 0; i < archetype.ChunkCount(); ++i)
+    for (auto& archetype : archetypes)
     {
-        auto& chunk = archetype.GetChunkAt(i);
-        InternalExecuteArray(chunk, GetComponentArray<Types>(archetype, chunk)...);
+        for (int i = 0; i < archetype->ChunkCount(); ++i)
+        {
+            auto& chunk = archetype->GetChunkAt(i);
+            InternalExecuteArray(chunk, GetComponentArray<Types>(*archetype, chunk)...);
+        }
     }
 }
 

@@ -17,7 +17,6 @@ protected:
 
 public:
     void Execute(EntityManager& entityManager);
-    void Execute(Chunk& chunk);
 };
 
 #include "tpp/System.tpp"

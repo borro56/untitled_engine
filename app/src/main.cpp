@@ -1,7 +1,7 @@
-#include "../include/Components/Translation.h"
-#include "../include/Components/Health.h"
-#include "../include/ECS/EntityManager.h"
-#include "../app/TestSystem.h"
+#include "../../engine/include/Components/Translation.h"
+#include "../../engine/include/Components/Health.h"
+#include "../../engine/include/ECS/EntityManager.h"
+#include "../include/TestSystem.h"
 
 int main ()
 {

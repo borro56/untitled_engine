@@ -6,83 +6,89 @@
 
 #IncludeRegexTransform: 
 
-/Users/nicolasborromeo/untitled_engine/app/TestSystem.cpp
-TestSystem.h
-/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
+/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
+../../engine/include/ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+../../engine/include/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
+../../engine/include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
 
-/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
-../include/ECS/System.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/System.h
-../include/Components/Translation.h
-/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
-../include/Components/Health.h
-/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/app/src/main.cpp
+../../engine/include/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
+../../engine/include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
+../../engine/include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
+../include/TestSystem.h
+/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
 
-/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
 
-/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
 ../Math/Vector3.h
-/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ../common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 ComponentType.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 tpp/Archetype.tpp
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 ../common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ComponentType.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 tpp/Chunk.tpp
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../common.h
-/Users/nicolasborromeo/untitled_engine/include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 Entity.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 tpp/EntityManager.tpp
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 cstdio
 -
 Chunk.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ComponentType.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 EntityManager.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 tpp/System.tpp
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/System.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 ../EntityManager.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../Entity.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 ../Archetype.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 vector
 -
 array
@@ -90,11 +96,11 @@ array
 typeinfo
 -
 
-/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/System.tpp
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
 
-/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
-/Users/nicolasborromeo/untitled_engine/include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 cstddef
 -
 vector
@@ -103,14 +109,4 @@ iostream
 -
 stdio.h
 -
-
-/Users/nicolasborromeo/untitled_engine/src/main.cpp
-../include/Components/Translation.h
-/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h
-../include/Components/Health.h
-/Users/nicolasborromeo/untitled_engine/include/Components/Health.h
-../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h
-../app/TestSystem.h
-/Users/nicolasborromeo/untitled_engine/app/TestSystem.h
 

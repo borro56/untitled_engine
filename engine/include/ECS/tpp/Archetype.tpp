@@ -51,10 +51,10 @@ template<class... Types>
 bool Archetype::HasTypes() const
 {
     if (sizeof...(Types) != componentTypes.size()) return false;
-    return HasTypesRecursive<Types...>();
+    return ContainsTypes<Types...>();
 }
 
-template<class Type, class... Types> bool Archetype::HasTypesRecursive() const
+template<class Type, class... Types> bool Archetype::ContainsTypes() const
 {
     auto id = type_id<Type>;
     for(auto& type : componentTypes)
@@ -63,7 +63,7 @@ template<class Type, class... Types> bool Archetype::HasTypesRecursive() const
         {
             if constexpr (sizeof...(Types) > 0)
             {
-                return HasTypesRecursive<Types...>();
+                return ContainsTypes<Types...>();
             }
 
             return true;

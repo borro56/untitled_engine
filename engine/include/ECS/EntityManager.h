@@ -11,7 +11,7 @@ class EntityManager {
 
 public:
     template<class... Types> const class Entity Create(Types const&... components);
-    template<class... Types> const Archetype& GetArchetype() const;
+    template<class... Types> vector<Archetype*> GetArchetypes();
 };
 
 #include "Archetype.h"

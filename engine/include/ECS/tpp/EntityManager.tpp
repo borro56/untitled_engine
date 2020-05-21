@@ -26,15 +26,17 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
     return archetypes[archetypes.size() - 1];
 }
 
-template<class... Types> const Archetype& EntityManager::GetArchetype() const
+template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()
 {
+    vector<Archetype*> matchingArchetypes;
+
     for(auto& archetype : archetypes)
     {
-        if(archetype.HasTypes<Types...>())
+        if(archetype.ContainsTypes<Types...>())
         {
-            return archetype;
+            matchingArchetypes.push_back(&archetype);
         }
     }
 
-    throw runtime_error("No Archetype for specified types");
+    return matchingArchetypes;
 }

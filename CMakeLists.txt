@@ -4,20 +4,20 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(untitled
-        src/main.cpp
-        include/Math/Vector3.h
-        include/Components/Translation.h
-        include/ECS/tpp/Archetype.tpp
-        include/ECS/Archetype.h
-        include/ECS/tpp/EntityManager.tpp
-        include/ECS/EntityManager.h
-        src/ECS/Entity.cpp
-        include/ECS/Entity.h
-        include/Components/Health.h
-        include/ECS/tpp/Chunk.tpp
-        include/ECS/Chunk.h
-        src/ECS/Archetype.cpp
-        include/ECS/ComponentType.h
-        include/common.h
-        src/ECS/Chunk.cpp
-        include/Components/Speed.h include/ECS/System.h app/TestSystem.cpp app/TestSystem.h)
+        app/src/main.cpp
+        engine/include/Math/Vector3.h
+        engine/include/Components/Translation.h
+        engine/include/ECS/tpp/Archetype.tpp
+        engine/include/ECS/Archetype.h
+        engine/include/ECS/tpp/EntityManager.tpp
+        engine/include/ECS/EntityManager.h
+        engine/src/ECS/Entity.cpp
+        engine/include/ECS/Entity.h
+        engine/include/Components/Health.h
+        engine/include/ECS/tpp/Chunk.tpp
+        engine/include/ECS/Chunk.h
+        engine/src/ECS/Archetype.cpp
+        engine/include/ECS/ComponentType.h
+        engine/include/common.h
+        engine/src/ECS/Chunk.cpp
+        engine/include/Components/Speed.h engine/include/ECS/System.h app/include/TestSystem.h)

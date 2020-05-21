@@ -80,64 +80,61 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/TestSystem.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/TestSystem.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/src/main.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Components/Health.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Components/Speed.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Components/Speed.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Components/Translation.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Archetype.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Chunk.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/ComponentType.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/Entity.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/EntityManager.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/System.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Archetype.tpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Archetype.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/Chunk.tpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/ECS/tpp/EntityManager.tpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/Math/Vector3.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/include/common.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/common.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/src/ECS/Archetype.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/src/ECS/Chunk.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Chunk.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/src/ECS/Entity.cpp">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/src/main.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Entity.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">

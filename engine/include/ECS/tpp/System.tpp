@@ -1,3 +1,6 @@
+
+#include "../System.h"
+
 template<class T>
 T* GetComponentArray(const Archetype& archetype, Chunk& chunk)
 {
@@ -27,8 +30,9 @@ void System<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types)
 }
 
 template<class... Types>
-System<Types...>::System(EntityManager& entityManager) : ISystem(entityManager)
+void System<Types...>::Init(EntityManager &entityManager)
 {
+    this->entityManager = &entityManager;
     auto archetypes = entityManager.GetArchetypes<Types...>();
     for(auto archetype : archetypes)
     {

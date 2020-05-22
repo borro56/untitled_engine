@@ -110,6 +110,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ISystem.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h">
 			<Option target="untitled"/>
 		</Unit>
@@ -135,6 +138,9 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp">

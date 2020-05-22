@@ -44,7 +44,8 @@ template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()
 template<class SystemType>
 SystemType *EntityManager::GetOrCreateSystem()
 {
-    auto system = new SystemType(*this);
+    auto system = new SystemType();
+    system->Init(*this);
     systems.push_back(system);
     return system;
 }

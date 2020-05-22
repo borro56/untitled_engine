@@ -21,4 +21,4 @@ add_executable(untitled
         engine/include/Components/Speed.h
         engine/include/ECS/System.h
         app/include/TestSystem.h
-        engine/src/ECS/EntityManager.cpp engine/include/ECS/SystemThread.h engine/src/ECS/SystemThread.cpp)
+        engine/src/ECS/EntityManager.cpp engine/include/ECS/SystemThread.h engine/src/ECS/SystemThread.cpp engine/src/ECS/ISystem.cpp engine/include/ECS/ISystem.h)

@@ -204,6 +204,33 @@ engine/src/ECS/EntityManager.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.s
 .PHONY : engine/src/ECS/EntityManager.cpp.s
 
+engine/src/ECS/ISystem.o: engine/src/ECS/ISystem.cpp.o
+
+.PHONY : engine/src/ECS/ISystem.o
+
+# target to build an object file
+engine/src/ECS/ISystem.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o
+.PHONY : engine/src/ECS/ISystem.cpp.o
+
+engine/src/ECS/ISystem.i: engine/src/ECS/ISystem.cpp.i
+
+.PHONY : engine/src/ECS/ISystem.i
+
+# target to preprocess a source file
+engine/src/ECS/ISystem.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.i
+.PHONY : engine/src/ECS/ISystem.cpp.i
+
+engine/src/ECS/ISystem.s: engine/src/ECS/ISystem.cpp.s
+
+.PHONY : engine/src/ECS/ISystem.s
+
+# target to generate assembly for a file
+engine/src/ECS/ISystem.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s
+.PHONY : engine/src/ECS/ISystem.cpp.s
+
 engine/src/ECS/SystemThread.o: engine/src/ECS/SystemThread.cpp.o
 
 .PHONY : engine/src/ECS/SystemThread.o
@@ -249,6 +276,9 @@ help:
 	@echo "... engine/src/ECS/EntityManager.o"
 	@echo "... engine/src/ECS/EntityManager.i"
 	@echo "... engine/src/ECS/EntityManager.s"
+	@echo "... engine/src/ECS/ISystem.o"
+	@echo "... engine/src/ECS/ISystem.i"
+	@echo "... engine/src/ECS/ISystem.s"
 	@echo "... engine/src/ECS/SystemThread.o"
 	@echo "... engine/src/ECS/SystemThread.i"
 	@echo "... engine/src/ECS/SystemThread.s"

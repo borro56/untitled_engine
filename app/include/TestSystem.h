@@ -7,11 +7,6 @@
 
 class TestSystem : public System<Translation>
 {
-    friend class EntityManager;
-
-protected:
-    TestSystem(EntityManager& entityManager) : System(entityManager) { }
-
 protected:
     void InternalExecute(Translation& a) override
     {

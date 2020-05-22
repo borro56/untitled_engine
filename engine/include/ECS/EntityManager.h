@@ -21,6 +21,7 @@ public:
 #include "Archetype.h"
 #include "Entity.h"
 #include "SystemThread.h"
+#include "System.h"
 #include "tpp/EntityManager.tpp"
 
 #endif

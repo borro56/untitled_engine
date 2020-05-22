@@ -63,10 +63,16 @@ Entity.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 SystemThread.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
+System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 tpp/EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ISystem.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+ISystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ISystem.h
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 Archetype.h
@@ -105,6 +111,8 @@ typeinfo
 -
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
+../System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
@@ -125,14 +133,8 @@ thread
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ../../include/ECS/System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
-../../include/ECS/SystemThread.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
 
 /Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
 ../../include/ECS/EntityManager.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp
-../../include/ECS/SystemThread.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
 

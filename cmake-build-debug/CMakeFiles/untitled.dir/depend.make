@@ -58,6 +58,8 @@ CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Framewo
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4.inl
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4_simd.inl
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/exponential.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.inl
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x3.hpp
@@ -94,6 +96,11 @@ CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Framewo
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.inl
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_transform.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.inl
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_int_sized.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_uint_sized.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_bool2.hpp
@@ -129,6 +136,10 @@ CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Framewo
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.inl
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.hpp
+CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.inl
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
@@ -245,6 +256,8 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/D
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4.inl
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4_simd.inl
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/exponential.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.inl
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x3.hpp
@@ -281,6 +294,11 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/D
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.inl
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.inl
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_int_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_uint_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_bool2.hpp
@@ -316,6 +334,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/D
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.inl
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.inl
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
@@ -428,6 +450,8 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborrom
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4.inl
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4_simd.inl
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/exponential.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.inl
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x3.hpp
@@ -464,6 +488,11 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborrom
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.inl
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.inl
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_int_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_uint_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_bool2.hpp
@@ -499,6 +528,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborrom
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.inl
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.inl
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
@@ -613,6 +646,8 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborrome
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4.inl
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_vec4_simd.inl
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/exponential.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_clip_space.inl
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x2_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_double2x3.hpp
@@ -649,6 +684,11 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborrome
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_projection.inl
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_constants.inl
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_int_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/scalar_uint_sized.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_bool2.hpp
@@ -684,6 +724,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborrome
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/constants.inl
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.hpp
+CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/gtc/matrix_transform.inl
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp

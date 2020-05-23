@@ -10,11 +10,13 @@
 #include <iostream>
 #include <thread>
 #include <optional>
+#include <array>
 
 #include <stdio.h>
 #include <GLFW/glfw3.h>
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
+#include <glm/glm.hpp>
 
 using namespace std;
 

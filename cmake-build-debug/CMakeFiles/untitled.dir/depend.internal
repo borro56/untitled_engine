@@ -16,12 +16,20 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_exponential_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/qualifier.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/setup.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x3.hpp
@@ -119,7 +127,10 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint3_sized.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4_sized.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x4.hpp
@@ -130,12 +141,15 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/matrix.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/packing.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/common.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/exponential.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/geometric.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/integer.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/matrix.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/neon.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/platform.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/trigonometric.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec4.hpp
@@ -189,12 +203,20 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_exponential_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/qualifier.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/setup.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x3.hpp
@@ -292,7 +314,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint3_sized.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4_sized.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x4.hpp
@@ -303,12 +328,15 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/matrix.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/packing.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/common.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/exponential.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/geometric.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/integer.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/matrix.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/neon.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/platform.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/trigonometric.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec4.hpp
@@ -358,12 +386,20 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_exponential_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/qualifier.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/setup.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x3.hpp
@@ -461,7 +497,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint3_sized.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4_sized.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x4.hpp
@@ -472,12 +511,15 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/matrix.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/packing.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/common.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/exponential.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/geometric.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/integer.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/matrix.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/neon.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/platform.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/trigonometric.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec4.hpp
@@ -529,12 +571,20 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_exponential_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_geometric_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_integer_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_matrix_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_packing_simd.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric.inl
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_trigonometric_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/func_vector_relational_simd.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/qualifier.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/setup.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_half.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x2.inl
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/type_mat2x3.hpp
@@ -632,7 +682,10 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint3_sized.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/ext/vector_uint4_sized.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/fwd.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/geometric.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/glm.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/integer.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat2x4.hpp
@@ -643,12 +696,15 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/mat4x4.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/matrix.hpp
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/packing.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/common.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/exponential.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/geometric.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/integer.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/matrix.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/neon.h
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/simd/platform.h
+ /Users/nicolasborromeo/Documents/Frameworks/glm/glm/trigonometric.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec2.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec3.hpp
  /Users/nicolasborromeo/Documents/Frameworks/glm/glm/vec4.hpp

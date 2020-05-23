@@ -1,17 +1,18 @@
 #ifndef UNTITLED_COMMON_H
 #define UNTITLED_COMMON_H
 
+#define GLFW_INCLUDE_VULKAN
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+
 #include <cstddef>
 #include <vector>
 #include <iostream>
-#include <stdio.h>
 #include <thread>
+#include <optional>
 
-#define GLFW_INCLUDE_VULKAN
+#include <stdio.h>
 #include <GLFW/glfw3.h>
-
-#define GLM_FORCE_RADIANS
-#define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
 

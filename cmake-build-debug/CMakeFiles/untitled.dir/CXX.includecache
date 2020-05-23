@@ -1023,6 +1023,16 @@ vk_platform.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 include/TestSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
+iostream
+-
+stdexcept
+-
+cstdlib
+-
+set
+-
+cstdint
+-
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
 
@@ -1123,9 +1133,11 @@ vector
 -
 iostream
 -
-stdio.h
--
 thread
+-
+optional
+-
+stdio.h
 -
 GLFW/glfw3.h
 -
@@ -1133,18 +1145,4 @@ glm/vec4.hpp
 -
 glm/mat4x4.hpp
 -
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
-../../include/ECS/System.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp
-../../include/ECS/SystemThread.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/SystemThread.h
 

@@ -37,6 +37,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.5/CMakeSystem.cmake"
+  "../engine/shaders/frag.spv"
+  "../engine/shaders/vert.spv"
   )
 
 # The corresponding makefile is:
@@ -47,6 +49,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "shaders/vert.spv"
+  "shaders/frag.spv"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

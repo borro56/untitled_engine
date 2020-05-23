@@ -17,3 +17,14 @@ add_executable(untitled
 
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)
+
+
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/engine/shaders/vert.spv
+        ${CMAKE_CURRENT_BINARY_DIR}/shaders/vert.spv
+        COPYONLY)
+
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/engine/shaders/frag.spv
+        ${CMAKE_CURRENT_BINARY_DIR}/shaders/frag.spv
+        COPYONLY)

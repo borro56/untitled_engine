@@ -5,7 +5,7 @@
 		<Option title="untitled"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\engine\;CMake Files\engine\shaders\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/nicolasborromeo/untitled_engine/cmake-build-debug"/>
@@ -103,6 +103,12 @@
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/shaders/frag.spv">
+			<Option virtualFolder="CMake Files\engine\shaders\"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/shaders/vert.spv">
+			<Option virtualFolder="CMake Files\engine\shaders\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

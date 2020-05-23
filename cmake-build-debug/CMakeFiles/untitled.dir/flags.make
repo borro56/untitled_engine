@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/Users/nicolasborromeo/Documents/Frameworks/glm -I/Users/nicolasborromeo/Documents/Frameworks/glfw/include -I/Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include 
 

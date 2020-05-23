@@ -13,6 +13,7 @@ class Chunk
 {
     friend class Archetype;
 
+private:
     int amount;
     byte data[CHUNK_SIZE];
 
@@ -22,7 +23,7 @@ class Chunk
 public:
     int Count() const { return amount; }
 
-    template<class Type> Type* GetArray(const ComponentType<Type>& type);
+    template<class Type> Type* GetArray(const ComponentType<Type>& type) const;
 };
 
 #include "Archetype.h"

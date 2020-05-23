@@ -7,6 +7,14 @@
 #include <stdio.h>
 #include <thread>
 
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/vec4.hpp>
+#include <glm/mat4x4.hpp>
+
 using namespace std;
 
 inline int type_id_seq = 0;

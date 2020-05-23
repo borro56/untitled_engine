@@ -22,7 +22,7 @@ public:
 
     }
 
-    class thread& Thread() { return thread; }
+    class thread& Thread() { return thread; } //TODO: See why cant set this as const
 
     void Execute();
 };

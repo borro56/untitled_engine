@@ -3,22 +3,17 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(
+        /Users/nicolasborromeo/Documents/Frameworks/glm
+        /Users/nicolasborromeo/Documents/Frameworks/glfw/include
+        /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include)
+
 add_executable(untitled
-        app/src/main.cpp
-        engine/include/Math/Vector3.h
-        engine/include/Components/Translation.h
-        engine/include/ECS/tpp/Archetype.tpp
-        engine/include/ECS/Archetype.h
-        engine/include/ECS/tpp/EntityManager.tpp
-        engine/include/ECS/EntityManager.h
-        engine/include/ECS/Entity.h
-        engine/include/Components/Health.h
-        engine/include/ECS/tpp/Chunk.tpp
-        engine/include/ECS/Chunk.h
+        app/main.cpp
         engine/src/ECS/Archetype.cpp
-        engine/include/ECS/ComponentType.h
-        engine/include/common.h
-        engine/include/Components/Speed.h
-        engine/include/ECS/System.h
-        app/include/TestSystem.h
-        engine/src/ECS/EntityManager.cpp engine/include/ECS/SystemThread.h engine/src/ECS/SystemThread.cpp engine/src/ECS/ISystem.cpp engine/include/ECS/ISystem.h)
+        engine/src/ECS/EntityManager.cpp
+        engine/src/ECS/SystemThread.cpp
+        engine/src/ECS/ISystem.cpp)
+
+target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
+target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)

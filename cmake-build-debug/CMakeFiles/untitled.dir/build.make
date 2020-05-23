@@ -57,18 +57,18 @@ include CMakeFiles/untitled.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/untitled.dir/flags.make
 
-CMakeFiles/untitled.dir/app/src/main.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/app/src/main.cpp.o: ../app/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/app/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/app/src/main.cpp.o -c /Users/nicolasborromeo/untitled_engine/app/src/main.cpp
+CMakeFiles/untitled.dir/app/main.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/app/main.cpp.o: ../app/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/app/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/app/main.cpp.o -c /Users/nicolasborromeo/untitled_engine/app/main.cpp
 
-CMakeFiles/untitled.dir/app/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/app/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolasborromeo/untitled_engine/app/src/main.cpp > CMakeFiles/untitled.dir/app/src/main.cpp.i
+CMakeFiles/untitled.dir/app/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/app/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolasborromeo/untitled_engine/app/main.cpp > CMakeFiles/untitled.dir/app/main.cpp.i
 
-CMakeFiles/untitled.dir/app/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/app/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolasborromeo/untitled_engine/app/src/main.cpp -o CMakeFiles/untitled.dir/app/src/main.cpp.s
+CMakeFiles/untitled.dir/app/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/app/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolasborromeo/untitled_engine/app/main.cpp -o CMakeFiles/untitled.dir/app/main.cpp.s
 
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/src/ECS/Archetype.cpp
@@ -124,7 +124,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s: cmake_force
 
 # Object files for target untitled
 untitled_OBJECTS = \
-"CMakeFiles/untitled.dir/app/src/main.cpp.o" \
+"CMakeFiles/untitled.dir/app/main.cpp.o" \
 "CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o" \
 "CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o" \
 "CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o" \
@@ -133,12 +133,14 @@ untitled_OBJECTS = \
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
-untitled: CMakeFiles/untitled.dir/app/src/main.cpp.o
+untitled: CMakeFiles/untitled.dir/app/main.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
+untitled: /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib
+untitled: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib
 untitled: CMakeFiles/untitled.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)

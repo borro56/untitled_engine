@@ -123,32 +123,32 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-app/src/main.o: app/src/main.cpp.o
+app/main.o: app/main.cpp.o
 
-.PHONY : app/src/main.o
+.PHONY : app/main.o
 
 # target to build an object file
-app/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/src/main.cpp.o
-.PHONY : app/src/main.cpp.o
+app/main.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/main.cpp.o
+.PHONY : app/main.cpp.o
 
-app/src/main.i: app/src/main.cpp.i
+app/main.i: app/main.cpp.i
 
-.PHONY : app/src/main.i
+.PHONY : app/main.i
 
 # target to preprocess a source file
-app/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/src/main.cpp.i
-.PHONY : app/src/main.cpp.i
+app/main.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/main.cpp.i
+.PHONY : app/main.cpp.i
 
-app/src/main.s: app/src/main.cpp.s
+app/main.s: app/main.cpp.s
 
-.PHONY : app/src/main.s
+.PHONY : app/main.s
 
 # target to generate assembly for a file
-app/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/src/main.cpp.s
-.PHONY : app/src/main.cpp.s
+app/main.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/main.cpp.s
+.PHONY : app/main.cpp.s
 
 engine/src/ECS/Archetype.o: engine/src/ECS/Archetype.cpp.o
 
@@ -267,9 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
-	@echo "... app/src/main.o"
-	@echo "... app/src/main.i"
-	@echo "... app/src/main.s"
+	@echo "... app/main.o"
+	@echo "... app/main.i"
+	@echo "... app/main.s"
 	@echo "... engine/src/ECS/Archetype.o"
 	@echo "... engine/src/ECS/Archetype.i"
 	@echo "... engine/src/ECS/Archetype.s"

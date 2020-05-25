@@ -7,6 +7,9 @@ class ISystem
 
     virtual void Init(class EntityManager& entityManager) = 0;
 
+    virtual void Prepare() { }
+    virtual void Finish() { }
+
 public:
     virtual void Execute(class Archetype& archetype, class Chunk& chunk) = 0;
 };

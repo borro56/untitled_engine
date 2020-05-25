@@ -1,12 +1,25 @@
 #include "../../include/ECS/EntityManager.h"
 
-vector<SystemThread*> EntityManager::ExecuteSystems()
+void EntityManager::ExecuteSystems()
 {
+    for(auto& system : systems)
+    {
+        system->Prepare();
+    }
+
     vector<SystemThread*> threads;
     for(auto& archetype : archetypes)
     {
         archetype.ExecuteSystems(threads);
     }
 
-    return threads;
+    for(auto thread : threads)
+    {
+        thread->Thread().join();
+    }
+
+    for(auto& system : systems)
+    {
+        system->Finish();
+    }
 }

@@ -11,6 +11,11 @@
 #include <thread>
 #include <optional>
 #include <array>
+#include <stdexcept>
+#include <cstdlib>
+#include <set>
+#include <cstdint>
+#include <fstream>
 
 #include <stdio.h>
 #include <GLFW/glfw3.h>

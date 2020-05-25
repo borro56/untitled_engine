@@ -180,13 +180,12 @@ CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Framewo
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xcb.h
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib.h
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib_xrandr.h
-CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/TestSystem.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Health.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/main.cpp
-CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Components/Health.h
-CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Components/Translation.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Archetype.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/ComponentType.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Translation.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Entity.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/ISystem.h
@@ -197,6 +196,10 @@ CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/tpp/Chunk.tpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/tpp/EntityManager.tpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/tpp/System.tpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Math/Vector3.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/QueryFamilyIndices.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/RenderSystem.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/UniformBufferObject.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/Vertex.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/common.h
 
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glfw/include/GLFW/glfw3.h

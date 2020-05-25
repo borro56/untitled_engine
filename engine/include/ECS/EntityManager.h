@@ -15,7 +15,7 @@ public:
 
     template<class... Types> const class Entity Create(Types const&... components);
     template<class SystemType> SystemType* GetOrCreateSystem();
-    vector<class SystemThread*> ExecuteSystems();
+    void ExecuteSystems();
 };
 
 #include "Archetype.h"

@@ -1224,41 +1224,17 @@ vk_platform.h
 
 /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib_xrandr.h
 
-/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
-../../engine/include/ECS/System.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
-../../engine/include/Components/Translation.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
-../../engine/include/Components/Health.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Health.h
 
 /Users/nicolasborromeo/untitled_engine/app/main.cpp
-../engine/include/Components/Translation.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
-../engine/include/Components/Health.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
+../engine/include/ECS/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
+include/Components/Health.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Health.h
 ../engine/include/ECS/EntityManager.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
-include/TestSystem.h
-/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
-iostream
--
-stdexcept
--
-cstdlib
--
-set
--
-cstdint
--
-fstream
--
-
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Health.h
-
-/Users/nicolasborromeo/untitled_engine/engine/include/Components/Translation.h
-../Math/Vector3.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
+../engine/include/Render/RenderSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ../common.h
@@ -1281,6 +1257,10 @@ tpp/Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
+../../Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 
@@ -1346,6 +1326,34 @@ typeinfo
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+Vertex.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Vertex.h
+UniformBufferObject.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+Vertex.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Vertex.h
+UniformBufferObject.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
+QueryFamilyIndices.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+Vertex.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Vertex.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Vertex.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/common.h
 cstddef
 -
@@ -1358,6 +1366,16 @@ thread
 optional
 -
 array
+-
+stdexcept
+-
+cstdlib
+-
+set
+-
+cstdint
+-
+fstream
 -
 stdio.h
 -

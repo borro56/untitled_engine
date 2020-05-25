@@ -3,7 +3,7 @@
 
 #include "../../engine/include/ECS/System.h"
 #include "../../engine/include/Components/Translation.h"
-#include "../../engine/include/Components/Health.h"
+#include "Components/Health.h"
 
 class TestSystem : public System<Translation>
 {

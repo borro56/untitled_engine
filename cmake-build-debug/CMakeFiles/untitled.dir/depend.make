@@ -181,6 +181,8 @@ CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Framewo
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib.h
 CMakeFiles/untitled.dir/app/main.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib_xrandr.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Health.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Speed.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/TestSystem.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/main.cpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Archetype.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Chunk.h

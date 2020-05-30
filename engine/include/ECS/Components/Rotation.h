@@ -7,7 +7,7 @@ struct Rotation
 {
     Vector3 value;
 
-    Rotation() {}
+    Rotation() : value(0,0,0) {}
     Rotation(Vector3 value) : value(value) {}
 };
 

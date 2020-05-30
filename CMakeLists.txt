@@ -10,10 +10,13 @@ include_directories(
 
 add_executable(untitled
         app/main.cpp
+        app/include/TestSystem.h
         engine/src/ECS/Archetype.cpp
         engine/src/ECS/EntityManager.cpp
         engine/src/ECS/SystemThread.cpp
-        engine/src/ECS/ISystem.cpp engine/include/Render/RenderSystem.h engine/include/Render/Renderable.h)
+        engine/src/ECS/ISystem.cpp
+        engine/include/Render/RenderSystem.h
+        engine/include/Render/Renderable.h)
 
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)

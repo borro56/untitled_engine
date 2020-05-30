@@ -2,15 +2,14 @@
 #include "include/Components/Health.h"
 #include "../engine/include/ECS/EntityManager.h"
 #include "../engine/include/Render/RenderSystem.h"
+#include "../engine/include/ECS/Components/Rotation.h"
 
 
 int main()
 {
     EntityManager em;
-    em.Create(Translation(Vector3(25,1,1)), Health(1));
-    //em.Create(Translation(Vector3(32,1,1)), Health(7));
-    //em.Create(Health(1), Translation(Vector3(77,1,1)) );
-    //em.Create(Translation(Vector3(97,1,1)) );
+    em.Create(Rotation(Vector3()), Renderable(0));
+    em.Create(Rotation(Vector3(0,0,45)), Renderable(1));
 
     shared_ptr<RenderSystem> app = em.GetOrCreateSystem<RenderSystem>();
 

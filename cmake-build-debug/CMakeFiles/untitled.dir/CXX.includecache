@@ -1235,6 +1235,8 @@ include/Components/Health.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../engine/include/Render/RenderSystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h
+../engine/include/ECS/Components/Rotation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Rotation.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ../common.h
@@ -1257,6 +1259,10 @@ tpp/Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Rotation.h
+../../Math/Vector3.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
 ../../Math/Vector3.h
@@ -1345,8 +1351,14 @@ QueryFamilyIndices.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
 SwapChainSupportDetails.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/SwapChainSupportDetails.h
+Renderable.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Renderable.h
 ../ECS/System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+../ECS/Components/Rotation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Rotation.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Renderable.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/SwapChainSupportDetails.h
 ../../include/common.h

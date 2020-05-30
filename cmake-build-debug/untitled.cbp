@@ -92,6 +92,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Render/Renderable.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp">
 			<Option target="untitled"/>
 		</Unit>

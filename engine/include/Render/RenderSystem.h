@@ -10,7 +10,9 @@
 #include "UniformBufferObject.h"
 #include "QueryFamilyIndices.h"
 #include "SwapChainSupportDetails.h"
+#include "Renderable.h"
 #include "../ECS/System.h"
+#include "../ECS/Components/Rotation.h"
 
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
@@ -37,9 +39,11 @@ const std::vector<uint16_t> indices = {
 };
 
 
-class RenderSystem : public System<Translation>
+class RenderSystem : public System<Rotation, Renderable>
 {
 public:
+    uint32_t imageIndex;
+
     GLFWwindow* window;
     VkInstance instance;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -79,15 +83,16 @@ public:
 
     int previousAmount = 0;
     int maxAmountOfObjects = -1;
-    int amountOfObjects = 0;
+    int amountOfObjects = -1;
 
     vector<vector<VkDescriptorSet>> descriptorSets;
     vector<vector<VkBuffer>> uniformBuffers;
     vector<vector<VkDeviceMemory>> uniformBuffersMemory;
 
 protected:
-    void InternalExecute(Translation& type) override;
+    void InternalExecute(Rotation& type, Renderable& renderable) override;
     void Prepare() override;
+    void Finish() override;
 
 public:
     void run();
@@ -127,7 +132,7 @@ private:
     void pickPhysicalDevice();
     void mainLoop();
     void drawFrame();
-    void updateUniformBuffer(uint32_t currentImage);
+    void updateUniformBuffer();
     void cleanup();
     void createInstance();
     void cleanupSwapChain();
@@ -893,31 +898,7 @@ void RenderSystem::mainLoop()
 
 void RenderSystem::drawFrame()
 {
-    createCommandBuffers();
-
-    vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
-    vkResetFences(device, 1, &inFlightFences[currentFrame]);
-
-    uint32_t imageIndex;
-    VkResult result = vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphores[currentFrame],
-                                            VK_NULL_HANDLE, &imageIndex);
-
-    if (result == VK_ERROR_OUT_OF_DATE_KHR)
-    {
-        recreateSwapChain();
-        return;
-    } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
-    {
-        throw std::runtime_error("failed to acquire swap chain image!");
-    }
-
-    if (imagesInFlight[imageIndex] != VK_NULL_HANDLE)
-    {
-        vkWaitForFences(device, 1, &imagesInFlight[imageIndex], VK_TRUE, UINT64_MAX);
-    }
-    imagesInFlight[imageIndex] = inFlightFences[currentFrame];
-
-    updateUniformBuffer(imageIndex);
+    //updateUniformBuffer();
 
 
     VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
@@ -952,7 +933,7 @@ void RenderSystem::drawFrame()
     presentInfo.pImageIndices = &imageIndex;
     presentInfo.pResults = nullptr; // Optional
 
-    result = vkQueuePresentKHR(presentQueue, &presentInfo);
+    VkResult result = vkQueuePresentKHR(presentQueue, &presentInfo);
 
     if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || framebufferResized)
     {
@@ -968,7 +949,7 @@ void RenderSystem::drawFrame()
 
 }
 
-void RenderSystem::updateUniformBuffer(uint32_t currentImage)
+void RenderSystem::updateUniformBuffer()
 {
     static auto startTime = std::chrono::high_resolution_clock::now();
     auto currentTime = std::chrono::high_resolution_clock::now();
@@ -983,9 +964,9 @@ void RenderSystem::updateUniformBuffer(uint32_t currentImage)
         ubo.proj[1][1] *= -1;
 
         void* data;
-        vkMapMemory(device, uniformBuffersMemory[i][currentImage], 0, sizeof(ubo), 0, &data);
+        vkMapMemory(device, uniformBuffersMemory[i][imageIndex], 0, sizeof(ubo), 0, &data);
         memcpy(data, &ubo, sizeof(ubo));
-        vkUnmapMemory(device, uniformBuffersMemory[i][currentImage]);
+        vkUnmapMemory(device, uniformBuffersMemory[i][imageIndex]);
     }
 }
 
@@ -1231,7 +1212,11 @@ void RenderSystem::updateObjects(int newAmount)
         previousAmount = maxAmountOfObjects;
     }
 
-    amountOfObjects = newAmount;
+    if(amountOfObjects != newAmount)
+    {
+        amountOfObjects = newAmount;
+        createCommandBuffers();
+    }
 }
 
 void RenderSystem::createDescriptorPool()
@@ -1307,9 +1292,45 @@ void RenderSystem::Prepare()
         totalEntities += archetype->EntityCount();
     }
     updateObjects(totalEntities);
+
+
+    vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
+    vkResetFences(device, 1, &inFlightFences[currentFrame]);
+
+    VkResult result = vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphores[currentFrame],
+                                            VK_NULL_HANDLE, &imageIndex);
+
+    if (result == VK_ERROR_OUT_OF_DATE_KHR)
+    {
+        recreateSwapChain();
+        return;
+    } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
+    {
+        throw std::runtime_error("failed to acquire swap chain image!");
+    }
+
+    if (imagesInFlight[imageIndex] != VK_NULL_HANDLE)
+    {
+        vkWaitForFences(device, 1, &imagesInFlight[imageIndex], VK_TRUE, UINT64_MAX);
+    }
+    imagesInFlight[imageIndex] = inFlightFences[currentFrame];
 }
 
-void RenderSystem::InternalExecute(Translation &type)
+void RenderSystem::InternalExecute(Rotation &rot, Renderable& renderData)
+{
+    UniformBufferObject ubo{};
+    ubo.model = glm::rotate(glm::mat4(1.0f), rot.value.z, glm::vec3(0.0f, 0.0f, 1.0f));
+    ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 10.0f);
+    ubo.proj[1][1] *= -1;
+
+    void* data;
+    vkMapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex], 0, sizeof(ubo), 0, &data);
+    memcpy(data, &ubo, sizeof(ubo));
+    vkUnmapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex]);
+}
+
+void RenderSystem::Finish()
 {
     glfwPollEvents();
     drawFrame();

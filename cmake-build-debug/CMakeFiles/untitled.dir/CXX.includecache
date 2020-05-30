@@ -1343,6 +1343,22 @@ UniformBufferObject.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
 QueryFamilyIndices.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
+SwapChainSupportDetails.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/SwapChainSupportDetails.h
+../ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/SwapChainSupportDetails.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+../../include/common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+Vertex.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Vertex.h
+UniformBufferObject.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
+QueryFamilyIndices.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/UniformBufferObject.h
 ../../include/common.h

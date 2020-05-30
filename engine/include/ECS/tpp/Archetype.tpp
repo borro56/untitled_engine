@@ -4,6 +4,7 @@
 template<class... Types> void Archetype::AddEntity(const Types &... components)
 {
     GetOrCreateChunk().AddData(*this, components...);
+    entityCount++;
 }
 
 template<class Type, class... Types> void Archetype::AddType()

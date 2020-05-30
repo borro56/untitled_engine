@@ -198,6 +198,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/tpp/System.tpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Math/Vector3.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/QueryFamilyIndices.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/RenderSystem.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/SwapChainSupportDetails.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/UniformBufferObject.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Render/Vertex.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/common.h

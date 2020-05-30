@@ -6,7 +6,7 @@
 using namespace std;
 
 class EntityManager {
-    vector<class ISystem*> systems;
+    vector<shared_ptr<class ISystem>> systems;
     vector<class Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
 
@@ -14,7 +14,7 @@ public:
     template<class... Types> vector<Archetype*> GetArchetypes();
 
     template<class... Types> const class Entity Create(Types const&... components);
-    template<class SystemType> SystemType* GetOrCreateSystem();
+    template<class SystemType> shared_ptr<SystemType> GetOrCreateSystem();
     void ExecuteSystems();
 };
 

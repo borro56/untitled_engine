@@ -11,12 +11,14 @@ class System : public ISystem
     EntityManager* entityManager;
 
     void InternalExecuteArray(Chunk& chunk, Types*... types);
-    void Init(class EntityManager& entityManager) override ;
 
 protected:
     virtual void InternalExecute(Types&... types) = 0;
+    void Init(class EntityManager& entityManager) override ;
 
 public:
+    vector<Archetype*> GetArchetypes();
+
     void Execute(Archetype& archetype,Chunk& chunk) override;
 };
 

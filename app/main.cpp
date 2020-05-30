@@ -6,13 +6,16 @@
 
 int main()
 {
-    RenderSystem app;
+    EntityManager em;
+    em.Create(Translation(Vector3(25,1,1)), Health(1));
+    //em.Create(Translation(Vector3(32,1,1)), Health(7));
+    //em.Create(Health(1), Translation(Vector3(77,1,1)) );
+    //em.Create(Translation(Vector3(97,1,1)) );
 
-    try {
-        app.run();
-    } catch (const std::exception& e) {
-        std::cerr << e.what() << std::endl;
-        return EXIT_FAILURE;
+    shared_ptr<RenderSystem> app = em.GetOrCreateSystem<RenderSystem>();
+
+    while(!glfwWindowShouldClose(app->window)) {
+        em.ExecuteSystems();
     }
 
     return EXIT_SUCCESS;
@@ -20,18 +23,19 @@ int main()
 
 void ecsTest()
 {
-    EntityManager em;
-    em.Create(Translation(Vector3(25,1,1)), Health(1));
-    em.Create(Translation(Vector3(32,1,1)), Health(7));
-    em.Create(Health(1), Translation(Vector3(77,1,1)) );
-    em.Create(Translation(Vector3(97,1,1)) );
 
-    //em.GetOrCreateSystem<TestSystem>();
-
-    while(true)
+    /*while(true)
     {
         em.ExecuteSystems();
-    }
+    }*/
+
+    /*
+    try {
+        app->run();
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }*/
 }
 
 void glfwTest()

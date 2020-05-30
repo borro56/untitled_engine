@@ -42,9 +42,9 @@ template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()
 }
 
 template<class SystemType>
-SystemType *EntityManager::GetOrCreateSystem()
+shared_ptr<SystemType> EntityManager::GetOrCreateSystem()
 {
-    auto system = new SystemType();
+    auto system = make_shared<SystemType>();
     system->Init(*this);
     systems.push_back(system);
     return system;

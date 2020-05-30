@@ -5,8 +5,8 @@ class ISystem
 {
     friend class EntityManager;
 
+protected:
     virtual void Init(class EntityManager& entityManager) = 0;
-
     virtual void Prepare() { }
     virtual void Finish() { }
 

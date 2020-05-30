@@ -13,6 +13,7 @@ class Archetype
     friend class SystemThread;
 
 private:
+    int entityCount = 0;
     int entitySize = 0;
     EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
@@ -29,6 +30,7 @@ public:
     template <class... Types> static Archetype Create(EntityManager& manager);
 
     const int EntitySize() const { return entitySize; }
+    const int EntityCount() const { return entityCount; }
     const int ChunkCount() const { return chunks.size(); }
     const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 

@@ -39,3 +39,9 @@ void System<Types...>::Init(EntityManager &entityManager)
         archetype->AddSystem(this);
     }
 }
+
+template<class... Types>
+vector<Archetype *> System<Types...>::GetArchetypes()
+{
+    return entityManager->GetArchetypes<Types...>();
+}

@@ -23,7 +23,20 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
     }
 
     archetypes.push_back(Archetype::Create<Types...>(*this));
-    return archetypes[archetypes.size() - 1];
+
+    auto& newArcehtype = archetypes[archetypes.size() - 1];
+
+    for(auto system : systems)
+    {
+        if(system->SubsetOf(newArcehtype))
+        {
+            newArcehtype.AddSystem(system);
+        }
+    }
+
+
+
+    return newArcehtype;
 }
 
 template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()

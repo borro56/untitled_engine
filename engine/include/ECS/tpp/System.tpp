@@ -36,7 +36,7 @@ void System<Types...>::Init(EntityManager &entityManager)
     auto archetypes = entityManager.GetArchetypes<Types...>();
     for(auto archetype : archetypes)
     {
-        archetype->AddSystem(this);
+        archetype->AddSystem(shared_from_this());
     }
 }
 
@@ -44,4 +44,10 @@ template<class... Types>
 vector<Archetype *> System<Types...>::GetArchetypes()
 {
     return entityManager->GetArchetypes<Types...>();
+}
+
+template<class... Types>
+bool System<Types...>::SubsetOf(Archetype &archetype)
+{
+    return archetype.ContainsTypes<Types...>();
 }

@@ -7,6 +7,7 @@
 int main()
 {
     EntityManager em;
+
     em.Create(  Rotation(Vector3()),
                 Renderable(0),
                 Speed(0.1f)); //TODO: Auto assign renderId
@@ -15,12 +16,14 @@ int main()
                 Renderable(1),
                 Speed(0.01f));
 
-    em.GetOrCreateSystem<TestSystem>();
-    shared_ptr<RenderSystem> app = em.GetOrCreateSystem<RenderSystem>();
+    em.Create(  Rotation(Vector3(0,0,45)),
+                Renderable(2),
+                Speed(0.05f));
 
-    while(!glfwWindowShouldClose(app->window)) {
-        em.ExecuteSystems();
-    }
+    em.GetOrCreateSystem<TestSystem>();
+    em.GetOrCreateSystem<RenderSystem>();
+
+    em.Start();
 
     return EXIT_SUCCESS;
 }

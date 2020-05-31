@@ -8,13 +8,13 @@ class System : public ISystem
 {
     friend class EntityManager;
 
-    EntityManager* entityManager;
-
     void InternalExecuteArray(Chunk& chunk, Types*... types);
 
 protected:
+    EntityManager* entityManager;
     virtual void InternalExecute(Types&... types) = 0;
-    void Init(class EntityManager& entityManager) override ;
+    void Init(class EntityManager& entityManager) override;
+    bool SubsetOf(class Archetype& archetype) override;
 
 public:
     vector<Archetype*> GetArchetypes();

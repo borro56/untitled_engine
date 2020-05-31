@@ -6,6 +6,7 @@
 using namespace std;
 
 class EntityManager {
+    bool running;
     vector<shared_ptr<class ISystem>> systems;
     vector<class Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
@@ -16,6 +17,15 @@ public:
     template<class... Types> const class Entity Create(Types const&... components);
     template<class SystemType> shared_ptr<SystemType> GetOrCreateSystem();
     void ExecuteSystems();
+    void Stop() { running = false; }
+    void Start()
+    {
+        running = true;
+        while (running)
+        {
+            ExecuteSystems();
+        }
+    }
 };
 
 #include "Archetype.h"

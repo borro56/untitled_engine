@@ -4,7 +4,7 @@ void EntityManager::ExecuteSystems()
 {
     for(auto& system : systems)
     {
-        system->Prepare();
+        system->PrepareFrame();
     }
 
     vector<SystemThread*> threads;
@@ -20,6 +20,6 @@ void EntityManager::ExecuteSystems()
 
     for(auto& system : systems)
     {
-        system->Finish();
+        system->FinishFrame();
     }
 }

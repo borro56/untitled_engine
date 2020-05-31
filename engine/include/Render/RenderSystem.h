@@ -91,12 +91,10 @@ public:
 
 protected:
     void InternalExecute(Rotation& type, Renderable& renderable) override;
-    void Prepare() override;
-    void Finish() override;
+    void PrepareFrame() override;
+    void FinishFrame() override;
 
 public:
-    void run();
-
     RenderSystem()
     {
         initWindow();
@@ -130,9 +128,7 @@ private:
     void createSurface();
     void createLogicalDevice();
     void pickPhysicalDevice();
-    void mainLoop();
     void drawFrame();
-    void updateUniformBuffer();
     void cleanup();
     void createInstance();
     void cleanupSwapChain();
@@ -171,12 +167,6 @@ std::vector<char> RenderSystem::readFile(const string &filename)
     return buffer;
 }
 
-void RenderSystem::run()
-{
-    mainLoop();
-    cleanup();
-}
-
 void RenderSystem::initWindow()
 {
     glfwInit();
@@ -209,8 +199,6 @@ void RenderSystem::initVulkan()
     createVertexBuffer();
     createIndexBuffer();
     createSemaphores();
-
-    updateObjects(0);
 }
 
 void RenderSystem::createDescriptorSetLayout()
@@ -888,19 +876,8 @@ QueueFamilyIndices RenderSystem::findQueueFamilies(VkPhysicalDevice device)
     return indices;
 }
 
-void RenderSystem::mainLoop()
-{
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
-        drawFrame();
-    }
-}
-
 void RenderSystem::drawFrame()
 {
-    //updateUniformBuffer();
-
-
     VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
     VkSemaphore signalSemaphores[] = {renderFinishedSemaphores[currentFrame]};
     VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
@@ -944,30 +921,7 @@ void RenderSystem::drawFrame()
         throw std::runtime_error("failed to present swap chain image!");
     }
 
-
     currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
-
-}
-
-void RenderSystem::updateUniformBuffer()
-{
-    static auto startTime = std::chrono::high_resolution_clock::now();
-    auto currentTime = std::chrono::high_resolution_clock::now();
-    float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
-
-    for (int i = 0; i < maxAmountOfObjects; ++i)
-    {
-        UniformBufferObject ubo{};
-        ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f + i * 45), glm::vec3(0.0f, 0.0f, 1.0f));
-        ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-        ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 10.0f);
-        ubo.proj[1][1] *= -1;
-
-        void* data;
-        vkMapMemory(device, uniformBuffersMemory[i][imageIndex], 0, sizeof(ubo), 0, &data);
-        memcpy(data, &ubo, sizeof(ubo));
-        vkUnmapMemory(device, uniformBuffersMemory[i][imageIndex]);
-    }
 }
 
 void RenderSystem::cleanup()
@@ -1010,9 +964,9 @@ void RenderSystem::createInstance()
 
     VkApplicationInfo appInfo{};
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-    appInfo.pApplicationName = "Hello Triangle";
+    appInfo.pApplicationName = "Hello ECS";
     appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-    appInfo.pEngineName = "No Engine";
+    appInfo.pEngineName = "Untitled Engine";
     appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
     appInfo.apiVersion = VK_API_VERSION_1_0;
 
@@ -1178,9 +1132,6 @@ void RenderSystem::recreateSwapChain()
     createGraphicsPipeline();
     createFramebuffers();
     createDescriptorPool();
-
-    //createUniformBuffers();
-    //createDescriptorSets();
 }
 
 void RenderSystem::createUniformBuffers()
@@ -1283,7 +1234,7 @@ void RenderSystem::createDescriptorSets()
     }
 }
 
-void RenderSystem::Prepare()
+void RenderSystem::PrepareFrame()
 {
     auto archetypes = GetArchetypes(); //TODO: Cache this
     auto totalEntities = 0;
@@ -1330,10 +1281,15 @@ void RenderSystem::InternalExecute(Rotation &rot, Renderable& renderData)
     vkUnmapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex]);
 }
 
-void RenderSystem::Finish()
+void RenderSystem::FinishFrame()
 {
     glfwPollEvents();
     drawFrame();
+
+    if(glfwWindowShouldClose(window))
+    {
+        entityManager->Stop();
+    }
 }
 
 #endif

@@ -8,10 +8,17 @@
 
 class TestSystem : public System<Rotation, Speed>
 {
+    shared_ptr<TimeSystem> time;
+
 protected:
+    void InternalInit() override
+    {
+        time = entityManager->GetOrCreateSystem<TimeSystem>();
+    }
+
     void InternalExecute(Rotation& rot, Speed& speed) override
     {
-        rot.value.z += speed.value;
+        rot.value.z += speed.value * time->GetDeltaTime();
     }
 };
 

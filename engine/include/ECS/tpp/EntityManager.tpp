@@ -57,8 +57,15 @@ template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()
 template<class SystemType>
 shared_ptr<SystemType> EntityManager::GetOrCreateSystem()
 {
+    for(auto system : systems)
+    {
+        auto castedSystem = dynamic_pointer_cast<SystemType>(system);
+        if(castedSystem)
+            return castedSystem;
+    }
+
     auto system = make_shared<SystemType>();
-    system->Init(*this);
     systems.push_back(system);
+    system->Init(*this);
     return system;
 }

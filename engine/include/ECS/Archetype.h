@@ -6,6 +6,7 @@
 class Chunk;
 class BaseComponentType;
 class EntityManager;
+class ISystem;
 template<class Type> class ComponentType;
 
 class Archetype
@@ -18,7 +19,7 @@ private:
     EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
-    vector<shared_ptr<class ISystem>> systems; //TODO: Replace this with shared_ptr
+    vector<shared_ptr<ISystem>> systems;
 
     Chunk& GetOrCreateChunk();
     template<class Type, class... Types> void AddType();

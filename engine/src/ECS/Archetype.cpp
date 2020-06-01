@@ -35,7 +35,7 @@ void Archetype::ExecuteSystems(vector<class SystemThread*>& vector) //TODO: Use 
 
 void Archetype::ExecuteSystem(Chunk& chunk)
 {
-    for(auto system : systems)
+    for(auto system : systems) //TODO: Check why this executes twice
     {
         system->Execute(*this, chunk);
     }

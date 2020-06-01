@@ -7,15 +7,19 @@
 
 
 #include "../ECS/System.h"
-
-class TimeSystem : public System<class Time>
-{
-protected:
-    virtual void InternalExecute(Time& time) override;
-
-    void InternalInit() override;
-};
-
 #include "Time.h"
+
+class TimeSystem : public System<Time>
+{
+    Time* timeReference;
+
+protected:
+    void InternalExecute(Time& time) override;
+    void InternalInit() override;
+
+public:
+    float GetTime();
+    float GetDeltaTime(); //TODO: Fix this through systems interlock
+};
 
 #endif

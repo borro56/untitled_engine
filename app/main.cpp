@@ -1,12 +1,15 @@
 #include "../engine/include/ECS/Components/Translation.h"
-#include "include/Components/Speed.h"
-#include "../engine/include/ECS/EntityManager.h"
 #include "../engine/include/Render/RenderSystem.h"
+#include "../engine/include/Core/TimeSystem.h"
 #include "include/TestSystem.h"
+#include "include/Components/Speed.h"
 
 int main()
 {
     EntityManager em;
+    em.GetOrCreateSystem<TestSystem>();
+    em.GetOrCreateSystem<RenderSystem>();
+    em.GetOrCreateSystem<TimeSystem>();
 
     em.Create(  Translation(),
                 Scale(),
@@ -25,9 +28,6 @@ int main()
                 Rotation(Vector3(0,0,15)),
                 Renderable(2),
                 Speed(0.05f));
-
-    em.GetOrCreateSystem<TestSystem>();
-    em.GetOrCreateSystem<RenderSystem>();
 
     em.Start();
 

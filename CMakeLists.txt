@@ -16,7 +16,7 @@ add_executable(untitled
         engine/src/ECS/SystemThread.cpp
         engine/src/ECS/ISystem.cpp
         engine/include/Render/RenderSystem.h
-        engine/include/Render/Renderable.h)
+        engine/include/Render/Renderable.h engine/include/Core/TimeSystem.cpp engine/include/Core/TimeSystem.h engine/include/Core/Time.h)
 
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)

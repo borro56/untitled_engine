@@ -1241,14 +1241,26 @@ Components/Speed.h
 /Users/nicolasborromeo/untitled_engine/app/main.cpp
 ../engine/include/ECS/Components/Translation.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
-include/Components/Speed.h
-/Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
-../engine/include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../engine/include/Render/RenderSystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h
+../engine/include/Core/TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 include/TestSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
+include/Components/Speed.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/Time.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
+TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
+../ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+Time.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/Time.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ../common.h
@@ -1301,6 +1313,8 @@ tpp/EntityManager.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ISystem.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 ISystem.h
@@ -1311,8 +1325,6 @@ Archetype.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 ComponentType.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
-EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 tpp/System.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
 
@@ -1345,6 +1357,8 @@ typeinfo
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
 ../System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+../EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
@@ -1437,4 +1451,14 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
+../../include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+../../include/ECS/System.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

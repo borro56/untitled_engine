@@ -1,11 +1,14 @@
 #ifndef UNTITLED_ISYSTEM_H
 #define UNTITLED_ISYSTEM_H
 
+#include "../common.h"
+
 class ISystem : public std::enable_shared_from_this<ISystem>
 {
     friend class EntityManager;
 
 protected:
+    virtual void InternalInit() { };
     virtual void Init(class EntityManager& entityManager) = 0;
     virtual bool SubsetOf(class Archetype& archetype) = 0;
 

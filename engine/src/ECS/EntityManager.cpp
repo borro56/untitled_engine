@@ -23,3 +23,17 @@ void EntityManager::ExecuteSystems()
         system->FinishFrame();
     }
 }
+
+void EntityManager::Start()
+{
+    running = true;
+    while (running)
+    {
+        ExecuteSystems();
+    }
+}
+
+void EntityManager::Stop()
+{
+    running = false;
+}

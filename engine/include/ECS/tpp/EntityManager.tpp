@@ -62,4 +62,3 @@ shared_ptr<SystemType> EntityManager::GetOrCreateSystem()
     systems.push_back(system);
     return system;
 }
-

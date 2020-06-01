@@ -1,5 +1,6 @@
 
 #include "../System.h"
+#include "../EntityManager.h"
 
 template<class T>
 T* GetComponentArray(const Archetype& archetype, Chunk& chunk)
@@ -38,6 +39,8 @@ void System<Types...>::Init(EntityManager &entityManager)
     {
         archetype->AddSystem(shared_from_this());
     }
+
+    InternalInit();
 }
 
 template<class... Types>

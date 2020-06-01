@@ -13,7 +13,7 @@ class System : public ISystem
 protected:
     EntityManager* entityManager;
     virtual void InternalExecute(Types&... types) = 0;
-    void Init(class EntityManager& entityManager) override;
+    virtual void Init(class EntityManager& entityManager) override;
     bool SubsetOf(class Archetype& archetype) override;
 
 public:
@@ -25,7 +25,6 @@ public:
 #include "Chunk.h"
 #include "Archetype.h"
 #include "ComponentType.h"
-#include "EntityManager.h"
 #include "tpp/System.tpp"
 
 #endif

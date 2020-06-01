@@ -150,6 +150,33 @@ app/main.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
 
+engine/include/Core/TimeSystem.o: engine/include/Core/TimeSystem.cpp.o
+
+.PHONY : engine/include/Core/TimeSystem.o
+
+# target to build an object file
+engine/include/Core/TimeSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o
+.PHONY : engine/include/Core/TimeSystem.cpp.o
+
+engine/include/Core/TimeSystem.i: engine/include/Core/TimeSystem.cpp.i
+
+.PHONY : engine/include/Core/TimeSystem.i
+
+# target to preprocess a source file
+engine/include/Core/TimeSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.i
+.PHONY : engine/include/Core/TimeSystem.cpp.i
+
+engine/include/Core/TimeSystem.s: engine/include/Core/TimeSystem.cpp.s
+
+.PHONY : engine/include/Core/TimeSystem.s
+
+# target to generate assembly for a file
+engine/include/Core/TimeSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.s
+.PHONY : engine/include/Core/TimeSystem.cpp.s
+
 engine/src/ECS/Archetype.o: engine/src/ECS/Archetype.cpp.o
 
 .PHONY : engine/src/ECS/Archetype.o
@@ -270,6 +297,9 @@ help:
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
+	@echo "... engine/include/Core/TimeSystem.o"
+	@echo "... engine/include/Core/TimeSystem.i"
+	@echo "... engine/include/Core/TimeSystem.s"
 	@echo "... engine/src/ECS/Archetype.o"
 	@echo "... engine/src/ECS/Archetype.i"
 	@echo "... engine/src/ECS/Archetype.s"

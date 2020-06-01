@@ -1,7 +1,3 @@
-//
-// Created by Nicolas Borromeo on 24/05/2020.
-//
-
 #ifndef UNTITLED_RENDERSYSTEM_H
 #define UNTITLED_RENDERSYSTEM_H
 
@@ -1054,6 +1050,8 @@ VkSurfaceFormatKHR RenderSystem::chooseSwapSurfaceFormat(const vector<VkSurfaceF
             return availableFormat;
         }
     }
+
+    throw std::runtime_error("failed to find surface format!");
 }
 
 VkPresentModeKHR RenderSystem::chooseSwapPresentMode(const vector<VkPresentModeKHR> &availablePresentModes)

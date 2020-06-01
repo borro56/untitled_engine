@@ -13,19 +13,11 @@ class EntityManager {
 
 public:
     template<class... Types> vector<Archetype*> GetArchetypes();
-
     template<class... Types> const class Entity Create(Types const&... components);
     template<class SystemType> shared_ptr<SystemType> GetOrCreateSystem();
     void ExecuteSystems();
-    void Stop() { running = false; }
-    void Start()
-    {
-        running = true;
-        while (running)
-        {
-            ExecuteSystems();
-        }
-    }
+    void Stop();
+    void Start();
 };
 
 #include "Archetype.h"

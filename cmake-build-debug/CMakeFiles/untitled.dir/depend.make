@@ -188,6 +188,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Archetype.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Rotation.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Scale.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Translation.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Entity.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/EntityManager.h

@@ -7,7 +7,7 @@ struct Translation
 {
     Vector3 value;
 
-    Translation() {}
+    Translation() : value() {}
     Translation(Vector3 value) : value(value) {}
 };
 

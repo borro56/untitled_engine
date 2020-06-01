@@ -13,6 +13,7 @@
 #include "Renderable.h"
 #include "../ECS/System.h"
 #include "../ECS/Components/Rotation.h"
+#include "../ECS/Components/Scale.h"
 
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
@@ -39,7 +40,7 @@ const std::vector<uint16_t> indices = {
 };
 
 
-class RenderSystem : public System<Rotation, Renderable>
+class RenderSystem : public System<Translation, Rotation, Scale, Renderable>
 {
 public:
     uint32_t imageIndex;
@@ -90,7 +91,7 @@ public:
     vector<vector<VkDeviceMemory>> uniformBuffersMemory;
 
 protected:
-    void InternalExecute(Rotation& type, Renderable& renderable) override;
+    void InternalExecute(Translation&, Rotation&, Scale&, Renderable&) override;
     void PrepareFrame() override;
     void FinishFrame() override;
 
@@ -1244,7 +1245,6 @@ void RenderSystem::PrepareFrame()
     }
     updateObjects(totalEntities);
 
-
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
     vkResetFences(device, 1, &inFlightFences[currentFrame]);
 
@@ -1267,11 +1267,16 @@ void RenderSystem::PrepareFrame()
     imagesInFlight[imageIndex] = inFlightFences[currentFrame];
 }
 
-void RenderSystem::InternalExecute(Rotation &rot, Renderable& renderData)
+void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca, Renderable& renderData)
 {
-    UniformBufferObject ubo{}; //TODO: Multithreaded access to rotation
-    ubo.model = glm::rotate(glm::mat4(1.0f), rot.value.z, glm::vec3(0.0f, 0.0f, 1.0f));
-    ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    UniformBufferObject ubo{};
+    ubo.model = glm::translate(glm::mat4(1.0f), glm::vec3(trans.value.x, trans.value.y, trans.value.z));
+    ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.z, glm::vec3(0.0f, 0.0f, 1.0f));
+    ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.y, glm::vec3(0.0f, 0.1f, 0.0f));
+    ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.x, glm::vec3(1.0f, 0.0f, 0.0f));
+    ubo.model *= glm::scale(glm::mat4(1.0f), glm::vec3(sca.value.x, sca.value.y, sca.value.z));
+
+    ubo.view = glm::lookAt(glm::vec3(0.0f, 3.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 10.0f);
     ubo.proj[1][1] *= -1;
 

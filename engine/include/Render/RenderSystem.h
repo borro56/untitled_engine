@@ -24,16 +24,6 @@ const bool enableValidationLayers = false;
 const bool enableValidationLayers = true;
 #endif
 
-const std::vector<Vertex> vertices = {
-        {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-        {{0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}},
-        {{0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}},
-        {{-0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}}
-};
-
-const std::vector<uint16_t> indices = {
-        0, 1, 2, 2, 3, 0
-};
 
 
 class RenderSystem : public System<Translation, Rotation, Scale, Renderable>
@@ -73,11 +63,6 @@ public:
 
     bool framebufferResized = false;
 
-    VkBuffer vertexBuffer;
-    VkDeviceMemory vertexBufferMemory;
-    VkBuffer indexBuffer;
-    VkDeviceMemory indexBufferMemory;
-
     int previousAmount = 0;
     int maxAmountOfObjects = -1;
     int amountOfObjects = -1;
@@ -103,19 +88,21 @@ public:
         cleanup();
     }
 
+    Mesh CreateMesh(const vector<Vertex> &vertices, const vector<uint16_t> &indices);
 private:
+    vector<Mesh> meshes;
+
     static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
     static std::vector<char> readFile(const std::string& filename);
 
     void initWindow();
     void initVulkan();
     void createDescriptorSetLayout();
-    void createIndexBuffer();
-    void createVertexBuffer();
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
     void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory);
     void createSemaphores();
-    void createCommandBuffers();
+    void startCommandBuffer();
+    void endCommandBuffer();
     void createCommandPool();
     void createFramebuffers();
     void createRenderPass();
@@ -145,6 +132,9 @@ private:
     VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
     VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
     VkShaderModule createShaderModule(const std::vector<char>& code);
+
+    void createIndexBuffer(VkBuffer &indexBuffer, VkDeviceMemory &indexBufferMemory, const vector<uint16_t> &indices);
+    void createVertexBuffer(VkBuffer &vertexBuffer, VkDeviceMemory &vertexBufferMemory, const vector<Vertex> &vertices);
 };
 
 std::vector<char> RenderSystem::readFile(const string &filename)
@@ -193,8 +183,6 @@ void RenderSystem::initVulkan()
     createGraphicsPipeline();
     createFramebuffers();
     createCommandPool();
-    createVertexBuffer();
-    createIndexBuffer();
     createSemaphores();
 }
 
@@ -217,7 +205,7 @@ void RenderSystem::createDescriptorSetLayout()
     }
 }
 
-void RenderSystem::createIndexBuffer()
+void RenderSystem::createIndexBuffer(VkBuffer& indexBuffer, VkDeviceMemory& indexBufferMemory, const vector<uint16_t>& indices)
 {
     VkDeviceSize bufferSize = sizeof(indices[0]) * indices.size();
 
@@ -238,7 +226,7 @@ void RenderSystem::createIndexBuffer()
     vkFreeMemory(device, stagingBufferMemory, nullptr);
 }
 
-void RenderSystem::createVertexBuffer()
+void RenderSystem::createVertexBuffer(VkBuffer& vertexBuffer, VkDeviceMemory& vertexBufferMemory, const vector<Vertex>& vertices)
 {
     VkDeviceSize bufferSize = sizeof(vertices[0]) * vertices.size();
 
@@ -360,7 +348,7 @@ void RenderSystem::createSemaphores()
     }
 }
 
-void RenderSystem::createCommandBuffers()
+void RenderSystem::startCommandBuffer()
 {
     //if (commandBuffers.size() <= 0)
     {
@@ -386,16 +374,19 @@ void RenderSystem::createCommandBuffers()
         }
     }*/
 
-    for (size_t i = 0; i < commandBuffers.size(); i++) {
+    for (size_t i = 0; i < commandBuffers.size(); i++)
+    {
         VkCommandBufferBeginInfo beginInfo{};
         beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
         beginInfo.flags = 0; // Optional
         beginInfo.pInheritanceInfo = nullptr; // Optional
 
-        if (vkBeginCommandBuffer(commandBuffers[i], &beginInfo) != VK_SUCCESS) {
+        if (vkBeginCommandBuffer(commandBuffers[i], &beginInfo) != VK_SUCCESS)
+        {
             throw std::runtime_error("failed to begin recording command buffer!");
         }
 
+        VkClearValue clearColor = {0.0f, 0.0f, 0.0f, 1.0f};
 
         VkRenderPassBeginInfo renderPassInfo{};
         renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
@@ -403,28 +394,21 @@ void RenderSystem::createCommandBuffers()
         renderPassInfo.framebuffer = swapChainFramebuffers[i];
         renderPassInfo.renderArea.offset = {0, 0};
         renderPassInfo.renderArea.extent = swapChainExtent;
-
-        VkClearValue clearColor = {0.0f, 0.0f, 0.0f, 1.0f};
         renderPassInfo.clearValueCount = 1;
         renderPassInfo.pClearValues = &clearColor;
 
         vkCmdBeginRenderPass(commandBuffers[i], &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-
         vkCmdBindPipeline(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, graphicsPipeline);
+    }
+}
 
-        VkBuffer vertexBuffers[] = {vertexBuffer};
-        VkDeviceSize offsets[] = {0};
-        vkCmdBindVertexBuffers(commandBuffers[i], 0, 1, vertexBuffers, offsets);
-        vkCmdBindIndexBuffer(commandBuffers[i], indexBuffer, 0, VK_INDEX_TYPE_UINT16);
-
-        for (int j = 0; j < amountOfObjects; ++j)
-        {
-            vkCmdBindDescriptorSets(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &descriptorSets[j][i], 0, nullptr);
-            vkCmdDrawIndexed(commandBuffers[i], static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
-        }
-
+void RenderSystem::endCommandBuffer()
+{
+    for (size_t i = 0; i < commandBuffers.size(); i++)
+    {
         vkCmdEndRenderPass(commandBuffers[i]);
-        if (vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS) {
+        if (vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS)
+        {
             throw std::runtime_error("failed to record command buffer!");
         }
     }
@@ -929,11 +913,16 @@ void RenderSystem::cleanup()
 
     vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
 
-    vkDestroyBuffer(device, indexBuffer, nullptr);
-    vkFreeMemory(device, indexBufferMemory, nullptr);
+    for(auto mesh : meshes)
+    {
+        vkDestroyBuffer(device, mesh.indexBuffer, nullptr);
+        vkFreeMemory(device, mesh.indexBufferMemory, nullptr);
 
-    vkDestroyBuffer(device, vertexBuffer, nullptr);
-    vkFreeMemory(device, vertexBufferMemory, nullptr);
+        vkDestroyBuffer(device, mesh.vertexBuffer, nullptr);
+        vkFreeMemory(device, mesh.vertexBufferMemory, nullptr);
+    }
+
+    meshes.clear();
 
     for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
@@ -1162,11 +1151,7 @@ void RenderSystem::updateObjects(int newAmount)
         previousAmount = maxAmountOfObjects;
     }
 
-    if(amountOfObjects != newAmount)
-    {
-        amountOfObjects = newAmount;
-        createCommandBuffers();
-    }
+    amountOfObjects = newAmount;
 }
 
 void RenderSystem::createDescriptorPool()
@@ -1263,6 +1248,8 @@ void RenderSystem::PrepareFrame()
         vkWaitForFences(device, 1, &imagesInFlight[imageIndex], VK_TRUE, UINT64_MAX);
     }
     imagesInFlight[imageIndex] = inFlightFences[currentFrame];
+
+    startCommandBuffer();
 }
 
 void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca, Renderable& renderData)
@@ -1282,10 +1269,23 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
     vkMapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex], 0, sizeof(ubo), 0, &data);
     memcpy(data, &ubo, sizeof(ubo));
     vkUnmapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex]);
+
+    for (size_t i = 0; i < commandBuffers.size(); i++)
+    {
+        VkBuffer vertexBuffers[] = {renderData.mesh.vertexBuffer};
+        VkDeviceSize offsets[] = {0};
+
+        vkCmdBindVertexBuffers(commandBuffers[i], 0, 1, vertexBuffers, offsets);
+        vkCmdBindIndexBuffer(commandBuffers[i], renderData.mesh.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
+        vkCmdBindDescriptorSets(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1,
+                                &descriptorSets[renderData.renderId][i], 0, nullptr);
+        vkCmdDrawIndexed(commandBuffers[i], static_cast<uint32_t>(renderData.mesh.indicesCount), 1, 0, 0, 0);
+    }
 }
 
 void RenderSystem::FinishFrame()
 {
+    endCommandBuffer();
     glfwPollEvents();
     drawFrame();
 
@@ -1293,6 +1293,16 @@ void RenderSystem::FinishFrame()
     {
         entityManager->Stop();
     }
+}
+
+Mesh RenderSystem::CreateMesh(const vector<Vertex> &vertices, const vector<uint16_t> &indices)
+{
+    Mesh mesh;
+    createVertexBuffer(mesh.vertexBuffer, mesh.vertexBufferMemory, vertices);
+    createIndexBuffer(mesh.indexBuffer, mesh.indexBufferMemory, indices);
+    mesh.indicesCount = indices.size();
+    meshes.push_back(mesh);
+    return mesh;
 }
 
 #endif

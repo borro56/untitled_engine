@@ -1252,10 +1252,6 @@ include/Components/Speed.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/Time.h
 
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
-TimeSystem.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
-
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
@@ -1362,6 +1358,10 @@ typeinfo
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
 
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Mesh.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
 ../../include/common.h
 /Users/nicolasborromeo/untitled_engine/engine/include/common.h
@@ -1391,6 +1391,8 @@ Renderable.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Scale.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/Renderable.h
+Mesh.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Render/Mesh.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Render/SwapChainSupportDetails.h
 ../../include/common.h
@@ -1451,14 +1453,4 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
-../../include/ECS/System.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

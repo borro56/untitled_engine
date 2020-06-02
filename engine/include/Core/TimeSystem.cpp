@@ -22,5 +22,5 @@ float TimeSystem::GetTime()
 
 float TimeSystem::GetDeltaTime()
 {
-    return timeReference ? timeReference->deltaTime : 0;
+    return timeReference ? timeReference->deltaTime : 0;  //TODO: Fix this through systems interlock
 }

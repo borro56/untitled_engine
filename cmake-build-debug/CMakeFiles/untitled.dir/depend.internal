@@ -203,6 +203,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntityManager.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/System.tpp
  /Users/nicolasborromeo/untitled_engine/engine/include/Math/Vector3.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/Render/Mesh.h
  /Users/nicolasborromeo/untitled_engine/engine/include/Render/QueryFamilyIndices.h
  /Users/nicolasborromeo/untitled_engine/engine/include/Render/RenderSystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/Render/Renderable.h

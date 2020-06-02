@@ -6,7 +6,7 @@ Chunk& Archetype::GetOrCreateChunk()
     for(auto chunk : chunks)
     {
         auto chunkBytes = EntitySize() * chunk->amount;
-        auto remainingBytes =  CHUNK_SIZE - chunkBytes;
+        auto remainingBytes = CHUNK_SIZE - chunkBytes;
 
         if(remainingBytes > entitySize)
         {

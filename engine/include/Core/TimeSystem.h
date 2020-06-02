@@ -19,7 +19,7 @@ protected:
 
 public:
     float GetTime();
-    float GetDeltaTime(); //TODO: Fix this through systems interlock
+    float GetDeltaTime();
 };
 
 #endif

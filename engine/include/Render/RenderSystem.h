@@ -49,7 +49,6 @@ public:
     VkRenderPass renderPass;
     VkDescriptorSetLayout descriptorSetLayout;
     VkPipelineLayout pipelineLayout;
-    VkPipeline graphicsPipeline;
     VkCommandPool commandPool;
     std::vector<VkCommandBuffer> commandBuffers;
     VkDescriptorPool descriptorPool = VK_NULL_HANDLE;
@@ -71,6 +70,8 @@ public:
     vector<vector<VkBuffer>> uniformBuffers;
     vector<vector<VkDeviceMemory>> uniformBuffersMemory;
 
+    vector<VkPipeline> pipelines;
+
 protected:
     void InternalExecute(Translation&, Rotation&, Scale&, Renderable&) override;
     void PrepareFrame() override;
@@ -89,6 +90,8 @@ public:
     }
 
     Mesh CreateMesh(const vector<Vertex> &vertices, const vector<uint16_t> &indices);
+    VkPipeline CreateGraphicsPipeline();
+
 private:
     vector<Mesh> meshes;
 
@@ -106,7 +109,6 @@ private:
     void createCommandPool();
     void createFramebuffers();
     void createRenderPass();
-    void createGraphicsPipeline();
     void createImageViews();
     void createSwapChain();
     void createSurface();
@@ -180,7 +182,6 @@ void RenderSystem::initVulkan()
     createImageViews();
     createRenderPass();
     createDescriptorSetLayout();
-    createGraphicsPipeline();
     createFramebuffers();
     createCommandPool();
     createSemaphores();
@@ -398,7 +399,7 @@ void RenderSystem::startCommandBuffer()
         renderPassInfo.pClearValues = &clearColor;
 
         vkCmdBeginRenderPass(commandBuffers[i], &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-        vkCmdBindPipeline(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, graphicsPipeline);
+
     }
 }
 
@@ -468,7 +469,6 @@ void RenderSystem::createRenderPass()
     colorAttachmentRef.attachment = 0;
     colorAttachmentRef.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
 
-
     VkSubpassDescription subpass{};
     subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
     subpass.colorAttachmentCount = 1;
@@ -496,7 +496,8 @@ void RenderSystem::createRenderPass()
     }
 }
 
-void RenderSystem::createGraphicsPipeline()
+
+VkPipeline RenderSystem::CreateGraphicsPipeline()
 {
     auto vertShaderCode = readFile("shaders/vert.spv");
     auto fragShaderCode = readFile("shaders/frag.spv");
@@ -625,12 +626,17 @@ void RenderSystem::createGraphicsPipeline()
     pipelineInfo.basePipelineHandle = VK_NULL_HANDLE; // Optional
     pipelineInfo.basePipelineIndex = -1; // Optional
 
+    VkPipeline graphicsPipeline;
     if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS) {
         throw std::runtime_error("failed to create graphics pipeline!");
     }
 
     vkDestroyShaderModule(device, fragShaderModule, nullptr);
     vkDestroyShaderModule(device, vertShaderModule, nullptr);
+
+    pipelines.push_back(graphicsPipeline);
+
+    return graphicsPipeline;
 }
 
 VkShaderModule RenderSystem::createShaderModule(const vector<char> &code)
@@ -1082,7 +1088,11 @@ void RenderSystem::cleanupSwapChain()
 
     vkFreeCommandBuffers(device, commandPool, static_cast<uint32_t>(commandBuffers.size()), commandBuffers.data());
 
-    vkDestroyPipeline(device, graphicsPipeline, nullptr);
+    for(auto pipeline : pipelines)
+    {
+        vkDestroyPipeline(device, pipeline, nullptr);
+    }
+
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
     vkDestroyRenderPass(device, renderPass, nullptr);
 
@@ -1117,7 +1127,6 @@ void RenderSystem::recreateSwapChain()
     createSwapChain();
     createImageViews();
     createRenderPass();
-    createGraphicsPipeline();
     createFramebuffers();
     createDescriptorPool();
 }
@@ -1238,7 +1247,8 @@ void RenderSystem::PrepareFrame()
     {
         recreateSwapChain();
         return;
-    } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
+    }
+    else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
     {
         throw std::runtime_error("failed to acquire swap chain image!");
     }
@@ -1275,6 +1285,7 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
         VkBuffer vertexBuffers[] = {renderData.mesh.vertexBuffer};
         VkDeviceSize offsets[] = {0};
 
+        vkCmdBindPipeline(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, renderData.pipeline);
         vkCmdBindVertexBuffers(commandBuffers[i], 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffers[i], renderData.mesh.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
         vkCmdBindDescriptorSets(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1,

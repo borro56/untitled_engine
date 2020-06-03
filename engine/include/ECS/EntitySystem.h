@@ -7,18 +7,15 @@
 template<class... Types>
 class EntitySystem : public System, public IEntitySystem
 {
-    friend class EntityManager;
-
     void InternalExecuteArray(class Chunk& chunk, Types*... types);
 
 protected:
+    virtual void Initialize() override;
     virtual void InternalExecute(Types&... types) = 0;
-    virtual void Init(class EntityManager& entityManager) override;
-    bool SubsetOf(class Archetype& archetype) override;
 
 public:
     vector<Archetype*> GetArchetypes();
-
+    bool SubsetOf(class Archetype& archetype) override;
     void Execute(class Archetype& archetype, Chunk& chunk) override;
 };
 

@@ -31,17 +31,13 @@ void EntitySystem<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types
 }
 
 template<class... Types>
-void EntitySystem<Types...>::Init(EntityManager &entityManager)
+void EntitySystem<Types...>::Initialize()
 {
-    System::Init(entityManager);
-
-    auto archetypes = entityManager.GetArchetypes<Types...>();
+    auto archetypes = entityManager->GetArchetypes<Types...>();
     for(auto archetype : archetypes)
     {
         archetype->AddSystem(shared_from_this());
     }
-
-    InternalInit();
 }
 
 template<class... Types>

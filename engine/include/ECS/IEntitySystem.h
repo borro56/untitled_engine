@@ -1,7 +1,3 @@
-//
-// Created by Nicolas Borromeo on 03/06/2020.
-//
-
 #ifndef UNTITLED_IENTITYSYSTEM_H
 #define UNTITLED_IENTITYSYSTEM_H
 

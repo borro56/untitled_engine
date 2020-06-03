@@ -11,7 +11,7 @@ class TestSystem : public EntitySystem<Rotation, Speed>
     shared_ptr<TimeSystem> time;
 
 protected:
-    void InternalInit() override
+    void Initialize() override
     {
         time = entityManager->GetOrCreateSystem<TimeSystem>();
     }
@@ -21,6 +21,4 @@ protected:
         rot.value.z += speed.value * time->GetDeltaTime();
     }
 };
-
-
 #endif

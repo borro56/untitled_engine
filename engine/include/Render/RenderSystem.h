@@ -78,7 +78,7 @@ protected:
     void FinishFrame() override;
 
 public:
-    RenderSystem()
+    void Initialize() override
     {
         initWindow();
         initVulkan();

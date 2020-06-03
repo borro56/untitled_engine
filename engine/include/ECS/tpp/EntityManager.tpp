@@ -63,8 +63,9 @@ shared_ptr<SystemType> EntityManager::GetOrCreateSystem()
             return castedSystem;
     }
 
+
     auto system = make_shared<SystemType>();
     systems.push_back(system);
-    system->Init(*this);
+    systems[systems.size()-1]->InternalInit(*this);
     return system;
 }

@@ -3,16 +3,17 @@
 
 #include "../common.h"
 
+class EntityManager;
+
 class System
 {
-    friend class EntityManager;
+    friend EntityManager;
+    void InternalInit(EntityManager& entityManager); //TODO: Review internalinit vs constructor
 
 protected:
-    class EntityManager* entityManager;
+    EntityManager* entityManager;
 
-    virtual void InternalInit() { };
-    virtual void Init(class EntityManager& entityManager);
-
+    virtual void Initialize() { }
     virtual void PrepareFrame() { }
     virtual void FinishFrame() { }
 };

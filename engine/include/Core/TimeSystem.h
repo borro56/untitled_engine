@@ -8,13 +8,12 @@
 
 #include "../ECS/EntitySystem.h"
 
-class TimeSystem : public EntitySystem<bool>
+class TimeSystem : public System
 {
     float time = 0;
     float deltaTime = 0;
 
 protected:
-    void InternalExecute(bool& time) override {}
     void PrepareFrame() override;
 
 public:

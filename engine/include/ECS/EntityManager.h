@@ -20,6 +20,8 @@ public:
     void Start();
 };
 
+
+
 #include "Archetype.h"
 #include "Entity.h"
 #include "SystemThread.h"

@@ -34,7 +34,6 @@ const std::vector<uint16_t> indices2 = {
 //Reapply const correctness
 //Recheck memory usage and leaks (smart pointers)
 //Fix chunks for single objects (Time EntitySystem)
-//Add support for no chunks systems (or manage them another way)
 
 int main()
 {

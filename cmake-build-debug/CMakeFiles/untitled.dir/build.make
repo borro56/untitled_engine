@@ -109,18 +109,18 @@ CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp -o CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.s
 
-CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o: ../engine/src/ECS/ISystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o -c /Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp
+CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/src/ECS/System.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o -c /Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp
 
-CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp > CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.i
+CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp > CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.i
 
-CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp -o CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s
+CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp -o CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.s
 
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/Core/TimeSystem.cpp
@@ -141,7 +141,7 @@ untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o" \
 "CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o" \
 "CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o" \
-"CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o" \
+"CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o" \
 "CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o"
 
 # External object files for target untitled
@@ -151,7 +151,7 @@ untitled: CMakeFiles/untitled.dir/app/main.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o
-untitled: CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o
+untitled: CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o
 untitled: CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib

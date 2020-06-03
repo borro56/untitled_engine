@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o"
-  "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o"
+  "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

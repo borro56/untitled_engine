@@ -6,7 +6,7 @@
 class Chunk;
 class BaseComponentType;
 class EntityManager;
-class ISystem;
+class System;
 template<class Type> class ComponentType;
 
 class Archetype
@@ -19,7 +19,7 @@ private:
     EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
-    vector<shared_ptr<ISystem>> systems;
+    vector<shared_ptr<class IEntitySystem>> systems;
 
     Chunk& GetOrCreateChunk();
     template<class Type, class... Types> void AddType();
@@ -35,7 +35,7 @@ public:
     const int ChunkCount() const { return chunks.size(); }
     const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
-    void AddSystem(shared_ptr<ISystem> system) { systems.push_back(system); } //TODO: Make this private and friend
+    void AddSystem(shared_ptr<IEntitySystem> system) { systems.push_back(system); } //TODO: Make this private and friend
     template<class... Types> void AddEntity(Types const&... components);
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;

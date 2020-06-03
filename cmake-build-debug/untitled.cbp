@@ -92,13 +92,13 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/main.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Core/Time.h">
-			<Option target="untitled"/>
-		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Render/Mesh.h">
@@ -116,7 +116,7 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/ISystem.cpp">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp">

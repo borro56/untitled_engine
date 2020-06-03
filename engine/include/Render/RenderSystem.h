@@ -7,7 +7,7 @@
 #include "QueryFamilyIndices.h"
 #include "SwapChainSupportDetails.h"
 #include "Renderable.h"
-#include "../ECS/System.h"
+#include "../ECS/EntitySystem.h"
 #include "../ECS/Components/Rotation.h"
 #include "../ECS/Components/Scale.h"
 
@@ -26,7 +26,7 @@ const bool enableValidationLayers = true;
 
 
 
-class RenderSystem : public System<Translation, Rotation, Scale, Renderable>
+class RenderSystem : public EntitySystem<Translation, Rotation, Scale, Renderable>
 {
 public:
     uint32_t imageIndex;
@@ -90,7 +90,7 @@ public:
     }
 
     Mesh CreateMesh(const vector<Vertex> &vertices, const vector<uint16_t> &indices);
-    VkPipeline CreateGraphicsPipeline();
+    VkPipeline CreateGraphicsPipeline(string vertexShader, string fragmentShader);
 
 private:
     vector<Mesh> meshes;
@@ -155,15 +155,22 @@ std::vector<char> RenderSystem::readFile(const string &filename)
 
     return buffer;
 }
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_E && action == GLFW_PRESS)
+    {
+    }
+}
 
 void RenderSystem::initWindow()
 {
     glfwInit();
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); //Tell GLFW to not init OpenGL
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
     window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
     glfwSetWindowUserPointer(window, this);
     glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
+    glfwSetKeyCallback(window, key_callback);
 }
 
 void RenderSystem::framebufferResizeCallback(GLFWwindow *window, int width, int height)
@@ -497,10 +504,10 @@ void RenderSystem::createRenderPass()
 }
 
 
-VkPipeline RenderSystem::CreateGraphicsPipeline()
+VkPipeline RenderSystem::CreateGraphicsPipeline(string vertexShader, string fragmentShader) //TODO: Check if this should be references
 {
-    auto vertShaderCode = readFile("shaders/vert.spv");
-    auto fragShaderCode = readFile("shaders/frag.spv");
+    auto vertShaderCode = readFile(vertexShader);
+    auto fragShaderCode = readFile(fragmentShader);
 
     VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
     VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);

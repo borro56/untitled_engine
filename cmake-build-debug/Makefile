@@ -231,32 +231,32 @@ engine/src/ECS/EntityManager.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.s
 .PHONY : engine/src/ECS/EntityManager.cpp.s
 
-engine/src/ECS/ISystem.o: engine/src/ECS/ISystem.cpp.o
+engine/src/ECS/System.o: engine/src/ECS/System.cpp.o
 
-.PHONY : engine/src/ECS/ISystem.o
+.PHONY : engine/src/ECS/System.o
 
 # target to build an object file
-engine/src/ECS/ISystem.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.o
-.PHONY : engine/src/ECS/ISystem.cpp.o
+engine/src/ECS/System.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o
+.PHONY : engine/src/ECS/System.cpp.o
 
-engine/src/ECS/ISystem.i: engine/src/ECS/ISystem.cpp.i
+engine/src/ECS/System.i: engine/src/ECS/System.cpp.i
 
-.PHONY : engine/src/ECS/ISystem.i
+.PHONY : engine/src/ECS/System.i
 
 # target to preprocess a source file
-engine/src/ECS/ISystem.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.i
-.PHONY : engine/src/ECS/ISystem.cpp.i
+engine/src/ECS/System.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.i
+.PHONY : engine/src/ECS/System.cpp.i
 
-engine/src/ECS/ISystem.s: engine/src/ECS/ISystem.cpp.s
+engine/src/ECS/System.s: engine/src/ECS/System.cpp.s
 
-.PHONY : engine/src/ECS/ISystem.s
+.PHONY : engine/src/ECS/System.s
 
 # target to generate assembly for a file
-engine/src/ECS/ISystem.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/ISystem.cpp.s
-.PHONY : engine/src/ECS/ISystem.cpp.s
+engine/src/ECS/System.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.s
+.PHONY : engine/src/ECS/System.cpp.s
 
 engine/src/ECS/SystemThread.o: engine/src/ECS/SystemThread.cpp.o
 
@@ -306,9 +306,9 @@ help:
 	@echo "... engine/src/ECS/EntityManager.o"
 	@echo "... engine/src/ECS/EntityManager.i"
 	@echo "... engine/src/ECS/EntityManager.s"
-	@echo "... engine/src/ECS/ISystem.o"
-	@echo "... engine/src/ECS/ISystem.i"
-	@echo "... engine/src/ECS/ISystem.s"
+	@echo "... engine/src/ECS/System.o"
+	@echo "... engine/src/ECS/System.i"
+	@echo "... engine/src/ECS/System.s"
 	@echo "... engine/src/ECS/SystemThread.o"
 	@echo "... engine/src/ECS/SystemThread.i"
 	@echo "... engine/src/ECS/SystemThread.s"

@@ -7,7 +7,7 @@ using namespace std;
 
 class EntityManager {
     bool running;
-    vector<shared_ptr<class ISystem>> systems;
+    vector<shared_ptr<class System>> systems;
     vector<class Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
 
@@ -23,7 +23,7 @@ public:
 #include "Archetype.h"
 #include "Entity.h"
 #include "SystemThread.h"
-#include "System.h"
+#include "EntitySystem.h"
 #include "tpp/EntityManager.tpp"
 
 #endif

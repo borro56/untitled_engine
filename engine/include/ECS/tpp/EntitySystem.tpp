@@ -1,5 +1,5 @@
 
-#include "../System.h"
+#include "../EntitySystem.h"
 #include "../EntityManager.h"
 
 template<class T>
@@ -16,13 +16,13 @@ T& GetComponentRef(T* array, int index)
 }
 
 template<class... Types>
-void System<Types...>::Execute(Archetype& archetype, Chunk& chunk)
+void EntitySystem<Types...>::Execute(Archetype& archetype, Chunk& chunk)
 {
     InternalExecuteArray(chunk, GetComponentArray<Types>(archetype, chunk)...);
 }
 
 template<class... Types>
-void System<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types)
+void EntitySystem<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types)
 {
     for (int i = 0; i < chunk.Count(); ++i)
     {
@@ -31,9 +31,10 @@ void System<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types)
 }
 
 template<class... Types>
-void System<Types...>::Init(EntityManager &entityManager)
+void EntitySystem<Types...>::Init(EntityManager &entityManager)
 {
-    this->entityManager = &entityManager;
+    System::Init(entityManager);
+
     auto archetypes = entityManager.GetArchetypes<Types...>();
     for(auto archetype : archetypes)
     {
@@ -44,13 +45,13 @@ void System<Types...>::Init(EntityManager &entityManager)
 }
 
 template<class... Types>
-vector<Archetype *> System<Types...>::GetArchetypes()
+vector<Archetype *> EntitySystem<Types...>::GetArchetypes()
 {
     return entityManager->GetArchetypes<Types...>();
 }
 
 template<class... Types>
-bool System<Types...>::SubsetOf(Archetype &archetype)
+bool EntitySystem<Types...>::SubsetOf(Archetype &archetype)
 {
     return archetype.ContainsTypes<Types...>();
 }

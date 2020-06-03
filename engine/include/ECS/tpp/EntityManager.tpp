@@ -28,13 +28,12 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
 
     for(auto system : systems)
     {
-        if(system->SubsetOf(newArcehtype))
+        auto entitySystem = dynamic_pointer_cast<IEntitySystem>(system);
+        if(entitySystem && entitySystem->SubsetOf(newArcehtype))
         {
-            newArcehtype.AddSystem(system);
+            newArcehtype.AddSystem(entitySystem);
         }
     }
-
-
 
     return newArcehtype;
 }

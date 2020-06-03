@@ -6,16 +6,16 @@
 #define UNTITLED_TIMESYSTEM_H
 
 
-#include "../ECS/System.h"
-#include "Time.h"
+#include "../ECS/EntitySystem.h"
 
-class TimeSystem : public System<Time>
+class TimeSystem : public EntitySystem<bool>
 {
-    Time* timeReference;
+    float time = 0;
+    float deltaTime = 0;
 
 protected:
-    void InternalExecute(Time& time) override;
-    void InternalInit() override;
+    void InternalExecute(bool& time) override {}
+    void PrepareFrame() override;
 
 public:
     float GetTime();

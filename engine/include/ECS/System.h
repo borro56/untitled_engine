@@ -1,30 +1,20 @@
 #ifndef UNTITLED_SYSTEM_H
 #define UNTITLED_SYSTEM_H
 
-#include "ISystem.h"
+#include "../common.h"
 
-template<class... Types>
-class System : public ISystem
+class System
 {
     friend class EntityManager;
 
-    void InternalExecuteArray(Chunk& chunk, Types*... types);
-
 protected:
-    EntityManager* entityManager;
-    virtual void InternalExecute(Types&... types) = 0;
-    virtual void Init(class EntityManager& entityManager) override;
-    bool SubsetOf(class Archetype& archetype) override;
+    class EntityManager* entityManager;
 
-public:
-    vector<Archetype*> GetArchetypes();
+    virtual void InternalInit() { };
+    virtual void Init(class EntityManager& entityManager);
 
-    void Execute(Archetype& archetype,Chunk& chunk) override;
+    virtual void PrepareFrame() { }
+    virtual void FinishFrame() { }
 };
-
-#include "Chunk.h"
-#include "Archetype.h"
-#include "ComponentType.h"
-#include "tpp/System.tpp"
 
 #endif

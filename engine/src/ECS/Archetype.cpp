@@ -1,5 +1,5 @@
 #include "../../include/ECS/Archetype.h"
-#include "../../include/ECS/System.h"
+#include "../../include/ECS/EntitySystem.h"
 
 Chunk& Archetype::GetOrCreateChunk()
 {

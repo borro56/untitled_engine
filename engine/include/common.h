@@ -16,6 +16,7 @@
 #include <set>
 #include <cstdint>
 #include <fstream>
+#include <map>
 
 #include <stdio.h>
 #include <GLFW/glfw3.h>

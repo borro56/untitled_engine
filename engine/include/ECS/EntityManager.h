@@ -14,7 +14,9 @@ class EntityManager {
 public:
     template<class... Types> vector<Archetype*> GetArchetypes();
     template<class... Types> const class Entity Create(Types const&... components);
+
     template<class SystemType> shared_ptr<SystemType> GetOrCreateSystem();
+    template<class SystemType, class... SystemTypes> void GetOrCreateSystems();
     void ExecuteSystems();
     void Stop();
     void Start();

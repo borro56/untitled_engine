@@ -101,6 +101,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Input/InputSystem.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Render/Mesh.h">
 			<Option target="untitled"/>
 		</Unit>
@@ -120,6 +123,9 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/src/Input/InputSystem.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/CMakeLists.txt">

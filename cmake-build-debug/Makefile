@@ -285,6 +285,33 @@ engine/src/ECS/SystemThread.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.s
 .PHONY : engine/src/ECS/SystemThread.cpp.s
 
+engine/src/Input/InputSystem.o: engine/src/Input/InputSystem.cpp.o
+
+.PHONY : engine/src/Input/InputSystem.o
+
+# target to build an object file
+engine/src/Input/InputSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/Input/InputSystem.cpp.o
+.PHONY : engine/src/Input/InputSystem.cpp.o
+
+engine/src/Input/InputSystem.i: engine/src/Input/InputSystem.cpp.i
+
+.PHONY : engine/src/Input/InputSystem.i
+
+# target to preprocess a source file
+engine/src/Input/InputSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/Input/InputSystem.cpp.i
+.PHONY : engine/src/Input/InputSystem.cpp.i
+
+engine/src/Input/InputSystem.s: engine/src/Input/InputSystem.cpp.s
+
+.PHONY : engine/src/Input/InputSystem.s
+
+# target to generate assembly for a file
+engine/src/Input/InputSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/engine/src/Input/InputSystem.cpp.s
+.PHONY : engine/src/Input/InputSystem.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... engine/src/ECS/SystemThread.o"
 	@echo "... engine/src/ECS/SystemThread.i"
 	@echo "... engine/src/ECS/SystemThread.s"
+	@echo "... engine/src/Input/InputSystem.o"
+	@echo "... engine/src/Input/InputSystem.i"
+	@echo "... engine/src/Input/InputSystem.s"
 .PHONY : help
 
 

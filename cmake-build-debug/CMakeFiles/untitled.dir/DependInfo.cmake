@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o"
   "/Users/nicolasborromeo/untitled_engine/engine/src/ECS/SystemThread.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/ECS/SystemThread.cpp.o"
+  "/Users/nicolasborromeo/untitled_engine/engine/src/Input/InputSystem.cpp" "/Users/nicolasborromeo/untitled_engine/cmake-build-debug/CMakeFiles/untitled.dir/engine/src/Input/InputSystem.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

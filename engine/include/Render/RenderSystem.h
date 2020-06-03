@@ -89,6 +89,8 @@ public:
         cleanup();
     }
 
+    GLFWwindow& GetWindow() { return *window; }
+
     Mesh CreateMesh(const vector<Vertex> &vertices, const vector<uint16_t> &indices);
     VkPipeline CreateGraphicsPipeline(string vertexShader, string fragmentShader);
 

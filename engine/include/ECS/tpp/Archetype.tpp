@@ -76,3 +76,22 @@ template<class Type, class... Types> bool Archetype::ContainsTypes() const
 
     return false;
 }
+
+template<class Type>
+int Archetype::GetData(Type* targetArray)
+{
+    auto& type = GetType<Type>();
+
+    for(auto chunk : chunks)
+    {
+        auto array = chunk->GetArray(type);
+        for (int i = 0; i < chunk->Count(); ++i)
+        {
+            *targetArray = *array;
+            targetArray++;
+            array++;
+        }
+    }
+
+    return entityCount;
+}

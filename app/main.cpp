@@ -4,6 +4,7 @@
 #include "include/TestSystem.h"
 #include "include/Components/Speed.h"
 #include "../engine/include/Input/InputSystem.h"
+#include "include/CollisionSystem.h"
 
 const std::vector<Vertex> vertices = {
         {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
@@ -36,13 +37,8 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 
 int main()
 {
-    map<int, bool> lala;
-
-    lala[10] = true;
-
     EntityManager em;
-    em.GetOrCreateSystem<TestSystem>();
-    em.GetOrCreateSystem<TimeSystem>();
+    em.GetOrCreateSystems<TestSystem,TimeSystem, CollisionSystem>();
 
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
     auto mesh = renderSystem->CreateMesh(vertices, indices);
@@ -52,7 +48,7 @@ int main()
     auto inputSystem = em.GetOrCreateSystem<InputSystem>();
     inputSystem->SetWindow(renderSystem->GetWindow());
 
-    em.Create(  Translation(),
+    em.Create(  Translation(Vector3(0,0,0)),
                 Scale(),
                 Rotation(),
                 Renderable(0, mesh, pipeline),
@@ -64,7 +60,7 @@ int main()
                 Renderable(1, mesh2, pipeline),
                 Speed(0.01f));
 
-    em.Create(  Translation(Vector3(-1,0,0)),
+    em.Create(  Translation(Vector3(-1,-2,0)),
                 Scale(Vector3(0.5f,0.5f,0.5f)),
                 Rotation(Vector3(0,0,15)),
                 Renderable(2, mesh, pipeline),

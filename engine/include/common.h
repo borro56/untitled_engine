@@ -18,6 +18,7 @@
 #include <fstream>
 #include <map>
 
+#include <math.h>
 #include <stdio.h>
 #include <GLFW/glfw3.h>
 #include <glm/vec4.hpp>

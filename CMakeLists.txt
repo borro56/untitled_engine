@@ -21,7 +21,7 @@ add_executable(untitled
         engine/include/Core/TimeSystem.cpp
         engine/include/Core/TimeSystem.h
         engine/include/Render/Mesh.h
-        engine/include/ECS/IEntitySystem.h engine/include/Input/InputSystem.h)
+        engine/include/ECS/IEntitySystem.h engine/include/Input/InputSystem.h app/include/CollisionSystem.h)
 
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)

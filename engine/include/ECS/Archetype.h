@@ -36,11 +36,14 @@ public:
     const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
     void AddSystem(shared_ptr<IEntitySystem> system) { systems.push_back(system); } //TODO: Make this private and friend
+    void ExecuteSystems(vector<class SystemThread*>& vector);
+
     template<class... Types> void AddEntity(Types const&... components);
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;
     template<class Type> const ComponentType<Type>& GetType() const;
-    void ExecuteSystems(vector<class SystemThread*>& vector);
+
+    template<class Type> int GetData(Type *);
 };
 
 //TODO: Remove non exposed headers

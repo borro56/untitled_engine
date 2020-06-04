@@ -1275,10 +1275,10 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
 {
     UniformBufferObject ubo{};
     ubo.model = glm::translate(glm::mat4(1.0f), glm::vec3(trans.value.x, trans.value.y, trans.value.z));
+    ubo.model *= glm::scale(glm::mat4(1.0f), glm::vec3(sca.value.x, sca.value.y, sca.value.z));
     ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.z, glm::vec3(0.0f, 0.0f, 1.0f));
     ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.y, glm::vec3(0.0f, 0.1f, 0.0f));
     ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.x, glm::vec3(1.0f, 0.0f, 0.0f));
-    ubo.model *= glm::scale(glm::mat4(1.0f), glm::vec3(sca.value.x, sca.value.y, sca.value.z));
 
     ubo.view = glm::lookAt(glm::vec3(0.0f, 3.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 10.0f);

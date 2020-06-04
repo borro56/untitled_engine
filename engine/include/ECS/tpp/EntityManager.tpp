@@ -63,9 +63,34 @@ shared_ptr<SystemType> EntityManager::GetOrCreateSystem()
             return castedSystem;
     }
 
-
     auto system = make_shared<SystemType>();
     systems.push_back(system);
     systems[systems.size()-1]->InternalInit(*this);
     return system;
+}
+
+template<class SystemType, class... SystemTypes>
+void EntityManager::GetOrCreateSystems()
+{
+    GetOrCreateSystem<SystemType>();
+
+    if constexpr (sizeof...(SystemTypes) > 0)
+    {
+        GetOrCreateSystems<SystemTypes...>();
+    }
+}
+
+template<class TargetType, class... RequiredTypes>
+int EntityManager::GetData(TargetType * targetArray)
+{
+    auto archetypes = GetArchetypes<RequiredTypes...>();
+    auto currentIndex = 0;
+
+    for(auto archetype : archetypes)
+    {
+        archetype->GetData(targetArray + currentIndex);
+        currentIndex += archetype->EntityCount();
+    }
+
+    return currentIndex;
 }

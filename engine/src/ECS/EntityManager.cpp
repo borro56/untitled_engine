@@ -38,13 +38,3 @@ void EntityManager::Stop()
     running = false;
 }
 
-template<class SystemType, class... SystemTypes>
-void EntityManager::GetOrCreateSystems()
-{
-    GetOrCreateSystem<SystemType>();
-
-    if constexpr (sizeof...(SystemTypes) > 0)
-    {
-        GetOrCreateSystems<SystemTypes...>();
-    }
-}

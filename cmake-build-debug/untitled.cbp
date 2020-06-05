@@ -89,7 +89,13 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/CollisionSystem.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h">
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/include/PlayerMovementSystem.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/app/main.cpp">

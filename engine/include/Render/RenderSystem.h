@@ -28,7 +28,12 @@ const bool enableValidationLayers = true;
 
 class RenderSystem : public EntitySystem<Translation, Rotation, Scale, Renderable>
 {
-public:
+    mutex renderIdMutex;
+    int renderCount;
+
+    Vector3 cameraPosition;
+    Vector3 cameraTarget;
+
     uint32_t imageIndex;
 
     GLFWwindow* window;
@@ -88,6 +93,9 @@ public:
     {
         cleanup();
     }
+
+    void SetCameraPosition(Vector3 cameraPosition) { this->cameraPosition = cameraPosition; }
+    void SetCameraTarget(Vector3 cameraTarget) { this->cameraTarget = cameraTarget; }
 
     GLFWwindow& GetWindow() { return *window; }
 
@@ -1238,6 +1246,8 @@ void RenderSystem::createDescriptorSets()
 
 void RenderSystem::PrepareFrame()
 {
+    renderCount = 0;
+
     auto archetypes = GetArchetypes(); //TODO: Cache this
     auto totalEntities = 0;
     for(auto archetype : archetypes)
@@ -1273,6 +1283,10 @@ void RenderSystem::PrepareFrame()
 
 void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca, Renderable& renderData)
 {
+    renderIdMutex.lock();
+    auto renderId = renderCount++;
+    renderIdMutex.unlock();
+
     UniformBufferObject ubo{};
     ubo.model = glm::translate(glm::mat4(1.0f), glm::vec3(trans.value.x, trans.value.y, trans.value.z));
     ubo.model *= glm::scale(glm::mat4(1.0f), glm::vec3(sca.value.x, sca.value.y, sca.value.z));
@@ -1280,14 +1294,18 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
     ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.y, glm::vec3(0.0f, 0.1f, 0.0f));
     ubo.model *= glm::rotate(glm::mat4(1.0f), rot.value.x, glm::vec3(1.0f, 0.0f, 0.0f));
 
-    ubo.view = glm::lookAt(glm::vec3(0.0f, 3.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    ubo.view = glm::lookAt(
+            glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z),
+            glm::vec3(cameraTarget.x, cameraTarget.y, cameraTarget.z),
+            glm::vec3(0.0f, 0.0f, 1.0f));
+
     ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 10.0f);
     ubo.proj[1][1] *= -1;
 
     void* data;
-    vkMapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex], 0, sizeof(ubo), 0, &data);
+    vkMapMemory(device, uniformBuffersMemory[renderId][imageIndex], 0, sizeof(ubo), 0, &data);
     memcpy(data, &ubo, sizeof(ubo));
-    vkUnmapMemory(device, uniformBuffersMemory[renderData.renderId][imageIndex]);
+    vkUnmapMemory(device, uniformBuffersMemory[renderId][imageIndex]);
 
     for (size_t i = 0; i < commandBuffers.size(); i++)
     {
@@ -1298,7 +1316,7 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
         vkCmdBindVertexBuffers(commandBuffers[i], 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffers[i], renderData.mesh.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
         vkCmdBindDescriptorSets(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1,
-                                &descriptorSets[renderData.renderId][i], 0, nullptr);
+                                &descriptorSets[renderId][i], 0, nullptr);
         vkCmdDrawIndexed(commandBuffers[i], static_cast<uint32_t>(renderData.mesh.indicesCount), 1, 0, 0, 0);
     }
 }

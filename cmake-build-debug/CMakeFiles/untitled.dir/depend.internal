@@ -183,8 +183,10 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/include/vulkan/vulkan_xlib_xrandr.h
  /Users/nicolasborromeo/untitled_engine/app/include/CollisionSystem.h
  /Users/nicolasborromeo/untitled_engine/app/include/Components/Health.h
+ /Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h
+ /Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h
  /Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
- /Users/nicolasborromeo/untitled_engine/app/include/TestSystem.h
+ /Users/nicolasborromeo/untitled_engine/app/include/PlayerMovementSystem.h
  /Users/nicolasborromeo/untitled_engine/app/main.cpp
  /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h

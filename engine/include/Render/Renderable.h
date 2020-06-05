@@ -6,11 +6,10 @@
 
 struct Renderable
 {
-    int renderId;
     Mesh mesh;
-    VkPipeline pipeline; //TODO: Create material
+    VkPipeline pipeline;
 
-    Renderable(int renderId, Mesh mesh, VkPipeline pipeline) : renderId(renderId), mesh(mesh), pipeline(pipeline) { }
+    Renderable(Mesh mesh, VkPipeline pipeline) : mesh(mesh), pipeline(pipeline) { }
 };
 
 #endif //UNTITLED_RENDERABLE_H

@@ -1,10 +1,11 @@
 #include "../engine/include/ECS/Components/Translation.h"
 #include "../engine/include/Render/RenderSystem.h"
 #include "../engine/include/Core/TimeSystem.h"
-#include "include/TestSystem.h"
+#include "include/PlayerMovementSystem.h"
 #include "include/Components/Speed.h"
 #include "../engine/include/Input/InputSystem.h"
 #include "include/CollisionSystem.h"
+#include "include/Components/Player.h"
 
 const std::vector<Vertex> vertices = {
         {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
@@ -18,7 +19,7 @@ const std::vector<uint16_t> indices = { 0, 1, 2, 2, 3, 0 };
 const std::vector<Vertex> vertices2 = {
         {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
         {{0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}},
-        {{0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
+        {{0.0f, 0.5f}, {0.0f, 0.0f, 1.0f}}
 };
 
 const std::vector<uint16_t> indices2 = { 0, 1, 2 };
@@ -33,38 +34,29 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //Recheck memory usage and leaks (smart pointers)
 //Fix chunks for single objects (Time EntitySystem)
 //Look for where equivalent for templates
-//Check why GetOrCreateSystems wont compile
+//Implement tag components concept
+//define an coordinate system
 
 int main()
 {
     EntityManager em;
-    em.GetOrCreateSystems<TestSystem,TimeSystem, CollisionSystem>();
-
+    em.GetOrCreateSystems<PlayerMovementSystem,TimeSystem, CollisionSystem>();
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
+    auto inputSystem = em.GetOrCreateSystem<InputSystem>();
+
     auto mesh = renderSystem->CreateMesh(vertices, indices);
     auto mesh2 = renderSystem->CreateMesh(vertices2, indices2);
     auto pipeline = renderSystem->CreateGraphicsPipeline("shaders/vert.spv", "shaders/frag.spv");
+    renderSystem->SetCameraPosition(Vector3(0,-4,4));
 
-    auto inputSystem = em.GetOrCreateSystem<InputSystem>();
     inputSystem->SetWindow(renderSystem->GetWindow());
 
-    em.Create(  Translation(Vector3(0,0,0)),
+    em.Create(  PlayerTag(),
+                Translation(Vector3(0,-1.5,0)),
                 Scale(),
                 Rotation(),
-                Renderable(0, mesh, pipeline),
-                Speed(0.1f)); //TODO: Auto assign renderId
-
-    em.Create(  Translation(Vector3(1,0,0)),
-                Scale(),
-                Rotation(Vector3(0,0,45)),
-                Renderable(1, mesh2, pipeline),
-                Speed(0.01f));
-
-    em.Create(  Translation(Vector3(-1,-2,0)),
-                Scale(Vector3(0.5f,0.5f,0.5f)),
-                Rotation(Vector3(0,0,15)),
-                Renderable(2, mesh, pipeline),
-                Speed(0.05f));
+                Renderable(mesh2, pipeline),
+                Speed(2));
 
     em.Start();
 

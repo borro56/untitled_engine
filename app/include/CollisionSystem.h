@@ -31,10 +31,10 @@ protected:
             auto& otherTranslation = translations[i];
             auto distance = otherTranslation.value.Distance(pos.value);
 
-            if(distance > 0.01f && distance < 1.5f)
+            /*if(distance > 0.01f && distance < 1.5f) 
             {
                 pos.value.y += 0.001f;
-            }
+            }*/
         }
     }
 };

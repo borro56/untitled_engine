@@ -10,7 +10,7 @@ include_directories(
 
 add_executable(untitled
         app/main.cpp
-        app/include/TestSystem.h
+        app/include/PlayerMovementSystem.h
         engine/src/ECS/Archetype.cpp
         engine/src/ECS/EntityManager.cpp
         engine/src/ECS/SystemThread.cpp
@@ -21,7 +21,7 @@ add_executable(untitled
         engine/include/Core/TimeSystem.cpp
         engine/include/Core/TimeSystem.h
         engine/include/Render/Mesh.h
-        engine/include/ECS/IEntitySystem.h engine/include/Input/InputSystem.h app/include/CollisionSystem.h)
+        engine/include/ECS/IEntitySystem.h engine/include/Input/InputSystem.h app/include/CollisionSystem.h app/include/Components/Player.h app/include/Components/MoveForwardTag.h)
 
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/glfw/lib-macos/libglfw.3.dylib)
 target_link_libraries(untitled /Users/nicolasborromeo/Documents/Frameworks/vulkansdk/macOS/lib/libvulkan.1.2.135.dylib)

@@ -33,18 +33,18 @@ protected:
         deltaTime = time->GetDeltaTime();
     }
 
-    void InternalExecute(Translation& rot, Speed& speed, Renderable& render, PlayerTag&) override
+    void InternalExecute(Translation& translation, Speed& speed, Renderable& render, PlayerTag&) override
     {
         if(leftPressed)
-            rot.value.x -= speed.value * deltaTime;
+            translation.value.x -= speed.value * deltaTime;
 
         if(rightPressed)
-            rot.value.x += speed.value * deltaTime;
+            translation.value.x += speed.value * deltaTime;
 
         if(spacePressed)
         {
             //TODO: Make this thread safe
-            entityManager->Create(  Translation(Vector3(0,-1.5,0)),
+            entityManager->Create(  translation,
                         Scale(),
                         Rotation(),
                         render,

@@ -40,3 +40,13 @@ void Archetype::ExecuteSystem(Chunk& chunk)
         system->Execute(*this, chunk);
     }
 }
+
+
+void Archetype::ActivateNewData()
+{
+    activeChunksAmount = chunks.size();
+    for(auto chunk : chunks)
+    {
+        chunk->ActivateNewData();
+    }
+}

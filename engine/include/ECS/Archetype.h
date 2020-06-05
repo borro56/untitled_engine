@@ -12,10 +12,13 @@ template<class Type> class ComponentType;
 class Archetype
 {
     friend class SystemThread;
+    friend class EntityManager;
 
 private:
     int entityCount = 0;
     int entitySize = 0;
+    int activeChunksAmount = 0;
+
     EntityManager& entityManager;
     vector<BaseComponentType> componentTypes;
     vector<shared_ptr<Chunk>> chunks;
@@ -27,12 +30,15 @@ private:
 
     Archetype(EntityManager& entityManager);
 
+
+    void ActivateNewData();
+
 public:
     template <class... Types> static Archetype Create(EntityManager& manager);
 
     const int EntitySize() const { return entitySize; }
     const int EntityCount() const { return entityCount; }
-    const int ChunkCount() const { return chunks.size(); }
+    const int ChunkCount() const { return activeChunksAmount; }
     const Chunk& GetChunkAt(const int i) const { return *chunks[i]; }
 
     void AddSystem(shared_ptr<IEntitySystem> system) { systems.push_back(system); } //TODO: Make this private and friend
@@ -46,7 +52,6 @@ public:
     template<class Type> int GetData(Type *);
 };
 
-//TODO: Remove non exposed headers
 #include "ComponentType.h"
 #include "Chunk.h"
 #include "tpp/Archetype.tpp"

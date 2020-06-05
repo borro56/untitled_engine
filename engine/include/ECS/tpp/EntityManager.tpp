@@ -22,20 +22,8 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
         }
     }
 
-    archetypes.push_back(Archetype::Create<Types...>(*this));
-
-    auto& newArcehtype = archetypes[archetypes.size() - 1];
-
-    for(auto system : systems)
-    {
-        auto entitySystem = dynamic_pointer_cast<IEntitySystem>(system);
-        if(entitySystem && entitySystem->SubsetOf(newArcehtype))
-        {
-            newArcehtype.AddSystem(entitySystem);
-        }
-    }
-
-    return newArcehtype;
+    newArchetypes.push_back(Archetype::Create<Types...>(*this));
+    return newArchetypes[newArchetypes.size() - 1];
 }
 
 template<class... Types> vector<Archetype*> EntityManager::GetArchetypes()

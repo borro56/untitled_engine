@@ -15,13 +15,16 @@ class Chunk
 
 private:
     int amount;
+    int activeAmount;
     byte data[CHUNK_SIZE];
 
     template<class... Types> void AddData(Archetype& archetype, Types const&... rest);
     template<class Type, class... Types> void AddDataRecursive(Archetype& archetype, Type const& data, Types const&... rest);
 
+    void ActivateNewData() { activeAmount = amount; }
+
 public:
-    int Count() const { return amount; }
+    int Count() const { return activeAmount; }
 
     template<class Type> Type* GetArray(const ComponentType<Type>& type) const;
 };

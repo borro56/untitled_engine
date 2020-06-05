@@ -29,7 +29,30 @@ void EntityManager::Start()
     running = true;
     while (running)
     {
+        ActivateArchetypes();
         ExecuteSystems();
+    }
+}
+
+void EntityManager::ActivateArchetypes()
+{
+    for(auto& newArchetype : newArchetypes)
+    {
+        for (auto system : systems)
+        {
+            auto entitySystem = dynamic_pointer_cast<IEntitySystem>(system);
+            if (entitySystem && entitySystem->SubsetOf(newArchetype))
+            {
+                newArchetype.AddSystem(entitySystem);
+            }
+        }
+        archetypes.push_back(newArchetype);
+    }
+    newArchetypes.clear();
+
+    for(auto& archetype : archetypes)
+    {
+        archetype.ActivateNewData();
     }
 }
 

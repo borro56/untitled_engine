@@ -25,6 +25,7 @@ const std::vector<Vertex> vertices2 = {
 const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 
 //Tasks:
+//PERFORMANCE
 //Implement custom shaders
 //Implement Materials
 //Implement frustum culling
@@ -37,6 +38,8 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //Implement tag components concept
 //define an coordinate system
 //one thread per core
+//Remove non exposed headers
+//Analizar uso de mutex en render system
 
 int main()
 {

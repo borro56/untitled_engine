@@ -5,11 +5,17 @@
 
 using namespace std;
 
+class Archetype;
+class System;
+
 class EntityManager {
     bool running;
-    vector<shared_ptr<class System>> systems;
-    vector<class Archetype> archetypes;
+
+    vector<Archetype> newArchetypes;
+    vector<shared_ptr<System>> systems;
+    vector<Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
+    void ActivateArchetypes();
 
 public:
     template<class... Types> vector<Archetype*> GetArchetypes();

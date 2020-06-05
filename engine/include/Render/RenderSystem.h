@@ -24,11 +24,10 @@ const bool enableValidationLayers = false;
 const bool enableValidationLayers = true;
 #endif
 
-
-
 class RenderSystem : public EntitySystem<Translation, Rotation, Scale, Renderable>
 {
     mutex renderIdMutex;
+    mutex commandMutex;
     int renderCount;
 
     Vector3 cameraPosition;
@@ -1171,9 +1170,13 @@ void RenderSystem::updateObjects(int newAmount)
     if(newAmount > maxAmountOfObjects)
     {
         maxAmountOfObjects = newAmount;
+
+        commandMutex.lock(); //TODO: Move locks to the exact needed moment
         createUniformBuffers();
         createDescriptorPool();
         createDescriptorSets();
+        commandMutex.unlock();
+
         previousAmount = maxAmountOfObjects;
     }
 
@@ -1246,6 +1249,7 @@ void RenderSystem::createDescriptorSets()
 
 void RenderSystem::PrepareFrame()
 {
+    vkDeviceWaitIdle(device); //TODO: Remove this
     renderCount = 0;
 
     auto archetypes = GetArchetypes(); //TODO: Cache this
@@ -1307,17 +1311,21 @@ void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca
     memcpy(data, &ubo, sizeof(ubo));
     vkUnmapMemory(device, uniformBuffersMemory[renderId][imageIndex]);
 
+
     for (size_t i = 0; i < commandBuffers.size(); i++)
     {
         VkBuffer vertexBuffers[] = {renderData.mesh.vertexBuffer};
         VkDeviceSize offsets[] = {0};
 
+        commandMutex.lock();
         vkCmdBindPipeline(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, renderData.pipeline);
         vkCmdBindVertexBuffers(commandBuffers[i], 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffers[i], renderData.mesh.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
         vkCmdBindDescriptorSets(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1,
                                 &descriptorSets[renderId][i], 0, nullptr);
         vkCmdDrawIndexed(commandBuffers[i], static_cast<uint32_t>(renderData.mesh.indicesCount), 1, 0, 0, 0);
+
+        commandMutex.unlock();
     }
 }
 

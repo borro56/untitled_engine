@@ -36,6 +36,7 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //Look for where equivalent for templates
 //Implement tag components concept
 //define an coordinate system
+//one thread per core
 
 int main()
 {

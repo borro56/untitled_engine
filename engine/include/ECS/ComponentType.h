@@ -1,6 +1,8 @@
 #ifndef UNTITLED_COMPONENTTYPE_H
 #define UNTITLED_COMPONENTTYPE_H
 
+#include "../common.h"
+
 class BaseComponentType
 {
     size_t id;

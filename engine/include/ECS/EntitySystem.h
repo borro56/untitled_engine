@@ -19,9 +19,9 @@ public:
     void Execute(class Archetype& archetype, Chunk& chunk) override;
 };
 
+#include "ComponentType.h"
 #include "Chunk.h"
 #include "Archetype.h"
-#include "ComponentType.h"
 #include "tpp/EntitySystem.tpp"
 
 #endif

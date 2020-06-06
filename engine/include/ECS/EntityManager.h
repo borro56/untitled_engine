@@ -12,16 +12,21 @@ class System;
 class EntityManager {
     bool running;
 
+    mutex entitiesToDeleteMutex;
+
+    vector<int> entitiesToDelete;
     map<int, EntityData> entityMap;
     vector<Archetype> newArchetypes;
     vector<shared_ptr<System>> systems;
     vector<Archetype> archetypes;
     template <class... Types> Archetype& GetOrCreateArchetype();
     void ActivateArchetypes();
+    void DeleteEntities();
 
 public:
     template<class... Types> vector<Archetype*> GetArchetypes();
     template<class... Types> const class Entity Create(Types const&... components);
+    void Delete(Entity entity);
 
     template<class TargetType, class... RequiredTypes> int GetData(TargetType* targetArray);
 

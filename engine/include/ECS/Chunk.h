@@ -10,6 +10,8 @@ class Archetype;
 template<class Type> class ComponentType;
 
 
+
+
 class Chunk
 {
     friend class Archetype;
@@ -25,6 +27,8 @@ private:
     template<class Type, class... Types> void AddDataRecursive(Archetype& archetype, Type const& data, Types const&... rest);
 
     void ActivateNewData() { activeAmount = amount; }
+
+    byte* GetArrayBase(const BaseComponentType& type);
 
 public:
     int Count() const { return activeAmount; }

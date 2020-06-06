@@ -30,6 +30,7 @@ void EntityManager::Start()
     while (running)
     {
         ActivateArchetypes();
+        DeleteEntities();
         ExecuteSystems();
     }
 }
@@ -61,3 +62,36 @@ void EntityManager::Stop()
     running = false;
 }
 
+void EntityManager::Delete(Entity entity)
+{
+    entitiesToDeleteMutex.lock();
+    entitiesToDelete.push_back(entity.id);
+    entitiesToDeleteMutex.unlock();
+}
+
+void EntityManager::DeleteEntities()
+{
+    for (auto entityId : entitiesToDelete)
+    {
+        auto& entityData = entityMap[entityId];
+
+        auto& archetype = archetypes[entityData.archetypeIndex];
+        auto& chunk = archetype.chunks[entityData.chunkIndex];
+
+        for(auto& componentType : archetype.componentTypes)
+        {
+            auto array = chunk->GetArrayBase(componentType);
+
+            auto lastElementIndex = (chunk->amount - 1) * componentType.Size();
+            auto toDeleteElementIndex = entityData.entityIndex * componentType.Size();
+
+            copy(
+                    array + lastElementIndex,
+                    array + lastElementIndex + componentType.Size(),
+                    array + toDeleteElementIndex);
+        }
+
+        chunk->amount--;
+        chunk->activeAmount--;
+    }
+}

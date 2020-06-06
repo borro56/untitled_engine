@@ -1304,10 +1304,6 @@ include/Components/Player.h
 include/MoveForwardSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/MoveForwardSystem.h
 
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
-TimeSystem.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
-
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/EntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
@@ -1333,6 +1329,8 @@ tpp/Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Rotation.h
 ../../Math/Vector3.h
@@ -1371,12 +1369,12 @@ System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 IEntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
+ComponentType.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 Chunk.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
 Archetype.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
-ComponentType.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 tpp/EntitySystem.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/tpp/EntitySystem.tpp
 
@@ -1529,18 +1527,4 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
-../../include/ECS/EntitySystem.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

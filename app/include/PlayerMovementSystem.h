@@ -29,7 +29,7 @@ protected:
     {
         leftPressed = input->GetKey(GLFW_KEY_A);
         rightPressed = input->GetKey(GLFW_KEY_D);
-        spacePressed = input->GetKey(GLFW_KEY_SPACE);
+        spacePressed = input->GetKeyDown(GLFW_KEY_SPACE);
         deltaTime = time->GetDeltaTime();
     }
 

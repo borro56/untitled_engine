@@ -3,6 +3,7 @@
 
 #include "../common.h"
 #include "EntityData.h"
+#include "Entity.h"
 
 using namespace std;
 
@@ -10,12 +11,16 @@ class Archetype;
 class System;
 
 class EntityManager {
+
     bool running;
 
     mutex entitiesToDeleteMutex;
 
     vector<int> entitiesToDelete;
+
     map<int, EntityData> entityMap;
+    map<EntityData, int> entityDataMap;
+
     vector<Archetype> newArchetypes;
     vector<shared_ptr<System>> systems;
     vector<Archetype> archetypes;
@@ -35,6 +40,8 @@ public:
     void ExecuteSystems();
     void Stop();
     void Start();
+
+    Entity GetEntity(EntityData& data) { return entityDataMap[data]; }
 };
 
 

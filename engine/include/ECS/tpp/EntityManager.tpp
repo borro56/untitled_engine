@@ -10,7 +10,9 @@ template<class... Types> const Entity EntityManager::Create(Types const&... comp
     auto& archetype = GetOrCreateArchetype<Types...>();
     auto& chunk = archetype.AddEntity(components...);
 
-    entityMap[entityMap.size()] = EntityData { (short)archetype.index , (short)chunk.index, (short)(chunk.amount - 1)};
+    EntityData entityData{ (short)archetype.index , (short)chunk.index, (short)(chunk.amount - 1)};
+    entityMap[entityMap.size()] = entityData;
+    entityDataMap[entityData] = entityMap.size() - 1;
     return Entity(entityMap.size()-1);
 }
 

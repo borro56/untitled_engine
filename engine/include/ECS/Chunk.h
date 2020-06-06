@@ -18,6 +18,7 @@ class Chunk
     friend class EntityManager;
 
 private:
+    int archetypeIndex;
     int index;
     int amount;
     int activeAmount;
@@ -32,6 +33,8 @@ private:
 
 public:
     int Count() const { return activeAmount; }
+    int GetIndex() { return index; }
+    int GetArchetypeIndex() { return archetypeIndex; }
 
     template<class Type> Type* GetArray(const ComponentType<Type>& type) const;
 };

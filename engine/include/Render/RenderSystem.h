@@ -77,7 +77,7 @@ class RenderSystem : public EntitySystem<Translation, Rotation, Scale, Renderabl
     vector<VkPipeline> pipelines;
 
 protected:
-    void InternalExecute(Translation&, Rotation&, Scale&, Renderable&) override;
+    void InternalExecute(Entity entity, Translation&, Rotation&, Scale&, Renderable&) override;
     void PrepareFrame() override;
     void FinishFrame() override;
 
@@ -1287,7 +1287,7 @@ void RenderSystem::PrepareFrame()
     startCommandBuffer();
 }
 
-void RenderSystem::InternalExecute(Translation& trans, Rotation& rot, Scale& sca, Renderable& renderData)
+void RenderSystem::InternalExecute(Entity entity, Translation& trans, Rotation& rot, Scale& sca, Renderable& renderData)
 {
     renderIdMutex.lock();
     auto renderId = renderCount++;

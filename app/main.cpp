@@ -43,6 +43,7 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //Analizar uso de mutex en render system
 //single large uniform buffer
 //entity version system
+//normalize all getters and setters
 
 int main()
 {
@@ -58,13 +59,12 @@ int main()
 
     inputSystem->SetWindow(renderSystem->GetWindow());
 
-    auto e1 = em.Create(  PlayerTag(),
+    em.Create(  PlayerTag(),
                 Translation(Vector3(0,-1.5,0)),
                 Scale(),
                 Rotation(),
                 Renderable(mesh2, pipeline),
                 Speed(2));
-
 
     auto e2 = em.Create(  PlayerTag(),
                 Translation(Vector3(0,1.5,0)),

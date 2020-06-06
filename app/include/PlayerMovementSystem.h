@@ -33,7 +33,7 @@ protected:
         deltaTime = time->GetDeltaTime();
     }
 
-    void InternalExecute(Translation& translation, Speed& speed, Renderable& render, PlayerTag&) override
+    void InternalExecute(Entity entity, Translation& translation, Speed& speed, Renderable& render, PlayerTag&) override
     {
         if(leftPressed)
             translation.value.x -= speed.value * deltaTime;

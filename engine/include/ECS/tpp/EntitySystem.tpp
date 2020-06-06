@@ -26,7 +26,9 @@ void EntitySystem<Types...>::InternalExecuteArray(Chunk& chunk, Types *... types
 {
     for (int i = 0; i < chunk.Count(); ++i)
     {
-        InternalExecute(GetComponentRef<Types>(types, i)...);
+        EntityData ed{ (short)chunk.GetArchetypeIndex(), (short)chunk.GetIndex(), (short)i };
+        auto entity = entityManager->GetEntity(ed);
+        InternalExecute(entity, GetComponentRef<Types>(types, i)...);
     }
 }
 

@@ -3,6 +3,7 @@
 
 #include "System.h"
 #include "IEntitySystem.h"
+#include "Entity.h"
 
 template<class... Types>
 class EntitySystem : public System, public IEntitySystem
@@ -11,7 +12,7 @@ class EntitySystem : public System, public IEntitySystem
 
 protected:
     virtual void Initialize() override;
-    virtual void InternalExecute(Types&... types) = 0;
+    virtual void InternalExecute(Entity entity, Types&... types) = 0;
 
 public:
     vector<Archetype*> GetArchetypes();

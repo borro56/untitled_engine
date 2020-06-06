@@ -26,7 +26,7 @@ protected:
         deltaTime = time->GetDeltaTime();
     }
 
-    void InternalExecute(Translation& pos, Speed& speed, MoveForwardTag&) override
+    void InternalExecute(Entity entity, Translation& pos, Speed& speed, MoveForwardTag&) override
     {
         pos.value.y -= speed.value * deltaTime;
     }

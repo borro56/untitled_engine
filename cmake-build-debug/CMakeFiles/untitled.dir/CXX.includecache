@@ -1353,6 +1353,8 @@ tpp/Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/common.h
 EntityData.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
+Entity.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 Archetype.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 Entity.h
@@ -1369,6 +1371,8 @@ System.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/System.h
 IEntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
+Entity.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 ComponentType.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
 Chunk.h

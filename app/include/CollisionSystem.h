@@ -24,7 +24,7 @@ protected:
         amount = entityManager->GetData<Translation, Translation>(translations);
     }
 
-    void InternalExecute(Translation& pos) override
+    void InternalExecute(Entity entity, Translation& pos) override
     {
         for (int i = 0; i < amount; ++i)
         {

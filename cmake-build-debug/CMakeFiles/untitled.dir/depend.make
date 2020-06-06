@@ -797,6 +797,9 @@ CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/ECS/tpp/Ch
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/include/common.h
 CMakeFiles/untitled.dir/engine/src/ECS/Chunk.cpp.o: ../engine/src/ECS/Chunk.cpp
 
+CMakeFiles/untitled.dir/engine/src/ECS/EntityData.cpp.o: ../engine/include/ECS/EntityData.h
+CMakeFiles/untitled.dir/engine/src/ECS/EntityData.cpp.o: ../engine/src/ECS/EntityData.cpp
+
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glfw/include/GLFW/glfw3.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/common.hpp
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: /Users/nicolasborromeo/Documents/Frameworks/glm/glm/detail/_fixes.hpp

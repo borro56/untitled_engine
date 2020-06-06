@@ -93,5 +93,10 @@ void EntityManager::DeleteEntities()
 
         chunk->amount--;
         chunk->activeAmount--;
+
+        entityMap.erase(entityId);
+        entityDataMap.erase(entityData);
     }
+
+    entitiesToDelete.clear();
 }

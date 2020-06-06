@@ -45,10 +45,10 @@ protected:
         {
             //TODO: Make this thread safe
             entityManager->Create(  translation,
-                        Scale(),
+                                    render,
+                        Scale(Vector3(0.1f)),
                         Rotation(),
-                        render,
-                        Speed(2),
+                        Speed(-2),
                         MoveForwardTag());
         }
     }

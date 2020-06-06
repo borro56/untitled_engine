@@ -25,9 +25,9 @@ Archetype::Archetype(EntityManager& entityManager) : entityManager(entityManager
 
 void Archetype::ExecuteSystems(vector<class SystemThread*>& vector) //TODO: Use shared_ptr
 {
-    for(auto chunk : chunks)
+    for (int i = 0; i < activeChunksAmount; ++i)
     {
-        vector.push_back(new SystemThread(*chunk, *this));
+        vector.push_back(new SystemThread(*chunks[i], *this));
         //ExecuteSystem(*chunk);
     }
 }

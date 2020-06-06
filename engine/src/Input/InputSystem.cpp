@@ -11,7 +11,6 @@ void InputSystem::SetWindow(GLFWwindow &window)
     glfwSetKeyCallback(&window, onKeyEvent);
 }
 
-
 void InputSystem::OnKeyEvent(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
     if (action == GLFW_PRESS)
@@ -28,6 +27,22 @@ void InputSystem::OnKeyEvent(GLFWwindow *window, int key, int scancode, int acti
 bool InputSystem::GetKey(int key)
 {
     return keyStatus[key];
+}
+
+bool InputSystem::GetKeyDown(int key)
+{
+    return !prevKeyStatus[key] && keyStatus[key];
+}
+
+bool InputSystem::GetKeyUp(int key)
+{
+    return prevKeyStatus[key] && !keyStatus[key];
+}
+
+
+void InputSystem::PrepareFrame()
+{
+    copy(keyStatus, keyStatus + 256, prevKeyStatus);
 }
 
 InputSystem* InputSystem::instance;

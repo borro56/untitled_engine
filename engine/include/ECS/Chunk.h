@@ -3,7 +3,8 @@
 
 #include "../common.h"
 
-const int CHUNK_SIZE = 16384;
+//const int CHUNK_SIZE = 16384;
+const int CHUNK_SIZE = 1600;
 
 class Archetype;
 template<class Type> class ComponentType;

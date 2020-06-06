@@ -6,6 +6,7 @@
 #include "../engine/include/Input/InputSystem.h"
 #include "include/CollisionSystem.h"
 #include "include/Components/Player.h"
+#include "include/MoveForwardSystem.h"
 
 const std::vector<Vertex> vertices = {
         {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
@@ -40,11 +41,12 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //one thread per core
 //Remove non exposed headers
 //Analizar uso de mutex en render system
+//single large uniform buffer
 
 int main()
 {
     EntityManager em;
-    em.GetOrCreateSystems<PlayerMovementSystem,TimeSystem, CollisionSystem>();
+    em.GetOrCreateSystems<PlayerMovementSystem, MoveForwardSystem, TimeSystem, CollisionSystem>();
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
     auto inputSystem = em.GetOrCreateSystem<InputSystem>();
 

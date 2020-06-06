@@ -10,9 +10,18 @@
 
 class InputSystem : public System
 {
+    friend void onKeyEvent(GLFWwindow*, int, int, int, int);
+
     static InputSystem* instance;
 
+    bool prevKeyStatus[256];
     bool keyStatus[256];
+
+    void OnKeyEvent(GLFWwindow *window, int key, int scancode, int action, int mods); //TODO: Use friend functions
+
+protected:
+    void PrepareFrame();
+
 public:
 
     InputSystem() { instance = this; }
@@ -21,9 +30,8 @@ public:
 
     void SetWindow(GLFWwindow& window);
     bool GetKey(int key);
-
-    void OnKeyEvent(GLFWwindow *window, int key, int scancode, int action, int mods); //TODO: Use friend functions
-
+    bool GetKeyDown(int key);
+    bool GetKeyUp(int key);
 };
 
 #endif

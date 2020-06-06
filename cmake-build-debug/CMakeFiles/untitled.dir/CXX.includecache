@@ -1246,6 +1246,28 @@ Components/Speed.h
 
 /Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
 
+/Users/nicolasborromeo/untitled_engine/app/include/MoveForwardSystem.h
+../../engine/include/Core/TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
+../../engine/include/ECS/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
+../../app/include/Components/Speed.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
+../../app/include/Components/MoveForwardTag.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h
+../../engine/include/ECS/EntitySystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
+../../engine/include/ECS/Components/Rotation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Rotation.h
+Components/Health.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Health.h
+Components/Speed.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
+../../engine/include/Input/InputSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Input/InputSystem.h
+Components/Player.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h
+
 /Users/nicolasborromeo/untitled_engine/app/include/PlayerMovementSystem.h
 ../../engine/include/ECS/EntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
@@ -1279,6 +1301,8 @@ include/CollisionSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/CollisionSystem.h
 include/Components/Player.h
 /Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h
+include/MoveForwardSystem.h
+/Users/nicolasborromeo/untitled_engine/app/include/MoveForwardSystem.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/EntitySystem.h

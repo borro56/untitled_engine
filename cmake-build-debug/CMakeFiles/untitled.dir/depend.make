@@ -185,6 +185,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Health.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/MoveForwardTag.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Player.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/Components/Speed.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/MoveForwardSystem.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/include/PlayerMovementSystem.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../app/main.cpp
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/Core/TimeSystem.h

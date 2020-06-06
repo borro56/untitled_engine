@@ -1169,7 +1169,7 @@ void RenderSystem::updateObjects(int newAmount)
 {
     if(newAmount > maxAmountOfObjects)
     {
-        maxAmountOfObjects = newAmount;
+        maxAmountOfObjects = newAmount * 2;
 
         commandMutex.lock(); //TODO: Move locks to the exact needed moment
         createUniformBuffers();
@@ -1186,7 +1186,10 @@ void RenderSystem::updateObjects(int newAmount)
 void RenderSystem::createDescriptorPool()
 {
     if(descriptorPool != VK_NULL_HANDLE)
+    {
+        vkDeviceWaitIdle(device); //TODO: Remove this
         vkDestroyDescriptorPool(device, descriptorPool, nullptr);
+    }
 
     VkDescriptorPoolSize poolSize{};
     poolSize.type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
@@ -1249,7 +1252,6 @@ void RenderSystem::createDescriptorSets()
 
 void RenderSystem::PrepareFrame()
 {
-    vkDeviceWaitIdle(device); //TODO: Remove this
     renderCount = 0;
 
     auto archetypes = GetArchetypes(); //TODO: Cache this

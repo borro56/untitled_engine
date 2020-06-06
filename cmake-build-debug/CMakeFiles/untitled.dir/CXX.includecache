@@ -1238,6 +1238,8 @@ Components/Speed.h
 ../../engine/include/ECS/Components/Translation.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
 
+/Users/nicolasborromeo/untitled_engine/app/include/Components/DeleteTime.h
+
 /Users/nicolasborromeo/untitled_engine/app/include/Components/Health.h
 
 /Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h
@@ -1283,6 +1285,20 @@ Components/Player.h
 /Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h
 Components/MoveForwardTag.h
 /Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h
+Components/DeleteTime.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/DeleteTime.h
+
+/Users/nicolasborromeo/untitled_engine/app/include/TimedDeleteSystem.h
+../../engine/include/Core/TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
+../../engine/include/ECS/Components/Translation.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
+../../app/include/Components/Speed.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/Speed.h
+../../app/include/Components/MoveForwardTag.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/MoveForwardTag.h
+Components/DeleteTime.h
+/Users/nicolasborromeo/untitled_engine/app/include/Components/DeleteTime.h
 
 /Users/nicolasborromeo/untitled_engine/app/main.cpp
 ../engine/include/ECS/Components/Translation.h
@@ -1303,6 +1319,12 @@ include/Components/Player.h
 /Users/nicolasborromeo/untitled_engine/app/include/Components/Player.h
 include/MoveForwardSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/MoveForwardSystem.h
+include/TimedDeleteSystem.h
+/Users/nicolasborromeo/untitled_engine/app/include/TimedDeleteSystem.h
+
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
+TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/EntitySystem.h
@@ -1347,6 +1369,8 @@ tpp/Chunk.tpp
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
+../common.h
+/Users/nicolasborromeo/untitled_engine/engine/include/common.h
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../common.h
@@ -1531,4 +1555,18 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
+../../include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+../../include/ECS/EntitySystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

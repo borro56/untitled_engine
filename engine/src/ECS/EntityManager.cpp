@@ -91,11 +91,15 @@ void EntityManager::DeleteEntities()
                     array + toDeleteElementIndex);
         }
 
+        auto movedEntityData = EntityData { entityData.archetypeIndex, entityData.chunkIndex, (short)(chunk->amount - 1)  };
+
+        entityDataMap[entityData] = entityDataMap[movedEntityData];
+        entityMap.erase(entityId); //TODO: Solve this with entity version
+        entityDataMap.erase(movedEntityData);
+
         chunk->amount--;
         chunk->activeAmount--;
-
-        entityMap.erase(entityId);
-        entityDataMap.erase(entityData);
+        archetype.activeChunksAmount--;
     }
 
     entitiesToDelete.clear();

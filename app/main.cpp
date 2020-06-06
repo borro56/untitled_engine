@@ -7,6 +7,7 @@
 #include "include/CollisionSystem.h"
 #include "include/Components/Player.h"
 #include "include/MoveForwardSystem.h"
+#include "include/TimedDeleteSystem.h"
 
 const std::vector<Vertex> vertices = {
         {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
@@ -48,7 +49,13 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 int main()
 {
     EntityManager em;
-    em.GetOrCreateSystems<PlayerMovementSystem, MoveForwardSystem, TimeSystem, CollisionSystem>();
+    em.GetOrCreateSystems<
+            PlayerMovementSystem,
+            MoveForwardSystem,
+            TimeSystem,
+            CollisionSystem,
+            TimedDeleteSystem>();
+
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
     auto inputSystem = em.GetOrCreateSystem<InputSystem>();
 
@@ -66,14 +73,14 @@ int main()
                 Renderable(mesh2, pipeline),
                 Speed(2));
 
-    auto e2 = em.Create(  PlayerTag(),
+   /* auto e2 = em.Create(  PlayerTag(),
                 Translation(Vector3(0,1.5,0)),
                 Scale(),
                 Rotation(),
                 Renderable(mesh2, pipeline),
                 Speed(2));
 
-    em.Delete(e2);
+    em.Delete(e2);*/
 
     em.Start();
 

@@ -8,6 +8,7 @@
 #include "../../engine/include/Input/InputSystem.h"
 #include "Components/Player.h"
 #include "Components/MoveForwardTag.h"
+#include "Components/DeleteTime.h"
 
 class PlayerMovementSystem : public EntitySystem<Translation, Speed, Renderable, PlayerTag>
 {
@@ -44,8 +45,8 @@ protected:
         if(spacePressed)
         {
             //TODO: Make this thread safe
-            entityManager->Create(  translation,
-                                    render,
+            entityManager->Create(translation, render,
+                        DeleteTime(),
                         Scale(Vector3(0.1f)),
                         Rotation(),
                         Speed(-2),
@@ -55,3 +56,4 @@ protected:
 };
 
 #endif
+

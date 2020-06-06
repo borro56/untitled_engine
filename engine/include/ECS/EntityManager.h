@@ -12,6 +12,9 @@ class System;
 
 class EntityManager {
 
+    mutex createdEntititesMutex;
+
+    int createdEntitites = 0;
     bool running;
 
     mutex entitiesToDeleteMutex;

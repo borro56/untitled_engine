@@ -13,8 +13,10 @@ template<class Type> class ComponentType;
 class Chunk
 {
     friend class Archetype;
+    friend class EntityManager;
 
 private:
+    int index;
     int amount;
     int activeAmount;
     byte data[CHUNK_SIZE];

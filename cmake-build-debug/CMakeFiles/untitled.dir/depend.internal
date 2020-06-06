@@ -197,6 +197,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Scale.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Components/Translation.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
@@ -402,6 +403,7 @@ CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
@@ -596,6 +598,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
@@ -791,6 +794,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h
@@ -986,6 +990,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Chunk.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/ComponentType.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
+ /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
  /Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h

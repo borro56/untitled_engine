@@ -8,8 +8,10 @@
 template<class... Types> const Entity EntityManager::Create(Types const&... components)
 {
     auto& archetype = GetOrCreateArchetype<Types...>();
-    archetype.AddEntity(components...);
-    return Entity(0); //TODO: Return actual entity
+    auto& chunk = archetype.AddEntity(components...);
+
+    entityMap[entityMap.size()] = EntityData { (short)archetype.index , (short)chunk.index, (short)(chunk.amount - 1)};
+    return Entity(entityMap.size()-1);
 }
 
 template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
@@ -23,6 +25,7 @@ template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
     }
 
     newArchetypes.push_back(Archetype::Create<Types...>(*this));
+    newArchetypes[newArchetypes.size() - 1].index = archetypes.size() + newArchetypes.size() - 1;
     return newArchetypes[newArchetypes.size() - 1];
 }
 

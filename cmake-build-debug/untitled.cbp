@@ -107,6 +107,9 @@
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/nicolasborromeo/untitled_engine/engine/include/ECS/IEntitySystem.h">
 			<Option target="untitled"/>
 		</Unit>

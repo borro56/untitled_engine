@@ -196,6 +196,7 @@ CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Rotatio
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Scale.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Components/Translation.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/EntityData.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/EntitySystem.h
 CMakeFiles/untitled.dir/app/main.cpp.o: ../engine/include/ECS/IEntitySystem.h
@@ -401,6 +402,7 @@ CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/EntityData.h
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/EntitySystem.h
 CMakeFiles/untitled.dir/engine/include/Core/TimeSystem.cpp.o: ../engine/include/ECS/IEntitySystem.h
@@ -595,6 +597,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Ar
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/EntityData.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/EntitySystem.h
 CMakeFiles/untitled.dir/engine/src/ECS/Archetype.cpp.o: ../engine/include/ECS/IEntitySystem.h
@@ -790,6 +793,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/EC
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/EntityData.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/EntitySystem.h
 CMakeFiles/untitled.dir/engine/src/ECS/EntityManager.cpp.o: ../engine/include/ECS/IEntitySystem.h
@@ -985,6 +989,7 @@ CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/Arche
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/Chunk.h
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/ComponentType.h
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/Entity.h
+CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/EntityData.h
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/EntityManager.h
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/EntitySystem.h
 CMakeFiles/untitled.dir/engine/src/ECS/System.cpp.o: ../engine/include/ECS/IEntitySystem.h

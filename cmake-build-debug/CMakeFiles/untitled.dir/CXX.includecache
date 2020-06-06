@@ -1304,6 +1304,10 @@ include/Components/Player.h
 include/MoveForwardSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/MoveForwardSystem.h
 
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
+TimeSystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/EntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
@@ -1344,9 +1348,13 @@ tpp/Chunk.tpp
 
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Entity.h
 
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
+
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 ../common.h
 /Users/nicolasborromeo/untitled_engine/engine/include/common.h
+EntityData.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityData.h
 Archetype.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
 Entity.h
@@ -1521,4 +1529,18 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
+../../include/ECS/Archetype.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
+../../include/ECS/EntitySystem.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
+
+/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp
+../../include/ECS/EntityManager.h
+/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

@@ -1,10 +1,13 @@
 
 #include "../Archetype.h"
 
-template<class... Types> void Archetype::AddEntity(const Types &... components)
+template<class... Types> Chunk& Archetype::AddEntity(const Types &... components)
 {
-    GetOrCreateChunk().AddData(*this, components...);
+    auto& chunk = GetOrCreateChunk();
+    chunk.AddData(*this, components...);
     entityCount++;
+
+    return chunk;
 }
 
 template<class Type, class... Types> void Archetype::AddType()

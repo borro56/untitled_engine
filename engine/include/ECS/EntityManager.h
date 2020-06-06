@@ -2,6 +2,7 @@
 #define UNTITLED_ENTITYMANAGER_H
 
 #include "../common.h"
+#include "EntityData.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ class System;
 class EntityManager {
     bool running;
 
+    map<int, EntityData> entityMap;
     vector<Archetype> newArchetypes;
     vector<shared_ptr<System>> systems;
     vector<Archetype> archetypes;

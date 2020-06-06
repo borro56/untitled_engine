@@ -15,6 +15,7 @@ Chunk& Archetype::GetOrCreateChunk()
     }
 
     auto chunk = make_shared<Chunk>();
+    chunk->index = chunks.size();
     chunks.push_back(chunk);
     return *chunk;
 }

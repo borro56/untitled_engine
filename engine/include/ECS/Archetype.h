@@ -15,6 +15,7 @@ class Archetype
     friend class EntityManager;
 
 private:
+    int index;
     int entityCount = 0;
     int entitySize = 0;
     int activeChunksAmount = 0;
@@ -44,7 +45,7 @@ public:
     void AddSystem(shared_ptr<IEntitySystem> system) { systems.push_back(system); } //TODO: Make this private and friend
     void ExecuteSystems(vector<class SystemThread*>& vector);
 
-    template<class... Types> void AddEntity(Types const&... components);
+    template<class... Types> Chunk& AddEntity(Types const&... components);
     template<class... Types> bool HasTypes() const;
     template<class Type, class... Types> bool ContainsTypes() const;
     template<class Type> const ComponentType<Type>& GetType() const;

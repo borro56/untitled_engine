@@ -7,17 +7,22 @@
 
 template<class... Types> const Entity EntityManager::Create(Types const&... components)
 {
+    createdEntititesMutex.lock();
+
     auto& archetype = GetOrCreateArchetype<Types...>();
     auto& chunk = archetype.AddEntity(components...);
 
+
     EntityData entityData{ (short)archetype.index , (short)chunk.index, (short)(chunk.amount - 1)};
-
-
-    createdEntititesMutex.lock();
     entityMap[createdEntitites] = entityData;
     entityDataMap[entityData] = createdEntitites;
-    createdEntitites++; //TODO: Make entity ids to be reusable and apply mutex
-    Entity en(createdEntitites - 1);
+    Entity en(createdEntitites);
+
+    cout << "+ " << createdEntitites << ' ' << (short)archetype.index << ' ' << (short)chunk.index << ' ' << (short)(chunk.amount - 1) << '\n';
+
+    createdEntitites++; //TODO: Make entity ids to be reusable
+    entityCount++;
+
     createdEntititesMutex.unlock();
     return en;
 }

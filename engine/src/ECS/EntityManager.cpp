@@ -71,35 +71,44 @@ void EntityManager::Delete(Entity entity)
 
 void EntityManager::DeleteEntities()
 {
+    cout << "-- " << entitiesToDelete.size() << "\n";
     for (auto entityId : entitiesToDelete)
     {
         auto& entityData = entityMap[entityId];
-
         auto& archetype = archetypes[entityData.archetypeIndex];
         auto& chunk = archetype.chunks[entityData.chunkIndex];
+
+        cout << "- " << entityId << ' ' << (short)entityData.archetypeIndex << ' ' << (short)entityData.chunkIndex << ' ' << (short)entityData.entityIndex << '\n';
 
         for(auto& componentType : archetype.componentTypes)
         {
             auto array = chunk->GetArrayBase(componentType);
-
             auto lastElementIndex = (chunk->amount - 1) * componentType.Size();
             auto toDeleteElementIndex = entityData.entityIndex * componentType.Size();
 
-            copy(
-                    array + lastElementIndex,
+            copy(array + lastElementIndex,
                     array + lastElementIndex + componentType.Size(),
                     array + toDeleteElementIndex);
         }
 
         auto movedEntityData = EntityData { entityData.archetypeIndex, entityData.chunkIndex, (short)(chunk->amount - 1)  };
+        auto movedEntityIndex = entityDataMap[movedEntityData];
 
-        entityDataMap[entityData] = entityDataMap[movedEntityData];
-        entityMap.erase(entityId); //TODO: Solve this with entity version
+        entityMap[movedEntityIndex] = entityData;
+        entityDataMap[entityData] = movedEntityIndex;
+
+        entityMap.erase(entityId);
         entityDataMap.erase(movedEntityData);
+
+        //TODO: Reuse entity ids
 
         chunk->amount--;
         chunk->activeAmount--;
         archetype.activeChunksAmount--;
+        entityCount--;
+
+        cout << "* " << entityMap.size() << ' ' << entityDataMap.size() << '\n';
+
     }
 
     entitiesToDelete.clear();

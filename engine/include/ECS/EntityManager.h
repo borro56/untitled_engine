@@ -13,12 +13,12 @@ class System;
 class EntityManager {
 
     mutex createdEntititesMutex;
-
     int createdEntitites = 0;
-    bool running;
+
+    bool running = false;
+    int entityCount = 0;
 
     mutex entitiesToDeleteMutex;
-
     vector<int> entitiesToDelete;
 
     map<int, EntityData> entityMap;

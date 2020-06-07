@@ -1322,10 +1322,6 @@ include/MoveForwardSystem.h
 include/TimedDeleteSystem.h
 /Users/nicolasborromeo/untitled_engine/app/include/TimedDeleteSystem.h
 
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.cpp
-TimeSystem.h
-/Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
-
 /Users/nicolasborromeo/untitled_engine/engine/include/Core/TimeSystem.h
 ../ECS/EntitySystem.h
 /Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
@@ -1555,18 +1551,4 @@ glm/gtc/matrix_transform.hpp
 -
 chrono
 -
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/Archetype.cpp
-../../include/ECS/Archetype.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/Archetype.h
-../../include/ECS/EntitySystem.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntitySystem.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/EntityManager.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
-
-/Users/nicolasborromeo/untitled_engine/engine/src/ECS/System.cpp
-../../include/ECS/EntityManager.h
-/Users/nicolasborromeo/untitled_engine/engine/include/ECS/EntityManager.h
 

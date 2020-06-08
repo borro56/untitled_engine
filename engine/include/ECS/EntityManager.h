@@ -21,8 +21,8 @@ class EntityManager {
     mutex entitiesToDeleteMutex;
     vector<int> entitiesToDelete;
 
-    map<int, EntityData> entityMap;
-    map<EntityData, int> entityDataMap;
+    unordered_map<int, EntityData> entityMap;
+    unordered_map<EntityData, int> entityDataMap;
 
     vector<Archetype> newArchetypes;
     vector<shared_ptr<System>> systems;
@@ -44,10 +44,8 @@ public:
     void Stop();
     void Start();
 
-    Entity GetEntity(EntityData& data) { return entityDataMap[data]; }
+    Entity GetEntity(EntityData& data) { return Entity(entityDataMap[data]); }
 };
-
-
 
 #include "Archetype.h"
 #include "Entity.h"

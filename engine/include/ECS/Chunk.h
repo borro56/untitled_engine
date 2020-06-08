@@ -3,8 +3,8 @@
 
 #include "../common.h"
 
-//const int CHUNK_SIZE = 16384;
-const int CHUNK_SIZE = 1600;
+const int CHUNK_SIZE = 16384;
+//const int CHUNK_SIZE = 160;
 
 class Archetype;
 template<class Type> class ComponentType;
@@ -18,10 +18,10 @@ class Chunk
     friend class EntityManager;
 
 private:
-    int archetypeIndex;
-    int index;
-    int amount;
-    int activeAmount;
+    int archetypeIndex = -1;
+    int index = -1;
+    int amount = 0;
+    int activeAmount = 0;
     byte data[CHUNK_SIZE];
 
     template<class... Types> void AddData(Archetype& archetype, Types const&... rest);

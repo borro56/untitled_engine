@@ -15,7 +15,7 @@ class Archetype
     friend class EntityManager;
 
 private:
-    int index;
+    int index = -1;
     int entityCount = 0;
     int entitySize = 0;
     int activeChunksAmount = 0;

@@ -11,8 +11,24 @@ struct EntityData
 
     bool operator<(const EntityData& e2) const
     {
-        return tie(archetypeIndex, chunkIndex, entityIndex) < tie(e2.archetypeIndex, e2.chunkIndex, e2.entityIndex);
+        return archetypeIndex < e2.archetypeIndex || chunkIndex < e2.chunkIndex || entityIndex < e2.entityIndex;
+    }
+
+    bool operator==(const EntityData& e2) const
+    {
+        return archetypeIndex == e2.archetypeIndex && chunkIndex == e2.chunkIndex && entityIndex == e2.entityIndex;
     }
 };
+
+namespace std {
+    template <>
+    struct hash<EntityData>
+    {
+        std::size_t operator()(const EntityData& k) const
+        {
+            return k.entityIndex + k.chunkIndex * 10000 + k.archetypeIndex * 10000000;
+        }
+    };
+}
 
 #endif

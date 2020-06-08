@@ -71,44 +71,43 @@ void EntityManager::Delete(Entity entity)
 
 void EntityManager::DeleteEntities()
 {
-    cout << "-- " << entitiesToDelete.size() << "\n";
-    for (auto entityId : entitiesToDelete)
+    for (auto toDeleteId : entitiesToDelete)
     {
-        auto& entityData = entityMap[entityId];
-        auto& archetype = archetypes[entityData.archetypeIndex];
-        auto& chunk = archetype.chunks[entityData.chunkIndex];
+        auto &toDeleteData = entityMap[toDeleteId];
+        auto &archetype = archetypes[toDeleteData.archetypeIndex];
+        auto &chunk = archetype.chunks[toDeleteData.chunkIndex];
 
-        cout << "- " << entityId << ' ' << (short)entityData.archetypeIndex << ' ' << (short)entityData.chunkIndex << ' ' << (short)entityData.entityIndex << '\n';
+        auto lastData = EntityData{toDeleteData.archetypeIndex, toDeleteData.chunkIndex, (short) (chunk->amount - 1)};
+        auto lastId = entityDataMap[lastData];
 
-        for(auto& componentType : archetype.componentTypes)
+        if(toDeleteId != lastId)
         {
-            auto array = chunk->GetArrayBase(componentType);
-            auto lastElementIndex = (chunk->amount - 1) * componentType.Size();
-            auto toDeleteElementIndex = entityData.entityIndex * componentType.Size();
+            for (auto &componentType : archetype.componentTypes)
+            {
+                auto array = chunk->GetArrayBase(componentType);
+                auto lastElementIndex = (chunk->amount - 1) * componentType.Size();
+                auto toDeleteElementIndex = toDeleteData.entityIndex * componentType.Size();
 
-            copy(array + lastElementIndex,
-                    array + lastElementIndex + componentType.Size(),
-                    array + toDeleteElementIndex);
+                copy(array + lastElementIndex,
+                     array + lastElementIndex + componentType.Size(),
+                     array + toDeleteElementIndex);
+            }
+
+            entityMap[lastId] = toDeleteData;
+            entityDataMap[toDeleteData] = lastId;
+
         }
 
-        auto movedEntityData = EntityData { entityData.archetypeIndex, entityData.chunkIndex, (short)(chunk->amount - 1)  };
-        auto movedEntityIndex = entityDataMap[movedEntityData];
+        map<int, EntityData> prevEntityMap; prevEntityMap.insert(entityMap.begin(), entityMap.end());
+        map<EntityData, int> prevEntityDataMap; prevEntityDataMap.insert(entityDataMap.begin(), entityDataMap.end());
 
-        entityMap[movedEntityIndex] = entityData;
-        entityDataMap[entityData] = movedEntityIndex;
-
-        entityMap.erase(entityId);
-        entityDataMap.erase(movedEntityData);
-
-        //TODO: Reuse entity ids
+        entityMap.erase(toDeleteId);
+        entityDataMap.erase(lastData);
 
         chunk->amount--;
         chunk->activeAmount--;
-        archetype.activeChunksAmount--;
+        archetype.entityCount--;
         entityCount--;
-
-        cout << "* " << entityMap.size() << ' ' << entityDataMap.size() << '\n';
-
     }
 
     entitiesToDelete.clear();

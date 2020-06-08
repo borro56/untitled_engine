@@ -46,7 +46,7 @@ protected:
         {
             //TODO: Make this thread safe
             entityManager->Create(translation, render,
-                        DeleteTime(1 + (rand() / (float)RAND_MAX) * 2),
+                        DeleteTime(rand() / (float)RAND_MAX * 5.0f),
                         Scale(Vector3(0.1f)),
                         Rotation(),
                         Speed(-2),

@@ -3,7 +3,6 @@
 #include "../engine/include/Core/TimeSystem.h"
 #include "include/PlayerMovementSystem.h"
 #include "include/Components/Speed.h"
-#include "../engine/include/Input/InputSystem.h"
 #include "include/CollisionSystem.h"
 #include "include/Components/Player.h"
 #include "include/MoveForwardSystem.h"
@@ -45,6 +44,8 @@ const std::vector<uint16_t> indices2 = { 0, 1, 2 };
 //single large uniform buffer
 //entity version system
 //normalize all getters and setters
+//Reuse entity ids
+//implement circular buffers for uniforms regeneration
 
 int main()
 {
@@ -59,7 +60,6 @@ int main()
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
     auto inputSystem = em.GetOrCreateSystem<InputSystem>();
 
-    auto mesh = renderSystem->CreateMesh(vertices, indices);
     auto mesh2 = renderSystem->CreateMesh(vertices2, indices2);
     auto pipeline = renderSystem->CreateGraphicsPipeline("shaders/vert.spv", "shaders/frag.spv");
     renderSystem->SetCameraPosition(Vector3(0,-4,4));
@@ -72,15 +72,6 @@ int main()
                 Rotation(),
                 Renderable(mesh2, pipeline),
                 Speed(2));
-
-   /* auto e2 = em.Create(  PlayerTag(),
-                Translation(Vector3(0,1.5,0)),
-                Scale(),
-                Rotation(),
-                Renderable(mesh2, pipeline),
-                Speed(2));
-
-    em.Delete(e2);*/
 
     em.Start();
 

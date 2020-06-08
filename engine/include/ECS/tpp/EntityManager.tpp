@@ -12,13 +12,11 @@ template<class... Types> const Entity EntityManager::Create(Types const&... comp
     auto& archetype = GetOrCreateArchetype<Types...>();
     auto& chunk = archetype.AddEntity(components...);
 
-
     EntityData entityData{ (short)archetype.index , (short)chunk.index, (short)(chunk.amount - 1)};
     entityMap[createdEntitites] = entityData;
     entityDataMap[entityData] = createdEntitites;
-    Entity en(createdEntitites);
 
-    cout << "+ " << createdEntitites << ' ' << (short)archetype.index << ' ' << (short)chunk.index << ' ' << (short)(chunk.amount - 1) << '\n';
+    Entity en(createdEntitites);
 
     createdEntitites++; //TODO: Make entity ids to be reusable
     entityCount++;
@@ -30,6 +28,14 @@ template<class... Types> const Entity EntityManager::Create(Types const&... comp
 template <class... Types> Archetype& EntityManager::GetOrCreateArchetype()
 {
     for(auto& archetype : archetypes)
+    {
+        if(archetype.HasTypes<Types...>())
+        {
+            return archetype;
+        }
+    }
+
+    for(auto& archetype : newArchetypes)
     {
         if(archetype.HasTypes<Types...>())
         {

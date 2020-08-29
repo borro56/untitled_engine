@@ -29,8 +29,8 @@ void Archetype::ExecuteSystems(vector<class SystemThread*>& vector) //TODO: Use 
 {
     for (int i = 0; i < activeChunksAmount; ++i)
     {
-        vector.push_back(new SystemThread(*chunks[i], *this));
-        //ExecuteSystem(*chunk);
+        //vector.push_back(new SystemThread(*chunks[i], *this));
+        ExecuteSystem(*chunks[i]);
     }
 }
 

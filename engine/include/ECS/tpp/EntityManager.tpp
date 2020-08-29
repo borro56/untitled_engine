@@ -91,13 +91,18 @@ void EntityManager::GetOrCreateSystems()
 }
 
 template<class TargetType, class... RequiredTypes>
-int EntityManager::GetData(TargetType * targetArray)
+int EntityManager::GetData(TargetType * targetArray, int maxAmount)
 {
-    auto archetypes = GetArchetypes<RequiredTypes...>();
+    auto archetypes = GetArchetypes<TargetType, RequiredTypes...>();
     auto currentIndex = 0;
 
     for(auto archetype : archetypes)
     {
+        if(maxAmount >= 0 && currentIndex + archetype->EntityCount() > maxAmount)
+        {
+            return currentIndex;
+        }
+
         archetype->GetData(targetArray + currentIndex);
         currentIndex += archetype->EntityCount();
     }

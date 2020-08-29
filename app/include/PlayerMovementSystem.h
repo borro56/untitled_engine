@@ -42,11 +42,11 @@ protected:
         if(rightPressed)
             translation.value.x += speed.value * deltaTime;
 
-        if(spacePressed)
+        //if(spacePressed)
         {
             //TODO: Make this thread safe
             entityManager->Create(translation, render,
-                        DeleteTime(rand() / (float)RAND_MAX * 5.0f),
+                        DeleteTime(200),
                         Scale(Vector3(0.1f)),
                         Rotation(),
                         Speed(-2),

@@ -36,7 +36,7 @@ public:
     template<class... Types> const class Entity Create(Types const&... components);
     void Delete(Entity entity);
 
-    template<class TargetType, class... RequiredTypes> int GetData(TargetType* targetArray);
+    template<class TargetType, class... RequiredTypes> int GetData(TargetType* targetArray, int maxAmount = -1);
 
     template<class SystemType> shared_ptr<SystemType> GetOrCreateSystem();
     template<class SystemType, class... SystemTypes> void GetOrCreateSystems();

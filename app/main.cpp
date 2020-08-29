@@ -5,6 +5,7 @@
 #include "include/Components/Speed.h"
 #include "include/CollisionSystem.h"
 #include "include/Components/Player.h"
+#include "include/Components/Enemy.h"
 #include "include/MoveForwardSystem.h"
 #include "include/TimedDeleteSystem.h"
 
@@ -51,10 +52,10 @@ int main()
 {
     EntityManager em;
     em.GetOrCreateSystems<
-            PlayerMovementSystem,
             MoveForwardSystem,
             TimeSystem,
-            CollisionSystem,
+            CollisionSystem, // <----
+            PlayerMovementSystem,
             TimedDeleteSystem>();
 
     auto renderSystem = em.GetOrCreateSystem<RenderSystem>();
@@ -72,6 +73,12 @@ int main()
                 Rotation(),
                 Renderable(mesh2, pipeline),
                 Speed(2));
+
+    em.Create(  EnemyTag(),
+                Translation(Vector3(0,1.5,0)),
+                Scale(),
+                Rotation(),
+                Renderable(mesh2, pipeline));
 
     em.Start();
 

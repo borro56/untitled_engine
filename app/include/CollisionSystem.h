@@ -8,7 +8,7 @@
 #include "../../engine/include/Input/InputSystem.h"
 #include "../../engine/include/ECS/Components/Translation.h"
 
-class CollisionSystem : public EntitySystem<Translation>
+class CollisionSystem : public EntitySystem<struct EnemyTag, Translation>
 {
     int amount;
     Translation translations[256];
@@ -21,20 +21,20 @@ protected:
 
     void PrepareFrame() override
     {
-        amount = entityManager->GetData<Translation, Translation>(translations);
+        amount = entityManager->GetData<Translation, MoveForwardTag>(translations, 256); //TODO: Solve this limitation
     }
 
-    void InternalExecute(Entity entity, Translation& pos) override
+    void InternalExecute(Entity entity, EnemyTag& tag, Translation& pos) override
     {
         for (int i = 0; i < amount; ++i)
         {
             auto& otherTranslation = translations[i];
             auto distance = otherTranslation.value.Distance(pos.value);
 
-            /*if(distance > 0.01f && distance < 1.5f) 
+            if(distance > 0.01f && distance < 0.5f)
             {
-                pos.value.y += 0.001f;
-            }*/
+                entityManager->Delete(entity);
+            }
         }
     }
 };

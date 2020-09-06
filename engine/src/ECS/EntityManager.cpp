@@ -65,7 +65,11 @@ void EntityManager::Stop()
 void EntityManager::Delete(Entity entity)
 {
     entitiesToDeleteMutex.lock();
-    entitiesToDelete.push_back(entity.id);
+
+    //TODO: Check faster way to do this
+    if(find(entitiesToDelete.begin(), entitiesToDelete.end(), entity.id) == entitiesToDelete.end())
+        entitiesToDelete.push_back(entity.id);
+
     entitiesToDeleteMutex.unlock();
 }
 

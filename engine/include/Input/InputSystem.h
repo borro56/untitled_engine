@@ -14,8 +14,8 @@ class InputSystem : public System
 
     static InputSystem* instance;
 
-    bool prevKeyStatus[256];
-    bool keyStatus[256];
+    bool prevKeyStatus[256] = { 0 };
+    bool keyStatus[256]= { 0 };
 
     void OnKeyEvent(GLFWwindow *window, int key, int scancode, int action, int mods); //TODO: Use friend functions
 

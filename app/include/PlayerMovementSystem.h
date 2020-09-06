@@ -46,7 +46,7 @@ protected:
         {
             //TODO: Make this thread safe
             entityManager->Create(translation, render,
-                        DeleteTime(200),
+                        DeleteTime(3),
                         Scale(Vector3(0.1f)),
                         Rotation(),
                         Speed(-2),

@@ -1,3 +1,3 @@
-C++ DOTS Engine
+# C++ DOTS Engine
 
-Creation of a Unity's DOTS like engine in C++
+Creation of a Unity's DOTS like engine with C++ and Vulkan
